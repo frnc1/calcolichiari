@@ -3,83 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NASpI anticipata 2026: calcolo delle due rate 70% e 30%</title>
-<meta name="description" content="Calcola quanto arriva con la NASpI anticipata in unica soluzione, ora divisa in due rate dalla legge 199/2025. Con il décalage applicato alle mensilità residue.">
+<title>NASpI anticipata 2026 in due rate: 70% subito e 30% a saldo</title>
+<meta name="description" content="Calcola la NASpI anticipata in unica soluzione, dal 2026 divisa in due rate dalla legge 199/2025, con il décalage applicato alle mensilità residue.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:title" content="Quanto arriva con la NASpI anticipata">
-<meta property="og:description" content="Calcola quanto arriva con la NASpI anticipata in unica soluzione, ora divisa in due rate dalla legge 199/2025. Con il décalage applicato alle mensilità residue.">
+<meta property="og:description" content="Calcola la NASpI anticipata in unica soluzione, dal 2026 divisa in due rate dalla legge 199/2025, con il décalage applicato alle mensilità residue.">
 <meta property="og:url" content="https://calcolichiari.it/naspi-anticipata.html">
 <meta property="og:image" content="https://calcolichiari.it/social-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<link rel="canonical" href="https://calcolichiari.it/naspi-anticipata.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#164e46">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23164e46'/%3E%3Crect x='7' y='9' width='4' height='14' fill='%23f4f6f4'/%3E%3Crect x='14' y='11' width='4' height='12' fill='%23f4f6f4'/%3E%3Crect x='21' y='14' width='4' height='9' fill='%23a2573a'/%3E%3C/svg%3E">
-<link rel="preload" href="/lora.woff" as="font" type="font/woff" crossorigin>
+<link rel="canonical" href="https://calcolichiari.it/naspi-anticipata.html">
+<meta name="theme-color" content="#0d8074">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d8074'/%3E%3Crect x='7' y='9' width='4' height='14' rx='1' fill='%23fff'/%3E%3Crect x='14' y='11' width='4' height='12' rx='1' fill='%23fff'/%3E%3Crect x='21' y='14' width='4' height='9' rx='1' fill='%23cdeee9'/%3E%3C/svg%3E">
+<link rel="preload" href="/poppins-700.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="/stile.css">
 </head>
 <body>
 <main class="foglio">
-<a class="torna" href="/">← tutti i calcolatori</a>
+<div class="top-nav"><a class="torna" href="/">← Tutti i calcolatori</a><span class="badge-tag">Novità legge 199/2025</span></div>
 <h1>Quanto arriva con la NASpI anticipata</h1>
-<p class="sottotitolo">Dal 2026 non arriva pi&ugrave; tutta insieme: 70% subito e 30% alla fine. Qui vedi le due rate e le mensilit&agrave; che stai rinunciando a riscuotere.</p>
+<p class="sottotitolo">Dal 2026 non arriva pi&ugrave; tutta insieme: 70% all'accoglimento e 30% a saldo. Qui vedi le due rate e le mensilit&agrave; a cui stai rinunciando.</p>
 
-<form id="modulo">
-<fieldset><legend>La NASpI che ti &egrave; stata riconosciuta</legend>
-<div class="campo"><label for="importo">Importo mensile lordo del primo mese (&euro;)</label>
+<form id="modulo" class="card">
+<fieldset><legend>Dati della NASpI riconosciuta</legend>
+<div class="campo"><label for="importo">Importo mensile lordo del 1&deg; mese (&euro;)</label>
 <input type="number" id="importo" inputmode="decimal" step="0.01" min="0" max="2000" value="1050">
-<p class="aiuto">Lo trovi nel provvedimento INPS. Se non ce l'hai ancora, calcolalo prima con il <a href="/naspi.html">calcolatore NASpI</a>.</p></div>
+<p class="aiuto">Lo trovi nel provvedimento INPS. Se non ce l'hai ancora, stimalo con il <a href="/naspi.html">calcolatore NASpI</a>.</p></div>
 <div class="campo"><label for="durata">Durata totale riconosciuta, in mesi</label>
 <input type="number" id="durata" inputmode="decimal" step="0.5" min="1" max="24" value="15">
-<p class="aiuto">Il massimo &egrave; 24 mesi.</p></div>
+<p class="aiuto">Il massimo di legge &egrave; 24 mesi.</p></div>
 <div class="campo"><label for="percepite">Mensilit&agrave; gi&agrave; percepite</label>
 <input type="number" id="percepite" inputmode="numeric" step="1" min="0" max="24" value="2">
-<p class="aiuto">Quante ne hai gi&agrave; incassate prima di chiedere l'anticipo. L'anticipazione riguarda solo quelle che restano.</p></div>
-<div class="campo"><label for="eta">La tua et&agrave; alla domanda di NASpI</label>
+<p class="aiuto">L'anticipazione riguarda soltanto le mensilit&agrave; residue non ancora riscosse.</p></div>
+<div class="campo"><label for="eta">Et&agrave; alla domanda iniziale di NASpI</label>
 <input type="number" id="eta" inputmode="numeric" step="1" min="16" max="80" value="40">
-<p class="aiuto">Da 55 anni in su il taglio del 3% mensile inizia due mesi pi&ugrave; tardi, quindi l'anticipo &egrave; pi&ugrave; alto.</p></div>
+<p class="aiuto">Dai 55 anni il d&eacute;calage parte due mesi pi&ugrave; tardi, quindi l'importo residuo &egrave; pi&ugrave; alto.</p></div>
 </fieldset>
-<button type="submit">Calcola</button>
+<button type="submit">Calcola le due rate</button>
 </form>
 
-<section id="esito" class="esito" hidden aria-live="polite">
-<h2>Anticipazione totale, al lordo</h2>
-<p class="cifra" id="totale">&mdash;</p>
-<p class="cifra-nota" id="notaTot"></p>
-<div class="riga-dato"><span>Prima rata, 70%</span><strong id="rata1">&mdash;</strong></div>
-<div class="riga-dato"><span>Seconda rata, 30%</span><strong id="rata2">&mdash;</strong></div>
-<div class="riga-dato"><span>Mensilit&agrave; residue anticipate</span><strong id="residue">&mdash;</strong></div>
+<section id="esito" class="card esito" hidden aria-live="polite">
+<div class="hero-risultato">
+<div class="hero-titolo">Anticipazione totale lorda</div>
+<div class="cifra" id="totale">&mdash;</div>
+<p class="cifra-nota">Al lordo delle ritenute IRPEF applicate dall'INPS su entrambe le rate</p>
+</div>
+<div class="griglia-rate">
+<div class="card-rata principale"><div class="card-rata-titolo">1&ordf; rata, 70% subito</div><div class="card-rata-cifra" id="rata1">&mdash;</div></div>
+<div class="card-rata"><div class="card-rata-titolo">2&ordf; rata, 30% a saldo</div><div class="card-rata-cifra" id="rata2">&mdash;</div></div>
+</div>
+<div class="dettagli-lista">
+<div class="riga-dato"><span>Mensilit&agrave; anticipate</span><strong id="residue">&mdash;</strong></div>
 <div class="riga-dato"><span>Se continuassi a riscuotere mese per mese</span><strong id="confronto">&mdash;</strong></div>
+</div>
 <div id="avvisi"></div>
 <h2>Le mensilit&agrave; che stai anticipando</h2>
-<table><thead><tr><th scope="col">Mese</th><th scope="col">Lordo</th><th scope="col">Rispetto al primo</th></tr></thead>
-<tbody id="tabella"></tbody></table>
+<div class="tabella-wrap"><table>
+<thead><tr><th scope="col">Mese</th><th scope="col">Lordo</th><th scope="col">Riduzione</th></tr></thead>
+<tbody id="tabella"></tbody></table></div>
 </section>
 
-<section>
-<h2>Domande frequenti</h2>
-<h3 class="domanda">Cosa &egrave; cambiato nel 2026?</h3>
-<p class="nota">Fino al 2025 l'anticipazione arrivava in un'unica soluzione. Dal 2026, con la legge 199/2025, viene erogata in due rate: il 70% all'accoglimento della domanda e il restante 30% alla fine. &Egrave; l'unica modifica che quella legge ha introdotto sulla NASpI.</p>
-<h3 class="domanda">Devo restituirla se le cose vanno male?</h3>
-<p class="nota">S&igrave;, in alcuni casi. La restituzione &egrave; prevista se cessi l'attivit&agrave; entro i primi sei mesi. &Egrave; anche prevista se torni a lavorare come dipendente prima della scadenza del periodo che ti era stato riconosciuto. Prima di chiedere l'anticipo vale la pena farsi due conti su quanto sei sicuro dell'attivit&agrave;.</p>
-<h3 class="domanda">Conviene rispetto a incassarla mese per mese?</h3>
-<p class="nota">L'importo totale &egrave; lo stesso, il d&eacute;calage viene applicato comunque. Cambia il momento in cui arrivano i soldi: tutti insieme se ti servono come capitale iniziale, contro un flusso mensile pi&ugrave; prevedibile. La differenza vera non &egrave; nella cifra ma nel vincolo, perch&eacute; con l'anticipo ti impegni a un'attivit&agrave; autonoma e perdi la copertura se cambi idea.</p>
+<section class="faq-box"><h2>Domande frequenti</h2>
+<details><summary>Cosa è cambiato nel 2026?</summary><div class="faq-contenuto">Fino al 2025 l'anticipazione arrivava in un'unica soluzione. Dal 2026, con la legge 199/2025, viene erogata in due rate: il 70% all'accoglimento della domanda e il restante 30% alla fine. È l'unica modifica che quella legge ha introdotto sulla NASpI.</div></details>
+<details><summary>Entro quando va richiesta l'anticipazione?</summary><div class="faq-contenuto">La domanda va inoltrata all'INPS entro trenta giorni dall'inizio dell'attività autonoma o dall'apertura della partita IVA. È un termine breve e decadenziale: conviene verificarlo prima di contare sulla cifra.</div></details>
+<details><summary>Devo restituirla se le cose vanno male?</summary><div class="faq-contenuto">In alcuni casi sì. La restituzione è prevista se cessi l'attività entro i primi sei mesi, ed è prevista anche se torni a lavorare come dipendente prima della scadenza del periodo che ti era stato riconosciuto.</div></details>
+<details><summary>Conviene rispetto a incassarla mese per mese?</summary><div class="faq-contenuto">L'importo totale è lo stesso, perché il décalage viene applicato comunque. Cambia il momento in cui arrivano i soldi: tutti insieme se servono come capitale iniziale, contro un flusso mensile più prevedibile. La differenza vera non è nella cifra ma nel vincolo, perché con l'anticipo ti impegni a un'attività autonoma e perdi la copertura se cambi idea.</div></details>
 </section>
-
 <footer>
-<h2>Come &egrave; calcolato</h2>
+<h2 style="margin-top:0">Come &egrave; calcolato</h2>
 <p class="aggiornamento">Norme verificate il <time datetime="2026-09-01">1 settembre 2026</time>.</p>
 <p class="nota">
-<strong>Importo.</strong> L'anticipazione corrisponde alla somma delle mensilit&agrave; residue che ti spetterebbero, ciascuna gi&agrave; ridotta dal d&eacute;calage previsto: 3% al mese a partire dal sesto mese di fruizione, dall'ottavo per chi ha compiuto 55 anni alla data della domanda.<br><br>
-<strong>Due rate.</strong> Dal 2026 l'erogazione &egrave; divisa in 70% e 30%, per effetto della legge 30 dicembre 2025 n. 199. Prima era in un'unica soluzione.<br><br>
+<strong>Importo.</strong> L'anticipazione corrisponde alla somma delle mensilit&agrave; residue che ti spetterebbero, ciascuna gi&agrave; ridotta dal d&eacute;calage: 3% al mese dal sesto mese di fruizione, dall'ottavo per chi ha compiuto 55 anni alla data della domanda.<br><br>
+<strong>Due rate.</strong> Dal 2026 l'erogazione &egrave; divisa in 70% e 30% per effetto della legge 30 dicembre 2025 n. 199.<br><br>
 <strong>Fonti.</strong> Art. 8 del D.Lgs. 22/2015 per l'anticipazione; art. 4 comma 3 dello stesso decreto per il d&eacute;calage; legge 199/2025 per la suddivisione in due rate.<br><br>
-<strong>Cosa non fa.</strong> Non verifica se hai i requisiti per l'anticipazione, non calcola la tassazione, non considera l'eventuale incentivo all'autoimprenditorialit&agrave; previsto da misure regionali. Importi lordi. &Egrave; una stima: fa fede solo l'INPS.</p>
+<strong>Cosa questo strumento non fa.</strong> Non verifica se hai i requisiti per l'anticipazione, non calcola la tassazione, non considera gli incentivi all'autoimprenditorialit&agrave; previsti da misure regionali. Gli importi sono lordi. &Egrave; una stima: fa fede solo l'INPS.</p>
 </footer>
 </main>
 <script>
-
 const euro = n => n.toLocaleString('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' \u20ac';
 const num = (n,d) => n.toLocaleString('it-IT',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});
 const leggi = (id,min,max) => { const e=document.getElementById(id); if(!e) return min;
@@ -99,27 +101,24 @@ function calcola(){
     tutte.push({mese:m,mens:mens,importo:par?mens*fraz:mens,par:par,rid:m>=decDa});
   }
   const residue=tutte.filter(x=>x.mese>perc);
-  const totale=residue.reduce((s,x)=>s+x.importo,0);
-  return {imp,durata,perc,residue,totale,decDa,nRate};
+  return {imp,durata,perc,residue,totale:residue.reduce((s,x)=>s+x.importo,0),decDa,nRate};
 }
 function mostra(r,scorri){
   document.getElementById('totale').textContent=euro(r.totale);
-  document.getElementById('notaTot').textContent='Lordi. L\'INPS trattiene l\'IRPEF su entrambe le rate.';
   document.getElementById('rata1').textContent=euro(r.totale*P.rata1);
   document.getElementById('rata2').textContent=euro(r.totale*P.rata2);
-  document.getElementById('residue').textContent=r.residue.length+(r.residue.length===1?' mensilit\u00e0':' mensilit\u00e0');
+  document.getElementById('residue').textContent=r.residue.length+' mensilit\u00e0';
   document.getElementById('confronto').textContent=euro(r.totale)+' in '+r.residue.length+' mesi';
   let h='';
-  if(r.residue.length===0) h+='<div class="avviso">Hai gi&agrave; percepito tutte le mensilit&agrave;: non resta nulla da anticipare.</div>';
-  if(r.perc===0) h+='<div class="avviso">La domanda di anticipazione va presentata entro 30 giorni dall\'inizio dell\'attivit&agrave; autonoma. Verifica i termini prima di contare su questa cifra.</div>';
-  h+='<div class="avviso">Se cessi l\'attivit&agrave; entro sei mesi, o se torni a lavorare come dipendente prima della scadenza del periodo riconosciuto, l\'anticipazione va restituita.</div>';
+  if(r.residue.length===0) h+='<div class="avviso">Hai gi\u00e0 percepito tutte le mensilit\u00e0 spettanti: non resta nulla da anticipare.</div>';
+  h+='<div class="avviso">Se cessi l\'attivit\u00e0 entro sei mesi, o se torni a lavorare come dipendente prima della scadenza del periodo riconosciuto, l\'anticipazione va restituita all\'INPS.</div>';
   document.getElementById('avvisi').innerHTML=h;
   const rif = r.residue.length ? r.residue[0].mens : 1;
   document.getElementById('tabella').innerHTML=r.residue.map(x=>{
-    const q = rif>0 ? x.importo/rif : 0;
-    const et = x.par ? 'mensilit\u00e0 ridotta' : (x.rid ? '\u2212'+num((1-x.mens/r.imp)*100,1)+'%' : 'pieno');
-    return '<tr class="'+(x.rid?'ridotto ':'')+(x.par?'parziale':'')+'"><td>'+x.mese+'</td><td>'+euro(x.importo)+
-      '</td><td><span class="pista"><span class="barra" style="width:'+(Math.min(q,1)*60).toFixed(1)+'%"></span><span class="barra-eti">'+et+'</span></span></td></tr>';
+    const q = rif>0 ? Math.min(x.importo/rif,1) : 0;
+    const et = x.par ? 'frazione' : (x.rid ? '\u2212'+num((1-x.mens/r.imp)*100,1)+'%' : 'pieno');
+    return '<tr class="'+(x.rid?'ridotto ':'')+(x.par?'parziale':'')+'"><td>'+x.mese+(x.par?' parz.':'')+'</td><td>'+euro(x.importo)+
+      '</td><td><div class="pista"><div class="barra" style="width:'+(q*58).toFixed(1)+'%"></div><span class="barra-eti">'+et+'</span></div></td></tr>';
   }).join('');
   const e=document.getElementById('esito'); e.hidden=false;
   if(scorri) e.scrollIntoView({behavior:'smooth',block:'start'});
@@ -128,6 +127,64 @@ let attivo=false;
 document.getElementById('modulo').addEventListener('submit',e=>{e.preventDefault();mostra(calcola(),!attivo);attivo=true;});
 document.getElementById('modulo').addEventListener('input',()=>{if(attivo)mostra(calcola(),false);});
 
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Quanto arriva con la NASpI anticipata",
+   "applicationCategory": "FinanceApplication",
+   "operatingSystem": "Qualsiasi browser",
+   "inLanguage": "it-IT",
+   "url": "https://calcolichiari.it/naspi-anticipata.html",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+   },
+   "dateModified": "2026-09-01"
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Cosa è cambiato nel 2026?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fino al 2025 l'anticipazione arrivava in un'unica soluzione. Dal 2026, con la legge 199/2025, viene erogata in due rate: il 70% all'accoglimento della domanda e il restante 30% alla fine. È l'unica modifica che quella legge ha introdotto sulla NASpI."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Entro quando va richiesta l'anticipazione?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La domanda va inoltrata all'INPS entro trenta giorni dall'inizio dell'attività autonoma o dall'apertura della partita IVA. È un termine breve e decadenziale: conviene verificarlo prima di contare sulla cifra."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Devo restituirla se le cose vanno male?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In alcuni casi sì. La restituzione è prevista se cessi l'attività entro i primi sei mesi, ed è prevista anche se torni a lavorare come dipendente prima della scadenza del periodo che ti era stato riconosciuto."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Conviene rispetto a incassarla mese per mese?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "L'importo totale è lo stesso, perché il décalage viene applicato comunque. Cambia il momento in cui arrivano i soldi: tutti insieme se servono come capitale iniziale, contro un flusso mensile più prevedibile. La differenza vera non è nella cifra ma nel vincolo, perché con l'anticipo ti impegni a un'attività autonoma e perdi la copertura se cambi idea."
+     }
+    }
+   ]
+  }
+ ]
+}
 </script>
 </body>
 </html>
