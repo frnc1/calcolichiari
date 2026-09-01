@@ -3,15 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Calcolo NASpI 2026 con contratti a termine e somministrazione</title>
-<meta name="description" content="Calcola la NASpI 2026 se hai avuto contratti brevi, in somministrazione o periodi già indennizzati. Importo mese per mese con décalage, durata in settimane e totale.">
-
-<!-- Anteprima quando il link viene condiviso su WhatsApp, Telegram, LinkedIn.
-     Sostituisci il dominio con il tuo quando pubblichi. -->
+<title>Calcolatori chiari per lavoro e stipendio | calcolichiari.it</title>
+<meta name="description" content="Calcolatori per NASpI, TFR e stipendio netto pensati per chi ha contratti brevi, a termine o in somministrazione. Fonti citate e aggiornate.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
-<meta property="og:title" content="Quanta NASpI ti spetta se hai lavorato a intermittenza">
-<meta property="og:description" content="Contratti brevi, somministrazione, periodi già indennizzati: il calcolo cambia. Importo mese per mese, durata e totale.">
+<meta property="og:title" content="Calcolatori chiari">
+<meta property="og:description" content="Calcolatori per NASpI, TFR e stipendio netto pensati per chi ha contratti brevi, a termine o in somministrazione. Fonti citate e aggiornate.">
 <meta property="og:url" content="https://calcolichiari.it/">
 <meta property="og:image" content="https://calcolichiari.it/social-card.png">
 <meta property="og:image:width" content="1200">
@@ -20,500 +17,41 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#164e46">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23164e46'/%3E%3Crect x='7' y='9' width='4' height='14' fill='%23f4f6f4'/%3E%3Crect x='14' y='11' width='4' height='12' fill='%23f4f6f4'/%3E%3Crect x='21' y='14' width='4' height='9' fill='%23a2573a'/%3E%3C/svg%3E">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --inchiostro:#1a2b33;
-    --carta:#f4f6f4;
-    --carta-alta:#fdfdfc;
-    --verde:#1f6f63;
-    --verde-scuro:#164e46;
-    --calo:#a2573a;
-    --tenue:#63767d;
-    --linea:#d9dfdb;
-  }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{
-    margin:0;
-    background:var(--carta);
-    color:var(--inchiostro);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    font-size:16px;
-    line-height:1.55;
-  }
-  .foglio{max-width:640px;margin:0 auto;padding:28px 20px 64px}
-  h1{
-    font-family:"Newsreader",Georgia,serif;
-    font-weight:500;
-    font-size:1.9rem;
-    line-height:1.15;
-    letter-spacing:-.01em;
-    margin:0 0 10px;
-  }
-  .sottotitolo{color:var(--tenue);margin:0 0 30px;max-width:46ch}
-  h2{
-    font-family:"Newsreader",Georgia,serif;
-    font-weight:500;
-    font-size:1.25rem;
-    margin:34px 0 12px;
-  }
-  fieldset{border:0;padding:0;margin:0 0 22px}
-  legend{
-    font-family:"Newsreader",Georgia,serif;
-    font-size:1.05rem;
-    padding:0;
-    margin-bottom:10px;
-  }
-  label{display:block;font-size:.92rem;margin-bottom:5px}
-  .aiuto{color:var(--tenue);font-size:.83rem;line-height:1.4;margin:5px 0 0}
-  input[type=number]{
-    width:100%;
-    padding:12px 13px;
-    font:inherit;
-    font-variant-numeric:tabular-nums;
-    background:var(--carta-alta);
-    border:1px solid var(--linea);
-    border-radius:3px;
-    color:inherit;
-  }
-  input[type=number]:focus-visible,
-  button:focus-visible,
-  .scelta input:focus-visible + span{
-    outline:2px solid var(--verde);
-    outline-offset:2px;
-  }
-  .campo{margin-bottom:18px}
-  .scelte{display:flex;gap:8px;margin-bottom:18px}
-  .scelta{flex:1}
-  .scelta input{position:absolute;opacity:0;width:1px;height:1px}
-  .scelta span{
-    display:block;
-    text-align:center;
-    padding:11px 8px;
-    font-size:.88rem;
-    background:var(--carta-alta);
-    border:1px solid var(--linea);
-    border-radius:3px;
-    cursor:pointer;
-  }
-  .scelta input:checked + span{
-    background:var(--verde);
-    border-color:var(--verde);
-    color:#fff;
-  }
-  button{
-    width:100%;
-    padding:15px;
-    font:inherit;
-    font-weight:600;
-    background:var(--inchiostro);
-    color:var(--carta-alta);
-    border:0;
-    border-radius:3px;
-    cursor:pointer;
-  }
-  #esito{margin-top:34px}
-  #esito[hidden]{display:none}
-  .cifra{
-    font-family:"Newsreader",Georgia,serif;
-    font-size:3.4rem;
-    line-height:1;
-    font-variant-numeric:tabular-nums;
-    color:var(--verde-scuro);
-    margin:2px 0 4px;
-  }
-  .cifra-nota{color:var(--tenue);font-size:.9rem;margin:0 0 26px}
-  .riga-dato{
-    display:flex;
-    justify-content:space-between;
-    gap:16px;
-    padding:11px 0;
-    border-top:1px solid var(--linea);
-    font-variant-numeric:tabular-nums;
-  }
-  .riga-dato:last-of-type{border-bottom:1px solid var(--linea)}
-  .riga-dato span:first-child{color:var(--tenue)}
-  table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.9rem}
-  th,td{padding:8px 4px;border-bottom:1px solid var(--linea);text-align:left}
-  th:nth-child(2),td:nth-child(2){text-align:right}
-  th{font-weight:600;color:var(--tenue);font-size:.8rem}
-  td:nth-child(3){width:42%;padding-left:14px}
-  .pista{
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-  .barra{
-    height:7px;
-    background:var(--verde);
-    border-radius:1px;
-    flex:0 0 auto;
-    min-width:2px;
-  }
-  tr.ridotto .barra{background:var(--calo)}
-  .barra-eti{font-size:.78rem;color:var(--tenue);white-space:nowrap}
-  tr.ridotto .barra-eti{color:var(--calo)}
-  tr.parziale td:first-child::after{
-    content:" (parziale)";
-    color:var(--tenue);
-    font-size:.78rem;
-  }
-  .avviso{
-    background:var(--carta-alta);
-    border-left:3px solid var(--calo);
-    padding:13px 15px;
-    margin:22px 0;
-    font-size:.9rem;
-  }
-  .nota{color:var(--tenue);font-size:.85rem;line-height:1.5}
-  .nota strong{color:var(--inchiostro);font-weight:600}
-  .domanda{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    font-size:.95rem;
-    font-weight:600;
-    margin:22px 0 6px;
-  }
-  .aggiornamento{
-    color:var(--tenue);
-    font-size:.82rem;
-    margin:0 0 18px;
-  }
-  footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--linea)}
-  @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
-</style>
+<link rel="stylesheet" href="/stile.css">
 </head>
 <body>
 <main class="foglio">
+<h1>Calcolatori chiari</h1>
+<p class="sottotitolo">Strumenti per capire quanto ti spetta quando la tua carriera &egrave; fatta di contratti brevi. Ogni calcolo dichiara la norma da cui prende i numeri.</p>
 
-  <h1>Quanta NASpI ti spetta se hai lavorato a intermittenza</h1>
-  <p class="sottotitolo">Contratti brevi, somministrazione, periodi di disoccupazione già indennizzati: il calcolo cambia. Qui li puoi mettere tutti.</p>
+<ul class="elenco-tool">
+  <li><a href="/naspi.html">
+    <span class="titolo-tool">Calcolo NASpI<span class="etichetta">contratti spezzettati</span></span>
+    <span class="desc-tool">Importo, durata in settimane e d&eacute;calage mese per mese. Gestisce contratti brevi, agenzie diverse e periodi gi&agrave; indennizzati.</span></a></li>
+  <li><a href="/naspi-anticipata.html">
+    <span class="titolo-tool">NASpI anticipata in unica soluzione<span class="etichetta">novit&agrave; 2026</span></span>
+    <span class="desc-tool">Quanto arriva se chiedi l'anticipo per aprire un'attivit&agrave;, ora diviso in due rate: 70% subito e 30% alla fine.</span></a></li>
+  <li><a href="/tfr.html">
+    <span class="titolo-tool">Calcolo TFR</span>
+    <span class="desc-tool">Quota annua, rivalutazione e totale maturato. Puoi sommare pi&ugrave; contratti a termine invece di un rapporto unico.</span></a></li>
+  <li><a href="/netto.html">
+    <span class="titolo-tool">Dal lordo al netto in busta paga</span>
+    <span class="desc-tool">Stima del netto mensile e annuo con le aliquote IRPEF 2026 e le detrazioni per lavoro dipendente.</span></a></li>
+</ul>
 
-  <form id="modulo">
+<h2>Perch&eacute; un altro sito di calcolatori</h2>
+<p class="nota">Perch&eacute; quelli esistenti dichiarano apertamente di non gestire le carriere fatte di contratti brevi: somministrazione, tempo determinato, periodi gi&agrave; indennizzati, rapporti che si sovrappongono. Sono proprio i casi in cui il calcolo cambia, e in cui una stima sbagliata costa soldi veri.</p>
+<p class="nota">Ogni strumento dichiara la norma da cui prende i numeri e la data in cui &egrave; stata verificata. Se un risultato non torna con quello che hai ricevuto, scrivilo: le segnalazioni servono a correggere.</p>
 
-    <fieldset>
-      <legend>La tua retribuzione</legend>
-      <div class="scelte">
-        <label class="scelta">
-          <input type="radio" name="modo" value="media" checked>
-          <span>So la media mensile</span>
-        </label>
-        <label class="scelta">
-          <input type="radio" name="modo" value="totale">
-          <span>Ho il totale dei 4 anni</span>
-        </label>
-      </div>
-
-      <div class="campo" id="campoMedia">
-        <label for="media">Retribuzione media mensile lorda (€)</label>
-        <input type="number" id="media" inputmode="decimal" step="0.01" min="0" max="99999" value="1400">
-        <p class="aiuto">Media dell'imponibile previdenziale degli ultimi 4 anni, non l'ultima busta paga.</p>
-      </div>
-
-      <div class="campo" id="campoTotale" hidden>
-        <label for="totale">Imponibile previdenziale totale dei 4 anni (€)</label>
-        <input type="number" id="totale" inputmode="decimal" step="0.01" min="0" max="9999999" value="42000">
-        <p class="aiuto">Lo trovi sommando le CU o nell'estratto conto contributivo INPS.</p>
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <legend>I tuoi contributi</legend>
-      <div class="campo">
-        <label for="settimane">Settimane di contributi negli ultimi 4 anni</label>
-        <input type="number" id="settimane" inputmode="numeric" step="1" min="0" max="208" value="130">
-        <p class="aiuto">Somma di tutti i contratti, anche brevi e di agenzie diverse. Il massimo teorico è 208.</p>
-      </div>
-      <div class="campo">
-        <label for="indennizzate">Settimane già coperte da una NASpI precedente</label>
-        <input type="number" id="indennizzate" inputmode="numeric" step="1" min="0" max="208" value="0">
-        <p class="aiuto">Se hai già percepito la NASpI in questi 4 anni, quelle settimane non contano una seconda volta per la durata. Lascia 0 se non è il tuo caso.</p>
-      </div>
-      <div class="campo">
-        <label for="eta">La tua età alla domanda</label>
-        <input type="number" id="eta" inputmode="numeric" step="1" min="16" max="80" value="40">
-        <p class="aiuto">Da 55 anni in su il taglio mensile dell'assegno inizia due mesi più tardi.</p>
-      </div>
-    </fieldset>
-
-    <button type="submit">Calcola</button>
-  </form>
-
-  <section id="esito" hidden aria-live="polite">
-    <h2>Il primo mese incassi</h2>
-    <p class="cifra" id="primoMese">—</p>
-    <p class="cifra-nota" id="notaNetto"></p>
-
-    <div class="riga-dato"><span>Durata</span><strong id="durata">—</strong></div>
-    <div class="riga-dato"><span>Ultimo mese pieno</span><strong id="ultimoPieno">—</strong></div>
-    <div class="riga-dato"><span>Importo dell'ultima mensilità</span><strong id="ultimoImporto">—</strong></div>
-    <div class="riga-dato"><span>Totale lordo su tutto il periodo</span><strong id="totaleLordo">—</strong></div>
-
-    <div id="blocoAvviso"></div>
-
-    <h2>Mese per mese</h2>
-    <table>
-      <thead>
-        <tr><th scope="col">Mese</th><th scope="col">Lordo</th><th scope="col">Rispetto al primo</th></tr>
-      </thead>
-      <tbody id="tabella"></tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Domande frequenti</h2>
-
-    <h3 class="domanda">Ho avuto tanti contratti brevi con agenzie diverse. Come conto le settimane?</h3>
-    <p class="nota">Si sommano tutte, senza distinzione di datore di lavoro. Contano le settimane in cui risulta versata contribuzione contro la disoccupazione nei quattro anni precedenti la cessazione, anche se sono spezzettate fra dieci contratti e tre agenzie diverse. Il dato preciso è nell'estratto conto contributivo sul portale INPS.</p>
-
-    <h3 class="domanda">Ho già preso la NASpI negli ultimi quattro anni. Posso riprenderla?</h3>
-    <p class="nota">Sì, se hai di nuovo tredici settimane di contributi nel quadriennio e la cessazione è involontaria. Cambia però la durata: le settimane già coperte da una NASpI precedente non si contano una seconda volta, quindi l'indennità nuova è più corta. È il campo che in questa pagina trovi sotto le settimane di contributi.</p>
-
-    <h3 class="domanda">Quanto dura la NASpI se ho lavorato pochi mesi?</h3>
-    <p class="nota">Metà delle settimane contribuite. Con tredici settimane di lavoro spettano sei settimane e mezzo di indennità, cioè circa un mese e mezzo: l'ultima mensilità arriva ridotta in proporzione, non sparisce. Il massimo assoluto è centoquattro settimane, ventiquattro mesi.</p>
-
-    <h3 class="domanda">L'importo che vedo è quello che mi arriva sul conto?</h3>
-    <p class="nota">No, è il lordo. L'INPS agisce da sostituto d'imposta e trattiene l'IRPEF, quindi sul conto arriva indicativamente un quinto o un quarto in meno. Non si applicano invece contributi previdenziali.</p>
-  </section>
-
-  <footer>
-    <h2>Come è calcolato</h2>
-    <p class="aggiornamento">Valori e norme verificati il <time datetime="2026-09-01">1 settembre 2026</time>.</p>
-    <p class="nota">
-      <strong>Importo.</strong> Il 75% della retribuzione media mensile fino a <span id="pSoglia"></span> € (soglia 2026). Sulla parte eccedente si aggiunge il 25%. Il tetto massimo è <span id="pMassimale"></span> € lordi al mese.<br><br>
-      <strong>Durata.</strong> L'INPS riconosce un numero di <em>settimane</em> pari alla metà delle settimane di contributi degli ultimi 4 anni, escluse quelle già indennizzate, fino a un massimo di 104 settimane. Le settimane non fanno sempre mesi interi: quando avanza una frazione, l'ultima mensilità è ridotta in proporzione, e qui la vedi come tale invece di essere buttata via.<br><br>
-      <strong>Décalage.</strong> Dal 6° mese l'assegno cala del 3% ogni mese, e la riduzione si accumula perché si applica sull'importo del mese prima. Chi ha compiuto 55 anni alla data della domanda inizia dall'8° mese.<br><br>
-      <strong>Fonti.</strong> Soglia e massimale dalla circolare INPS n. 4 del 28 gennaio 2026. Requisiti, durata e décalage dagli articoli 3, 4 e 5 del D.Lgs. 22/2015 nel testo vigente. La legge 199/2025 non ha toccato la NASpI ordinaria: ha cambiato solo l'anticipazione in unica soluzione, che dal 2026 si eroga in due rate.<br><br>
-      <strong>Cosa questo strumento non fa.</strong> Non verifica il requisito dei 30 giorni di lavoro effettivo negli ultimi 12 mesi, non gestisce il part time verticale, gli operai agricoli, la NASpI anticipata, né la regola sulle dimissioni volontarie da un tempo indeterminato nei 12 mesi precedenti. Gli importi sono lordi: l'INPS trattiene l'IRPEF come sostituto d'imposta. È una stima, non un provvedimento: fa fede solo l'INPS.
-    </p>
-  </footer>
-
+<footer>
+<p class="nota"><strong>Come sono calcolati.</strong> Ogni pagina cita gli articoli di legge e le circolari da cui prende i parametri. Gli importi sono al lordo salvo dove indicato. Sono stime a scopo informativo: fanno fede solo i provvedimenti degli enti competenti.</p>
+</footer>
 </main>
-
 <script>
-/* ------------------------------------------------------------------
-   PARAMETRI DELL'ANNO — l'unica parte da aggiornare ogni gennaio,
-   quando esce la circolare INPS con la rivalutazione ISTAT.
 
-   Valori verificati al 01/09/2026:
-   - soglia e massimale: Circolare INPS n. 4 del 28/01/2026, che cita
-     l'art. 4 co. 2 del D.Lgs. 22/2015.
-   - 13 settimane minime: art. 3 D.Lgs. 22/2015, non modificato dalla
-     L. 199/2025 (Bilancio 2026).
-   - durata: art. 5 D.Lgs. 22/2015, metà delle settimane contribuite,
-     massimo 104 settimane.
-   - décalage: art. 4 co. 3 D.Lgs. 22/2015, testo vigente. 3% dal 6°
-     mese, dall'8° per chi ha compiuto 55 anni alla data della domanda.
-   - la L. 199/2025 sulla NASpI ordinaria non ha cambiato né requisiti
-     né durata né décalage: è intervenuta solo sulla NASpI anticipata,
-     ora erogata in due rate (70% + 30%).
------------------------------------------------------------------- */
-const PARAMETRI = {
-  anno: 2026,
-  soglia: 1456.72,               // Circolare INPS 4/2026
-  massimale: 1584.70,            // Circolare INPS 4/2026
-  quotaBase: 0.75,
-  quotaEccedenza: 0.25,
-  decalage: 0.03,
-  decalageDalMese: 6,
-  decalageDalMeseOver55: 8,
-  etaSoglia: 55,
-  settimaneMinime: 13,
-  settimaneMassimeQuadriennio: 208,
-  durataMassimaSettimane: 104,
-  settimanePerMese: 4.33,
-  prelievoIrpefMin: 0.20,        // solo per la stima indicativa del netto
-  prelievoIrpefMax: 0.25
-};
-
-const euro = n => n.toLocaleString('it-IT', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' €';
-const numero = (n, d = 0) => n.toLocaleString('it-IT', {minimumFractionDigits:d, maximumFractionDigits:d});
-
-document.getElementById('pSoglia').textContent = numero(PARAMETRI.soglia, 2);
-document.getElementById('pMassimale').textContent = numero(PARAMETRI.massimale, 2);
-
-const campoMedia = document.getElementById('campoMedia');
-const campoTotale = document.getElementById('campoTotale');
-document.querySelectorAll('input[name=modo]').forEach(r => {
-  r.addEventListener('change', e => {
-    const usaMedia = e.target.value === 'media';
-    campoMedia.hidden = !usaMedia;
-    campoTotale.hidden = usaMedia;
-  });
-});
-
-const leggi = (id, min, max) => {
-  const v = parseFloat(document.getElementById(id).value);
-  if (!isFinite(v)) return min;
-  return Math.min(max, Math.max(min, v));
-};
-
-function importoIniziale(rmm){
-  const lordo = rmm <= PARAMETRI.soglia
-    ? rmm * PARAMETRI.quotaBase
-    : PARAMETRI.soglia * PARAMETRI.quotaBase + (rmm - PARAMETRI.soglia) * PARAMETRI.quotaEccedenza;
-  return Math.min(lordo, PARAMETRI.massimale);
-}
-
-function calcola(){
-  const modo = document.querySelector('input[name=modo]:checked').value;
-  const settimane = leggi('settimane', 0, PARAMETRI.settimaneMassimeQuadriennio);
-  const indennizzate = leggi('indennizzate', 0, PARAMETRI.settimaneMassimeQuadriennio);
-  const eta = leggi('eta', 16, 80);
-
-  const rmm = modo === 'media'
-    ? leggi('media', 0, 99999)
-    : (settimane > 0 ? leggi('totale', 0, 9999999) / settimane * PARAMETRI.settimanePerMese : 0);
-
-  // Durata: l'INPS ragiona in SETTIMANE, non in mesi interi.
-  // Metà delle settimane utili, con tetto a 104. Può essere frazionaria.
-  const settimaneUtili = Math.max(0, settimane - indennizzate);
-  const settimaneNaspi = Math.min(PARAMETRI.durataMassimaSettimane, settimaneUtili / 2);
-  const mesiDecimali = settimaneNaspi / PARAMETRI.settimanePerMese;
-  const mesiPieni = Math.floor(mesiDecimali);
-  const frazione = mesiDecimali - mesiPieni;
-  const haCoda = frazione > 0.01;
-  const numeroRate = mesiPieni + (haCoda ? 1 : 0);
-
-  const decalageDa = eta >= PARAMETRI.etaSoglia
-    ? PARAMETRI.decalageDalMeseOver55
-    : PARAMETRI.decalageDalMese;
-
-  const base = importoIniziale(rmm);
-  const rate = [];
-  let mensile = base;
-  for (let m = 1; m <= numeroRate; m++){
-    if (m >= decalageDa) mensile = mensile * (1 - PARAMETRI.decalage);
-    const parziale = haCoda && m === numeroRate;
-    rate.push({
-      mese: m,
-      mensile: mensile,
-      importo: parziale ? mensile * frazione : mensile,
-      parziale: parziale,
-      ridotto: m >= decalageDa
-    });
-  }
-
-  return {
-    rmm, settimane, settimaneUtili, settimaneNaspi, mesiDecimali,
-    base, rate, decalageDa, numeroRate,
-    totale: rate.reduce((s, r) => s + r.importo, 0)
-  };
-}
-
-function testoDurata(r){
-  if (r.settimaneNaspi <= 0) return '—';
-  const sett = numero(r.settimaneNaspi, r.settimaneNaspi % 1 ? 1 : 0);
-  const mesi = numero(r.mesiDecimali, 1);
-  return sett + ' settimane, circa ' + mesi + ' mesi';
-}
-
-function mostra(r, scorri){
-  const esito = document.getElementById('esito');
-  const avvisi = document.getElementById('blocoAvviso');
-  let html = '';
-
-  if (r.settimane < PARAMETRI.settimaneMinime){
-    html += '<div class="avviso">Con ' + numero(r.settimane) + ' settimane di contributi non raggiungi il requisito minimo di ' +
-            PARAMETRI.settimaneMinime + ' settimane nei 4 anni. Senza quello la NASpI non spetta, qualunque sia l\'importo calcolato qui sopra.</div>';
-  } else if (r.settimaneNaspi <= 0){
-    html += '<div class="avviso">Le settimane residue sono zero. Controlla il dato sulle settimane già indennizzate.</div>';
-  }
-
-  if (r.base >= PARAMETRI.massimale - 0.01){
-    html += '<div class="avviso">Il calcolo ha toccato il tetto massimo di ' + euro(PARAMETRI.massimale) +
-            ': sopra questa cifra l\'assegno non sale, per quanto alta sia la retribuzione.</div>';
-  }
-  avvisi.innerHTML = html;
-
-  document.getElementById('primoMese').textContent = euro(r.base);
-  document.getElementById('notaNetto').textContent =
-    'Lordi. In busta ne arrivano indicativamente tra ' + euro(r.base * (1 - PARAMETRI.prelievoIrpefMax)) +
-    ' e ' + euro(r.base * (1 - PARAMETRI.prelievoIrpefMin)) + ' dopo l\'IRPEF.';
-
-  document.getElementById('durata').textContent = testoDurata(r);
-
-  const ultimoPieno = Math.min(r.decalageDa - 1, r.numeroRate);
-  document.getElementById('ultimoPieno').textContent = ultimoPieno > 0 ? ('mese ' + ultimoPieno) : '—';
-  document.getElementById('ultimoImporto').textContent = r.rate.length ? euro(r.rate[r.rate.length - 1].importo) : '—';
-  document.getElementById('totaleLordo').textContent = euro(r.totale);
-
-  document.getElementById('tabella').innerHTML = r.rate.map(function(x){
-    const quota = r.base > 0 ? x.importo / r.base : 0;
-    const etichetta = x.parziale
-      ? 'mensilità ridotta'
-      : (x.ridotto ? '−' + numero((1 - x.mensile / r.base) * 100, 1) + '%' : 'pieno');
-    return '<tr class="' + (x.ridotto ? 'ridotto ' : '') + (x.parziale ? 'parziale' : '') + '">' +
-             '<td>' + x.mese + '</td>' +
-             '<td>' + euro(x.importo) + '</td>' +
-             '<td><span class="pista"><span class="barra" style="width:' + (quota * 60).toFixed(1) + '%"></span>' +
-             '<span class="barra-eti">' + etichetta + '</span></span></td>' +
-           '</tr>';
-  }).join('');
-
-  esito.hidden = false;
-  if (scorri) esito.scrollIntoView({behavior:'smooth', block:'start'});
-}
-
-// Primo calcolo al click, poi aggiornamento dal vivo a ogni modifica.
-// Lo scroll avviene solo la prima volta, altrimenti la pagina salterebbe
-// a ogni tasto premuto.
-let attivo = false;
-
-document.getElementById('modulo').addEventListener('submit', function(e){
-  e.preventDefault();
-  mostra(calcola(), !attivo);
-  attivo = true;
-});
-
-document.getElementById('modulo').addEventListener('input', function(){
-  if (attivo) mostra(calcola(), false);
-});
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebApplication",
-      "name": "Calcolo NASpI 2026 per contratti a termine e somministrazione",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Qualsiasi browser",
-      "inLanguage": "it-IT",
-      "url": "https://ESEMPIO.it/",
-      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
-      "dateModified": "2026-09-01"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Ho avuto tanti contratti brevi con agenzie diverse. Come conto le settimane?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Si sommano tutte, senza distinzione di datore di lavoro. Contano le settimane in cui risulta versata contribuzione contro la disoccupazione nei quattro anni precedenti la cessazione, anche se sono spezzettate fra più contratti e più agenzie. Il dato preciso è nell'estratto conto contributivo sul portale INPS."}
-        },
-        {
-          "@type": "Question",
-          "name": "Ho già preso la NASpI negli ultimi quattro anni. Posso riprenderla?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Sì, se hai di nuovo tredici settimane di contributi nel quadriennio e la cessazione è involontaria. Cambia però la durata: le settimane già coperte da una NASpI precedente non si contano una seconda volta, quindi l'indennità nuova è più corta."}
-        },
-        {
-          "@type": "Question",
-          "name": "Quanto dura la NASpI se ho lavorato pochi mesi?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Metà delle settimane contribuite. Con tredici settimane di lavoro spettano sei settimane e mezzo di indennità, circa un mese e mezzo: l'ultima mensilità arriva ridotta in proporzione. Il massimo assoluto è centoquattro settimane, ventiquattro mesi."}
-        },
-        {
-          "@type": "Question",
-          "name": "L'importo della NASpI che vedo è quello che mi arriva sul conto?",
-          "acceptedAnswer": {"@type": "Answer", "text": "No, è il lordo. L'INPS agisce da sostituto d'imposta e trattiene l'IRPEF, quindi sul conto arriva indicativamente un quinto o un quarto in meno. Non si applicano invece contributi previdenziali."}
-        }
-      ]
-    }
-  ]
-}
 </script>
 </body>
 </html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calcolo stipendio netto 2026 dal lordo | aliquote IRPEF aggiornate</title>
+<meta name="description" content="Dal lordo al netto con le aliquote IRPEF 2026 e le detrazioni art. 13 TUIR. Gestisce la detrazione minima maggiorata dei contratti a termine.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Dal lordo al netto in busta paga">
+<meta property="og:description" content="Dal lordo al netto con le aliquote IRPEF 2026 e le detrazioni art. 13 TUIR. Gestisce la detrazione minima maggiorata dei contratti a termine.">
+<meta property="og:url" content="https://calcolichiari.it/netto.html">
+<meta property="og:image" content="https://calcolichiari.it/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="canonical" href="https://calcolichiari.it/netto.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#164e46">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23164e46'/%3E%3Crect x='7' y='9' width='4' height='14' fill='%23f4f6f4'/%3E%3Crect x='14' y='11' width='4' height='12' fill='%23f4f6f4'/%3E%3Crect x='21' y='14' width='4' height='9' fill='%23a2573a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stile.css">
+</head>
+<body>
+<main class="foglio">
+<a class="torna" href="/">← tutti i calcolatori</a>
+<h1>Dal lordo al netto in busta paga</h1>
+<p class="sottotitolo">Stima con le aliquote IRPEF 2026 e le detrazioni per lavoro dipendente. Il risultato &egrave; una forbice, perch&eacute; le addizionali cambiano da comune a comune.</p>
+
+<form id="modulo">
+<fieldset><legend>Il tuo contratto</legend>
+<div class="campo"><label for="ral">Retribuzione annua lorda &mdash; RAL (&euro;)</label>
+<input type="number" id="ral" inputmode="decimal" step="100" min="0" max="500000" value="25000">
+<p class="aiuto">Il totale lordo dell'anno, comprese tredicesima e quattordicesima se le hai. &Egrave; scritto nel contratto o nella CU.</p></div>
+<div class="campo"><label for="mensilita">Mensilit&agrave;</label>
+<select id="mensilita"><option value="12">12</option><option value="13" selected>13</option><option value="14">14</option></select></div>
+<div class="campo"><label>Tipo di rapporto</label>
+<div class="scelte">
+<label class="scelta"><input type="radio" name="tipo" value="ind" checked><span>Indeterminato</span></label>
+<label class="scelta"><input type="radio" name="tipo" value="det"><span>A termine</span></label>
+</div>
+<p class="aiuto">Sui contratti a termine la detrazione minima garantita &egrave; 1.380 &euro; invece di 690 &euro;: sui redditi bassi cambia il netto.</p></div>
+</fieldset>
+<button type="submit">Calcola</button>
+</form>
+
+<section id="esito" class="esito" hidden aria-live="polite">
+<h2>Netto in busta, ogni mese</h2>
+<p class="cifra forbice" id="mensile">&mdash;</p>
+<p class="cifra-nota" id="notaMensile"></p>
+<div class="riga-dato"><span>Netto annuo</span><strong id="annuo">&mdash;</strong></div>
+<div class="riga-dato"><span>Contributi INPS a tuo carico</span><strong id="contributi">&mdash;</strong></div>
+<div class="riga-dato"><span>Imponibile fiscale</span><strong id="imponibile">&mdash;</strong></div>
+<div class="riga-dato"><span>IRPEF lorda</span><strong id="irpefLorda">&mdash;</strong></div>
+<div class="riga-dato"><span>Detrazione lavoro dipendente</span><strong id="detrazione">&mdash;</strong></div>
+<div class="riga-dato"><span>IRPEF effettiva</span><strong id="irpefNetta">&mdash;</strong></div>
+<div class="riga-dato"><span>Integrazioni in busta</span><strong id="bonus">&mdash;</strong></div>
+<div id="avvisi"></div>
+</section>
+
+<section>
+<h2>Domande frequenti</h2>
+<h3 class="domanda">Perch&eacute; il risultato &egrave; una forbice e non una cifra sola?</h3>
+<p class="nota">Per le addizionali regionali e comunali. Le regioni applicano aliquote diverse fra loro e i comuni italiani sono quasi ottomila, ciascuno con la propria: la differenza fra il comune pi&ugrave; leggero e il pi&ugrave; pesante vale diverse decine di euro al mese. Chi ti d&agrave; una cifra secca senza chiederti dove vivi sta indovinando.</p>
+<h3 class="domanda">Il netto cambia se ho un contratto a termine?</h3>
+<p class="nota">S&igrave;, sui redditi bassi. La detrazione per lavoro dipendente ha un minimo garantito di 690 &euro;, che per i rapporti a tempo determinato sale a 1.380 &euro;. &Egrave; una regola dell'art. 13 TUIR che quasi nessun calcolatore applica.</p>
+<h3 class="domanda">Perch&eacute; il mio cedolino dice una cifra diversa?</h3>
+<p class="nota">Le cause pi&ugrave; comuni: familiari a carico, che qui non sono considerati; trattenute sindacali o cessioni del quinto; fringe benefit e buoni pasto; conguaglio di fine anno se hai iniziato a lavorare a met&agrave; anno o hai cambiato datore.</p>
+</section>
+
+<footer>
+<h2>Come &egrave; calcolato</h2>
+<p class="aggiornamento">Valori e norme verificati il <time datetime="2026-09-01">1 settembre 2026</time>.</p>
+<p class="nota">
+<strong>Contributi.</strong> 9,19% della retribuzione lorda, aliquota ordinaria a carico del lavoratore dipendente del settore privato.<br><br>
+<strong>IRPEF 2026.</strong> Tre scaglioni: 23% fino a 28.000 &euro;, 33% da 28.001 a 50.000 &euro;, 43% oltre. Il secondo scaglione &egrave; sceso dal 35% al 33% con la legge 199/2025.<br><br>
+<strong>Detrazione lavoro dipendente.</strong> Art. 13 comma 1 TUIR: 1.955 &euro; fino a 15.000 &euro; di reddito; poi 1.910 + 1.190 &times; (28.000 &minus; reddito) / 13.000 fino a 28.000 &euro;; poi 1.910 &times; (50.000 &minus; reddito) / 22.000 fino a 50.000 &euro;, dove si azzera. Minimo garantito 690 &euro;, elevato a 1.380 &euro; per i contratti a termine. Il comma 1.1 aggiunge 65 &euro; fra 25.000 e 35.000 &euro;.<br><br>
+<strong>Integrazioni.</strong> Trattamento integrativo fino a 1.200 &euro; sotto i 15.000 &euro; con verifica di capienza; somma esente sui redditi fino a 20.000 &euro;; ulteriore detrazione decrescente fra 20.000 e 40.000 &euro;.<br><br>
+<strong>Addizionali.</strong> Stimate in una forbice tra 1,2% e 3,3% dell'imponibile, che copre la quasi totalit&agrave; delle combinazioni regione-comune.<br><br>
+<strong>Cosa non fa.</strong> Non considera familiari a carico, oneri detraibili, fringe benefit, premi di risultato detassati, cessioni del quinto, contratti part time con orario variabile, apprendistato (aliquota contributiva 5,84%) e settore pubblico. &Egrave; una stima: fa fede il cedolino.</p>
+</footer>
+</main>
+<script>
+
+const euro = n => n.toLocaleString('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' \u20ac';
+const num = (n,d) => n.toLocaleString('it-IT',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});
+const leggi = (id,min,max) => { const e=document.getElementById(id); if(!e) return min;
+  const v=parseFloat(e.value); if(!isFinite(v)) return min; return Math.min(max,Math.max(min,v)); };
+
+const P={contrib:.0919,sc1:28000,sc2:50000,a1:.23,a2:.33,a3:.43,
+det1:1955,detMin:690,detMinDet:1380,detB1:1910,detB2:1190,detB3:13000,detC:1910,detC2:22000,
+magg:65,maggDa:25000,maggA:35000,ti:1200,tiSoglia:15000,tiRid:75,
+esente1:.071,esente2:.053,esente3:.048,ulterior:1000,addMin:.012,addMax:.033};
+
+function detrazione(R,termine){
+  let d;
+  if(R<=15000) d=P.det1;
+  else if(R<=28000) d=P.detB1+P.detB2*(28000-R)/P.detB3;
+  else if(R<=50000) d=P.detC*(50000-R)/P.detC2;
+  else d=0;
+  if(R>P.maggDa && R<=P.maggA) d+=P.magg;
+  if(R<=50000) d=Math.max(d, termine?P.detMinDet:P.detMin);
+  return d;
+}
+function irpefLorda(R){
+  if(R<=P.sc1) return R*P.a1;
+  if(R<=P.sc2) return P.sc1*P.a1+(R-P.sc1)*P.a2;
+  return P.sc1*P.a1+(P.sc2-P.sc1)*P.a2+(R-P.sc2)*P.a3;
+}
+function calcola(){
+  const ral=leggi('ral',0,500000);
+  const mens=parseInt(document.getElementById('mensilita').value,10);
+  const termine=document.querySelector('input[name=tipo]:checked').value==='det';
+  const contrib=ral*P.contrib;
+  const imp=ral-contrib;
+  const lorda=irpefLorda(imp);
+  const det=detrazione(imp,termine);
+  const netta=Math.max(0,lorda-det);
+  let ti=0;
+  if(imp<=P.tiSoglia && lorda>(det-P.tiRid)) ti=P.ti;
+  let esente=0;
+  if(imp<=8500) esente=ral*P.esente1;
+  else if(imp<=15000) esente=ral*P.esente2;
+  else if(imp<=20000) esente=ral*P.esente3;
+  let ult=0;
+  if(imp>20000 && imp<=32000) ult=P.ulterior;
+  else if(imp>32000 && imp<=40000) ult=P.ulterior*(40000-imp)/8000;
+  const integrazioni=ti+esente+ult;
+  const addMin=imp*P.addMin, addMax=imp*P.addMax;
+  const nettoAlto=imp-netta-addMin+integrazioni;
+  const nettoBasso=imp-netta-addMax+integrazioni;
+  return {ral,mens,contrib,imp,lorda,det,netta,integrazioni,ti,esente,ult,nettoBasso,nettoAlto,termine};
+}
+function mostra(r,scorri){
+  document.getElementById('mensile').textContent=euro(r.nettoBasso/r.mens)+' \u2013 '+euro(r.nettoAlto/r.mens);
+  document.getElementById('notaMensile').textContent='Su '+r.mens+' mensilit\u00e0. La forbice dipende da regione e comune di residenza.';
+  document.getElementById('annuo').textContent=euro(r.nettoBasso)+' \u2013 '+euro(r.nettoAlto);
+  document.getElementById('contributi').textContent=euro(r.contrib);
+  document.getElementById('imponibile').textContent=euro(r.imp);
+  document.getElementById('irpefLorda').textContent=euro(r.lorda);
+  document.getElementById('detrazione').textContent=euro(r.det);
+  document.getElementById('irpefNetta').textContent=euro(r.netta);
+  document.getElementById('bonus').textContent = r.integrazioni>0 ? euro(r.integrazioni) : 'nessuna';
+  let h='';
+  if(r.netta<=0) h+='<div class="avviso">A questo livello di reddito le detrazioni assorbono tutta l\'IRPEF: non versi imposta sul reddito.</div>';
+  if(r.termine && r.imp<=50000) h+='<div class="avviso">Contratto a termine: applicata la detrazione minima garantita di '+euro(P.detMinDet)+' prevista dall\'art. 13 comma 1 lett. a) TUIR.</div>';
+  if(r.imp>50000) h+='<div class="avviso">Sopra i 50.000 &euro; di reddito la detrazione per lavoro dipendente si azzera del tutto.</div>';
+  document.getElementById('avvisi').innerHTML=h;
+  const e=document.getElementById('esito'); e.hidden=false;
+  if(scorri) e.scrollIntoView({behavior:'smooth',block:'start'});
+}
+let attivo=false;
+document.getElementById('modulo').addEventListener('submit',e=>{e.preventDefault();mostra(calcola(),!attivo);attivo=true;});
+document.getElementById('modulo').addEventListener('input',()=>{if(attivo)mostra(calcola(),false);});
+document.getElementById('modulo').addEventListener('change',()=>{if(attivo)mostra(calcola(),false);});
+
+</script>
+</body>
+</html>

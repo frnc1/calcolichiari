@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calcolo TFR 2026 anche con più contratti a termine</title>
+<meta name="description" content="Calcola il TFR maturato con la formula dell'art. 2120 c.c. In modalità multipla somma più contratti a termine tenendoli separati, come fa davvero la legge.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Quanto TFR hai maturato">
+<meta property="og:description" content="Calcola il TFR maturato con la formula dell'art. 2120 c.c. In modalità multipla somma più contratti a termine tenendoli separati, come fa davvero la legge.">
+<meta property="og:url" content="https://calcolichiari.it/tfr.html">
+<meta property="og:image" content="https://calcolichiari.it/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="canonical" href="https://calcolichiari.it/tfr.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#164e46">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23164e46'/%3E%3Crect x='7' y='9' width='4' height='14' fill='%23f4f6f4'/%3E%3Crect x='14' y='11' width='4' height='12' fill='%23f4f6f4'/%3E%3Crect x='21' y='14' width='4' height='9' fill='%23a2573a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stile.css">
+</head>
+<body>
+<main class="foglio">
+<a class="torna" href="/">← tutti i calcolatori</a>
+<h1>Quanto TFR hai maturato</h1>
+<p class="sottotitolo">Quota annua, rivalutazione e totale. Se hai avuto pi&ugrave; contratti a termine puoi sommarli tenendoli separati, come avviene davvero.</p>
+
+<form id="modulo">
+<div class="scelte">
+<label class="scelta"><input type="radio" name="modo" value="uno" checked><span>Un solo rapporto</span></label>
+<label class="scelta"><input type="radio" name="modo" value="piu"><span>Pi&ugrave; contratti</span></label>
+</div>
+
+<fieldset id="bloccoUno"><legend>Il rapporto di lavoro</legend>
+<div class="campo"><label for="ral">Retribuzione annua lorda (&euro;)</label>
+<input type="number" id="ral" inputmode="decimal" step="100" min="0" max="500000" value="25000"></div>
+<div class="campo"><label for="anni">Anni di servizio</label>
+<input type="number" id="anni" inputmode="decimal" step="0.5" min="0" max="45" value="5"></div>
+</fieldset>
+
+<fieldset id="bloccoPiu" hidden><legend>I tuoi contratti</legend>
+<p class="aiuto" style="margin-bottom:14px">Un rigo per contratto. Metti la retribuzione lorda complessiva di quel contratto, non quella annua: il TFR matura su quanto hai effettivamente percepito.</p>
+<div id="contratti" class="contratti"></div>
+<button type="button" class="secondario" id="aggiungi">+ aggiungi un contratto</button>
+</fieldset>
+
+<fieldset><legend>Rivalutazione</legend>
+<div class="campo"><label for="riv">Tasso annuo di rivalutazione (%)</label>
+<input type="number" id="riv" inputmode="decimal" step="0.1" min="0" max="15" value="3">
+<p class="aiuto">La legge prevede 1,5% fisso pi&ugrave; il 75% dell'aumento ISTAT dell'anno. Con inflazione al 2% si ottiene circa il 3%. Cambialo se conosci il dato dell'anno che ti interessa.</p></div>
+</fieldset>
+<button type="submit">Calcola</button>
+</form>
+
+<section id="esito" class="esito" hidden aria-live="polite">
+<h2>TFR maturato, al lordo</h2>
+<p class="cifra" id="totale">&mdash;</p>
+<p class="cifra-nota" id="notaTot"></p>
+<div class="riga-dato"><span>Quote accantonate</span><strong id="quote">&mdash;</strong></div>
+<div class="riga-dato"><span>Rivalutazione</span><strong id="rivalutazione">&mdash;</strong></div>
+<div class="riga-dato"><span>Contributo INPS trattenuto (0,50%)</span><strong id="contributo">&mdash;</strong></div>
+<div id="avvisi"></div>
+<h2 id="titoloTab" hidden>Anno per anno</h2>
+<table id="tabellaWrap" hidden><thead><tr><th scope="col">Anno</th><th scope="col">Fondo a fine anno</th><th scope="col">Di cui rivalutazione</th></tr></thead>
+<tbody id="tabella"></tbody></table>
+</section>
+
+<section>
+<h2>Domande frequenti</h2>
+<h3 class="domanda">Ho avuto sei contratti a termine con la stessa agenzia. Il TFR &egrave; uno solo?</h3>
+<p class="nota">No, ogni contratto matura il proprio TFR e viene liquidato alla fine di quel rapporto, non accumulato fino all'ultimo. &Egrave; il motivo per cui i calcolatori pensati sul rapporto unico danno cifre sbagliate a chi lavora in somministrazione: sommano anni che in realt&agrave; sono rapporti separati, e applicano una rivalutazione che su un contratto di tre mesi &egrave; quasi nulla.</p>
+<h3 class="domanda">Perch&eacute; si divide per 13,5?</h3>
+<p class="nota">Lo dice l'art. 2120 del Codice Civile: la quota annua &egrave; la retribuzione divisa per 13,5. Da quella quota si toglie lo 0,50% della retribuzione imponibile previdenziale, che va all'INPS come contributo al fondo di garanzia.</p>
+<h3 class="domanda">Quanto mi resta al netto delle tasse?</h3>
+<p class="nota">Il TFR &egrave; soggetto a tassazione separata, con un'aliquota calcolata sulla media dei redditi degli ultimi cinque anni. In pratica si aggira spesso fra il 15% e il 30%, ma dipende dalla tua storia reddituale e non si pu&ograve; stimare senza quei dati. Le cifre qui sono al lordo.</p>
+</section>
+
+<footer>
+<h2>Come &egrave; calcolato</h2>
+<p class="aggiornamento">Norme verificate il <time datetime="2026-09-01">1 settembre 2026</time>.</p>
+<p class="nota">
+<strong>Quota annua.</strong> Art. 2120 del Codice Civile: retribuzione utile divisa per 13,5. Da questa si detrae lo 0,50% della retribuzione imponibile previdenziale, destinato al fondo di garanzia INPS.<br><br>
+<strong>Rivalutazione.</strong> Il fondo accantonato al 31 dicembre dell'anno precedente si rivaluta di 1,5% fisso pi&ugrave; il 75% dell'aumento dell'indice ISTAT dei prezzi al consumo. Poich&eacute; l'indice cambia ogni anno, qui il tasso &egrave; un parametro che imposti tu.<br><br>
+<strong>Pi&ugrave; contratti.</strong> Ogni rapporto matura e liquida il proprio TFR in modo autonomo. La modalit&agrave; a pi&ugrave; contratti li tiene separati e li somma, invece di trattarli come un unico rapporto lungo.<br><br>
+<strong>Cosa non fa.</strong> Non calcola la tassazione separata, che dipende dai redditi dei cinque anni precedenti. Non gestisce il TFR destinato a fondo pensione, le anticipazioni gi&agrave; richieste, n&eacute; il Fondo di Tesoreria INPS per le aziende sopra i 50 dipendenti. Importi al lordo.</p>
+</footer>
+</main>
+<script>
+
+const euro = n => n.toLocaleString('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' \u20ac';
+const num = (n,d) => n.toLocaleString('it-IT',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});
+const leggi = (id,min,max) => { const e=document.getElementById(id); if(!e) return min;
+  const v=parseFloat(e.value); if(!isFinite(v)) return min; return Math.min(max,Math.max(min,v)); };
+
+const P={divisore:13.5,contributo:.005};
+const bU=document.getElementById('bloccoUno'), bP=document.getElementById('bloccoPiu');
+document.querySelectorAll('input[name=modo]').forEach(r=>r.addEventListener('change',e=>{
+  const uno=e.target.value==='uno'; bU.hidden=!uno; bP.hidden=uno; if(attivo) mostra(calcola(),false); }));
+
+let nc=0;
+function rigaContratto(val){
+  nc++;
+  const d=document.createElement('div'); d.className='contratto';
+  d.innerHTML='<div><label for="c'+nc+'">Retribuzione lorda del contratto (\u20ac)</label>'+
+    '<input type="number" class="importoContratto" id="c'+nc+'" inputmode="decimal" step="100" min="0" max="500000" value="'+(val||6000)+'"></div>'+
+    '<button type="button" class="togli" aria-label="togli questo contratto">\u00d7</button>';
+  d.querySelector('.togli').addEventListener('click',()=>{ d.remove(); if(attivo) mostra(calcola(),false); });
+  document.getElementById('contratti').appendChild(d);
+}
+rigaContratto(6000); rigaContratto(4500);
+document.getElementById('aggiungi').addEventListener('click',()=>{ rigaContratto(); if(attivo) mostra(calcola(),false); });
+
+function calcola(){
+  const modo=document.querySelector('input[name=modo]:checked').value;
+  const tasso=leggi('riv',0,15)/100;
+  if(modo==='uno'){
+    const ral=leggi('ral',0,500000), anni=leggi('anni',0,45);
+    const quotaLorda=ral/P.divisore, contributo=ral*P.contributo;
+    const quota=quotaLorda-contributo;
+    const interi=Math.floor(anni), resto=anni-interi;
+    let fondo=0, quoteTot=0, rivTot=0; const righe=[];
+    for(let a=1;a<=interi;a++){
+      const riv=fondo*tasso; fondo=fondo+riv+quota;
+      quoteTot+=quota; rivTot+=riv;
+      righe.push({anno:a,fondo:fondo,riv:riv});
+    }
+    if(resto>0.01){
+      const riv=fondo*tasso*resto, q=quota*resto;
+      fondo=fondo+riv+q; quoteTot+=q; rivTot+=riv;
+      righe.push({anno:interi+1,fondo:fondo,riv:riv,parziale:true});
+    }
+    return {modo:modo,totale:fondo,quote:quoteTot,riv:rivTot,contributo:contributo*anni,righe:righe,anni:anni};
+  }
+  const imp=[...document.querySelectorAll('.importoContratto')].map(i=>{
+    const v=parseFloat(i.value); return isFinite(v)?Math.max(0,Math.min(500000,v)):0; });
+  let quoteTot=0, contribTot=0;
+  imp.forEach(v=>{ quoteTot += v/P.divisore - v*P.contributo; contribTot += v*P.contributo; });
+  return {modo:modo,totale:quoteTot,quote:quoteTot,riv:0,contributo:contribTot,righe:[],n:imp.length,
+          lordo:imp.reduce((a,b)=>a+b,0)};
+}
+function mostra(r,scorri){
+  document.getElementById('totale').textContent=euro(r.totale);
+  document.getElementById('notaTot').textContent = r.modo==='uno'
+    ? 'Al lordo della tassazione separata, dopo '+num(r.anni,r.anni%1?1:0)+' anni.'
+    : 'Al lordo della tassazione separata, sommando '+r.n+' contratti.';
+  document.getElementById('quote').textContent=euro(r.quote);
+  document.getElementById('rivalutazione').textContent = r.riv>0 ? euro(r.riv) : 'non applicata';
+  document.getElementById('contributo').textContent=euro(r.contributo);
+  let h='';
+  if(r.modo==='piu') h+='<div class="avviso">Sui contratti brevi la rivalutazione &egrave; trascurabile e non viene applicata: si rivaluta il fondo accantonato al 31 dicembre, e un rapporto che dura pochi mesi non attraversa un fine anno con un fondo significativo.</div>';
+  if(r.modo==='uno' && r.anni>=10) h+='<div class="avviso">Su periodi lunghi il risultato dipende molto dal tasso di rivalutazione che hai impostato: l\'inflazione reale di ogni anno cambia il totale in modo sensibile.</div>';
+  document.getElementById('avvisi').innerHTML=h;
+  const tab=document.getElementById('tabellaWrap'), tit=document.getElementById('titoloTab');
+  if(r.righe.length){
+    tab.hidden=false; tit.hidden=false;
+    document.getElementById('tabella').innerHTML=r.righe.map(x=>
+      '<tr'+(x.parziale?' class="parziale"':'')+'><td>'+x.anno+'</td><td>'+euro(x.fondo)+'</td><td>'+euro(x.riv)+'</td></tr>').join('');
+  } else { tab.hidden=true; tit.hidden=true; }
+  const e=document.getElementById('esito'); e.hidden=false;
+  if(scorri) e.scrollIntoView({behavior:'smooth',block:'start'});
+}
+let attivo=false;
+document.getElementById('modulo').addEventListener('submit',e=>{e.preventDefault();mostra(calcola(),!attivo);attivo=true;});
+document.getElementById('modulo').addEventListener('input',()=>{if(attivo)mostra(calcola(),false);});
+
+</script>
+</body>
+</html>

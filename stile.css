@@ -1,0 +1,79 @@
+:root{
+  --inchiostro:#1a2b33;
+  --carta:#f4f6f4;
+  --carta-alta:#fdfdfc;
+  --verde:#1f6f63;
+  --verde-scuro:#164e46;
+  --calo:#a2573a;
+  --tenue:#63767d;
+  --linea:#d9dfdb;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--carta);color:var(--inchiostro);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px;line-height:1.55;
+}
+.foglio{max-width:640px;margin:0 auto;padding:20px 20px 64px}
+.torna{display:inline-block;color:var(--tenue);text-decoration:none;font-size:.88rem;margin-bottom:18px}
+.torna:hover{color:var(--verde-scuro)}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:500;font-size:1.9rem;line-height:1.15;letter-spacing:-.01em;margin:0 0 10px}
+.sottotitolo{color:var(--tenue);margin:0 0 30px;max-width:46ch}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:500;font-size:1.25rem;margin:34px 0 12px}
+fieldset{border:0;padding:0;margin:0 0 22px}
+legend{font-family:"Newsreader",Georgia,serif;font-size:1.05rem;padding:0;margin-bottom:10px}
+label{display:block;font-size:.92rem;margin-bottom:5px}
+.aiuto{color:var(--tenue);font-size:.83rem;line-height:1.4;margin:5px 0 0}
+input[type=number],select{
+  width:100%;padding:12px 13px;font:inherit;font-variant-numeric:tabular-nums;
+  background:var(--carta-alta);border:1px solid var(--linea);border-radius:3px;color:inherit;
+}
+input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,.scelta input:focus-visible + span{outline:2px solid var(--verde);outline-offset:2px}
+.campo{margin-bottom:18px}
+.scelte{display:flex;gap:8px;margin-bottom:18px}
+.scelta{flex:1}
+.scelta input{position:absolute;opacity:0;width:1px;height:1px}
+.scelta span{display:block;text-align:center;padding:11px 8px;font-size:.88rem;background:var(--carta-alta);border:1px solid var(--linea);border-radius:3px;cursor:pointer}
+.scelta input:checked + span{background:var(--verde);border-color:var(--verde);color:#fff}
+button{width:100%;padding:15px;font:inherit;font-weight:600;background:var(--inchiostro);color:var(--carta-alta);border:0;border-radius:3px;cursor:pointer}
+button.secondario{background:transparent;color:var(--verde-scuro);border:1px solid var(--linea);font-weight:500;padding:11px;margin-top:10px}
+.esito{margin-top:34px}
+.esito[hidden]{display:none}
+.cifra{font-family:"Newsreader",Georgia,serif;font-size:3.2rem;line-height:1;font-variant-numeric:tabular-nums;color:var(--verde-scuro);margin:2px 0 4px}
+.cifra.forbice{font-size:2.3rem}
+.cifra-nota{color:var(--tenue);font-size:.9rem;margin:0 0 26px}
+.riga-dato{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--linea);font-variant-numeric:tabular-nums}
+.riga-dato:last-of-type{border-bottom:1px solid var(--linea)}
+.riga-dato span:first-child{color:var(--tenue)}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.9rem}
+th,td{padding:8px 4px;border-bottom:1px solid var(--linea);text-align:left}
+th:nth-child(2),td:nth-child(2){text-align:right}
+th{font-weight:600;color:var(--tenue);font-size:.8rem}
+td:nth-child(3){width:42%;padding-left:14px}
+.pista{display:flex;align-items:center;gap:8px}
+.barra{height:7px;background:var(--verde);border-radius:1px;flex:0 0 auto;min-width:2px}
+tr.ridotto .barra{background:var(--calo)}
+.barra-eti{font-size:.78rem;color:var(--tenue);white-space:nowrap}
+tr.ridotto .barra-eti{color:var(--calo)}
+tr.parziale td:first-child::after{content:" (parziale)";color:var(--tenue);font-size:.78rem}
+.avviso{background:var(--carta-alta);border-left:3px solid var(--calo);padding:13px 15px;margin:22px 0;font-size:.9rem}
+.nota{color:var(--tenue);font-size:.85rem;line-height:1.5}
+.nota strong{color:var(--inchiostro);font-weight:600}
+.domanda{font-size:.95rem;font-weight:600;margin:22px 0 6px}
+.aggiornamento{color:var(--tenue);font-size:.82rem;margin:0 0 18px}
+footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--linea)}
+.elenco-tool{list-style:none;padding:0;margin:26px 0 0}
+.elenco-tool li{border-top:1px solid var(--linea)}
+.elenco-tool li:last-child{border-bottom:1px solid var(--linea)}
+.elenco-tool a{display:block;padding:17px 0;text-decoration:none;color:inherit}
+.elenco-tool a:hover .titolo-tool{color:var(--verde-scuro)}
+.titolo-tool{font-family:"Newsreader",Georgia,serif;font-size:1.2rem;display:block;margin-bottom:3px}
+.desc-tool{color:var(--tenue);font-size:.88rem;display:block}
+.etichetta{display:inline-block;font-size:.7rem;letter-spacing:.04em;color:var(--verde-scuro);background:#e4ede9;padding:2px 7px;border-radius:2px;margin-left:7px;vertical-align:2px}
+.contratti{margin-bottom:12px}
+.contratto{display:flex;gap:8px;align-items:flex-end;margin-bottom:10px}
+.contratto > div{flex:1}
+.contratto label{font-size:.8rem;color:var(--tenue)}
+.togli{flex:0 0 auto;width:42px;padding:12px 0;background:transparent;color:var(--calo);border:1px solid var(--linea);font-size:1.1rem}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
