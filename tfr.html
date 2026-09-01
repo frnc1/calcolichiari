@@ -6,6 +6,7 @@
 <title>Calcolo TFR 2026, anche con più contratti a termine</title>
 <meta name="description" content="Calcola il TFR maturato secondo l'art. 2120 del Codice Civile. La modalità a più contratti tiene separati i rapporti a termine, come avviene davvero.">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="calcolichiari.it">
 <meta property="og:locale" content="it_IT">
 <meta property="og:title" content="Quanto TFR hai maturato">
 <meta property="og:description" content="Calcola il TFR maturato secondo l'art. 2120 del Codice Civile. La modalità a più contratti tiene separati i rapporti a termine, come avviene davvero.">
@@ -15,17 +16,21 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://calcolichiari.it/tfr.html">
-<meta name="theme-color" content="#0d8074">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d8074'/%3E%3Crect x='7' y='9' width='4' height='14' rx='1' fill='%23fff'/%3E%3Crect x='14' y='11' width='4' height='12' rx='1' fill='%23fff'/%3E%3Crect x='21' y='14' width='4' height='9' rx='1' fill='%23cdeee9'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0a6b5f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a6b5f'/%3E%3Crect x='7' y='9' width='4' height='14' rx='1.5' fill='%23fff'/%3E%3Crect x='14' y='11' width='4' height='12' rx='1.5' fill='%23fff'/%3E%3Crect x='21' y='14' width='4' height='9' rx='1.5' fill='%237fd4c4'/%3E%3C/svg%3E">
 <link rel="preload" href="/poppins-700.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="/stile.css">
 </head>
 <body>
+<header class="testata"><div class="testata-interno">
+<a class="marchio" href="/"><svg width='26' height='26' viewBox='0 0 32 32' aria-hidden='true'><rect width='32' height='32' rx='7' fill='#0a6b5f'/><rect x='7' y='9' width='4' height='14' rx='1.5' fill='#fff'/><rect x='14' y='11' width='4' height='12' rx='1.5' fill='#fff'/><rect x='21' y='14' width='4' height='9' rx='1.5' fill='#7fd4c4'/></svg><span class="marchio-nome">calcoli<b>chiari</b></span></a>
+<nav class="nav-sito" aria-label="Calcolatori"><a href="/naspi.html">NASpI</a><a href="/naspi-anticipata.html">Anticipata</a><a href="/tfr.html" aria-current="page">TFR</a><a href="/netto.html">Busta paga</a></nav>
+</div></header>
 <main class="foglio">
-<div class="top-nav"><a class="torna" href="/">← Tutti i calcolatori</a><span class="badge-tag">Art. 2120 Codice Civile</span></div>
+<nav class="briciole" aria-label="Percorso"><a href="/">Home</a> &rsaquo; <span aria-current="page">Calcolo TFR</span></nav>
+<div class="etichetta-pag">Art. 2120 Codice Civile</div>
 <h1>Quanto TFR hai maturato</h1>
 <p class="sottotitolo">Quota annua divisa per 13,5, rivalutazione e trattenuta per il fondo di garanzia. Puoi inserire un rapporto unico o sommare pi&ugrave; contratti a termine.</p>
-
 <form id="modulo" class="card">
 <div class="scelte">
 <label class="scelta"><input type="radio" name="modo" value="uno" checked><span>Un solo rapporto</span></label>
@@ -67,24 +72,36 @@
 <thead><tr><th scope="col">Anno</th><th scope="col">Fondo a fine anno</th><th scope="col">Di cui rivalutazione</th></tr></thead>
 <tbody id="tabella"></tbody></table></div>
 </section>
-
 <section class="faq-box"><h2>Domande frequenti</h2>
 <details><summary>Ho avuto sei contratti a termine con la stessa agenzia. Il TFR è uno solo?</summary><div class="faq-contenuto">No. Ogni contratto matura il proprio TFR e viene liquidato alla fine di quel rapporto, non accumulato fino all'ultimo. È il motivo per cui i calcolatori pensati sul rapporto unico danno cifre sbagliate a chi lavora in somministrazione: sommano anni che in realtà sono rapporti separati e applicano una rivalutazione che su un contratto di tre mesi è quasi nulla.</div></details>
 <details><summary>Perché si divide per 13,5?</summary><div class="faq-contenuto">Lo prevede l'articolo 2120 del Codice Civile: la quota annua è la retribuzione utile divisa per 13,5. Da quella quota si toglie lo 0,50% della retribuzione imponibile previdenziale, che va all'INPS come contributo al fondo di garanzia.</div></details>
 <details><summary>Quanto mi resta al netto delle tasse?</summary><div class="faq-contenuto">Il TFR è soggetto a tassazione separata, con un'aliquota calcolata sulla media dei redditi degli ultimi cinque anni. In pratica si aggira spesso fra il 15% e il 30%, ma dipende dalla storia reddituale di ciascuno e non si può stimare senza quei dati. Le cifre di questo strumento sono al lordo.</div></details>
 <details><summary>La rivalutazione cambia molto il risultato?</summary><div class="faq-contenuto">Su periodi lunghi sì, ed è la parte più incerta del calcolo, perché dipende dall'inflazione reale di ogni singolo anno. Su contratti brevi invece è quasi irrilevante, perché si rivaluta il fondo accantonato al 31 dicembre e un rapporto di pochi mesi non attraversa un fine anno con un fondo significativo.</div></details>
 </section>
-<footer>
-<h2 style="margin-top:0">Come &egrave; calcolato</h2>
-<p class="aggiornamento">Norme verificate il <time datetime="2026-09-01">1 settembre 2026</time>.</p>
+<section class="metodo"><h2>Come &egrave; calcolato</h2>
+<p class="aggiornamento"><span aria-hidden="true">✓</span> Norme verificate il <time datetime="2026-09-01">1 settembre 2026</time>.</p>
 <p class="nota">
 <strong>Quota annua.</strong> Articolo 2120 del Codice Civile: retribuzione utile divisa per 13,5. Da questa si detrae lo 0,50% della retribuzione imponibile previdenziale, destinato al fondo di garanzia INPS.<br><br>
 <strong>Rivalutazione.</strong> Il fondo accantonato al 31 dicembre dell'anno precedente si rivaluta di 1,5% fisso pi&ugrave; il 75% dell'aumento dell'indice ISTAT dei prezzi al consumo. Poich&eacute; l'indice cambia ogni anno, qui il tasso &egrave; un parametro che imposti tu.<br><br>
 <strong>Pi&ugrave; contratti.</strong> Ogni rapporto matura e liquida il proprio TFR in modo autonomo. La modalit&agrave; a pi&ugrave; contratti li tiene separati e li somma, invece di trattarli come un unico rapporto lungo.<br><br>
 <strong>Cosa questo strumento non fa.</strong> Non calcola la tassazione separata, che dipende dai redditi dei cinque anni precedenti. Non gestisce il TFR destinato a un fondo pensione, le anticipazioni gi&agrave; richieste, n&eacute; il Fondo di Tesoreria INPS per le aziende sopra i cinquanta dipendenti. Gli importi sono al lordo.<br><br>
-<strong>Fonti.</strong> Art. 2120 del Codice Civile; legge 29 maggio 1982 n. 297.</p>
-</footer>
-</main>
+<strong>Fonti.</strong> Art. 2120 del Codice Civile; legge 29 maggio 1982 n. 297.</p></section>
+<section class="altri"><h2>Gli altri calcolatori</h2><div class="altri-griglia"><a href="/naspi.html"><span class="altri-nome">Calcolo NASpI</span><span class="altri-desc">Importo, durata e décalage</span></a><a href="/naspi-anticipata.html"><span class="altri-nome">NASpI anticipata</span><span class="altri-desc">Le due rate 70% e 30%</span></a><a href="/netto.html"><span class="altri-nome">Lordo e netto</span><span class="altri-desc">Busta paga con IRPEF 2026</span></a></div></section></main>
+<footer class="piede"><div class="piede-interno">
+<div class="piede-griglia">
+<div>
+<a class="marchio" href="/" style="text-decoration:none"><svg width='26' height='26' viewBox='0 0 32 32' aria-hidden='true'><rect width='32' height='32' rx='7' fill='#0a6b5f'/><rect x='7' y='9' width='4' height='14' rx='1.5' fill='#fff'/><rect x='14' y='11' width='4' height='12' rx='1.5' fill='#fff'/><rect x='21' y='14' width='4' height='9' rx='1.5' fill='#7fd4c4'/></svg><span class="marchio-nome">calcoli<b>chiari</b></span></a>
+<p class="piede-intro">Calcolatori per chi ha contratti brevi, a termine o in somministrazione. Ogni risultato dichiara la norma da cui viene.</p>
+</div>
+<div><h3>Calcolatori</h3><ul><li><a href="/naspi.html">Calcolo NASpI</a></li><li><a href="/naspi-anticipata.html">NASpI anticipata</a></li><li><a href="/tfr.html">Calcolo TFR</a></li><li><a href="/netto.html">Lordo e netto</a></li></ul></div>
+<div><h3>Il sito</h3><ul>
+<li><a href="/chi-siamo.html">Chi c'&egrave; dietro</a></li>
+<li><a href="/">Tutti gli strumenti</a></li>
+<li><a href="/sitemap.xml">Mappa del sito</a></li>
+</ul></div>
+</div>
+<p class="piede-legale"><strong>calcolichiari.it</strong> &mdash; I calcoli hanno scopo informativo e si basano sui testi normativi vigenti, citati per esteso in fondo a ogni pagina. Fanno fede unicamente i provvedimenti degli enti previdenziali e fiscali competenti. Questo sito non usa cookie, non raccoglie dati di navigazione e non carica risorse da server di terze parti.</p>
+</div></footer>
 <script>
 const euro = n => n.toLocaleString('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' \u20ac';
 const num = (n,d) => n.toLocaleString('it-IT',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});
@@ -169,12 +186,34 @@ document.getElementById('modulo').addEventListener('input',()=>{if(attivo)mostra
    "operatingSystem": "Qualsiasi browser",
    "inLanguage": "it-IT",
    "url": "https://calcolichiari.it/tfr.html",
+   "isPartOf": {
+    "@type": "WebSite",
+    "name": "calcolichiari.it",
+    "url": "https://calcolichiari.it/"
+   },
    "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "EUR"
    },
    "dateModified": "2026-09-01"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://calcolichiari.it/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Calcolo TFR",
+     "item": "https://calcolichiari.it/tfr.html"
+    }
+   ]
   },
   {
    "@type": "FAQPage",
