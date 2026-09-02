@@ -192,7 +192,7 @@ details[open] summary::after{transform:rotate(180deg);color:var(--brand)}
 .altri{margin-top:44px;padding-top:30px;border-top:1px solid var(--bordo)}
 .altri h2{margin-top:0}
 .altri-griglia{display:grid;grid-template-columns:1fr;gap:10px}
-@media(min-width:560px){.altri-griglia{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:560px){.altri-griglia{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}}
 .altri-griglia a{display:flex;align-items:flex-start;gap:11px;background:var(--bg-card);
   border:1px solid var(--bordo);border-radius:var(--r-md);padding:14px 15px;
   text-decoration:none;transition:all .14s}
