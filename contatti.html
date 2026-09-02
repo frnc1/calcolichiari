@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chi c'è dietro calcolichiari.it e come sono costruiti i calcoli</title>
-<meta name="description" content="Chi cura calcolichiari.it, con quale metodo sono verificate le norme, come segnalare un errore e perché il sito non usa cookie né pubblicità.">
+<title>Contatti | calcolichiari.it</title>
+<meta name="description" content="Scrivi a calcolichiari.it per segnalare un errore in un calcolo, proporre uno strumento nuovo o chiedere un chiarimento su una fonte normativa.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="calcolichiari.it">
 <meta property="og:locale" content="it_IT">
-<meta property="og:title" content="Chi c'è dietro questo sito">
-<meta property="og:description" content="Chi cura calcolichiari.it, con quale metodo sono verificate le norme, come segnalare un errore e perché il sito non usa cookie né pubblicità.">
-<meta property="og:url" content="https://calcolichiari.it/chi-siamo.html">
+<meta property="og:title" content="Scrivimi">
+<meta property="og:description" content="Scrivi a calcolichiari.it per segnalare un errore in un calcolo, proporre uno strumento nuovo o chiedere un chiarimento su una fonte normativa.">
+<meta property="og:url" content="https://calcolichiari.it/contatti.html">
 <meta property="og:image" content="https://calcolichiari.it/social-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://calcolichiari.it/chi-siamo.html">
+<link rel="canonical" href="https://calcolichiari.it/contatti.html">
 <meta name="theme-color" content="#0a6b5f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a6b5f'/%3E%3Crect x='7' y='9' width='4' height='14' rx='1.5' fill='%23fff'/%3E%3Crect x='14' y='11' width='4' height='12' rx='1.5' fill='%23fff'/%3E%3Crect x='21' y='14' width='4' height='9' rx='1.5' fill='%237fd4c4'/%3E%3C/svg%3E">
 <link rel="preload" href="/poppins-700.woff" as="font" type="font/woff" crossorigin>
@@ -24,34 +24,38 @@
 <body>
 <header class="testata"><div class="testata-interno"><a class="marchio" href="/"><svg width='34' height='34' viewBox='0 0 32 32' aria-hidden='true' focusable='false'><rect width='32' height='32' rx='7' fill='#0a6b5f'/><rect x='7' y='9' width='4' height='14' rx='1.5' fill='#fff'/><rect x='14' y='11' width='4' height='12' rx='1.5' fill='#fff'/><rect x='21' y='14' width='4' height='9' rx='1.5' fill='#7fd4c4'/></svg><span class="marchio-nome">calcoli<b>chiari</b></span></a><nav class="nav-sito" aria-label="Calcolatori"><a href="/naspi.html">NASpI</a><a href="/naspi-anticipata.html">NASpI anticipata</a><a href="/tfr.html">TFR</a><a href="/netto.html">Busta paga</a></nav></div></header>
 <main class="foglio">
-<nav class="briciole" aria-label="Percorso"><a href="/">Home</a> &rsaquo; <span aria-current="page">Chi c'è dietro</span></nav>
-<div class="etichetta-pag">Metodo e trasparenza</div>
-<h1>Chi c'&egrave; dietro questo sito</h1>
-<p class="sottotitolo">Chi lo cura, da dove vengono i numeri, come segnalare un errore e perch&eacute; non troverai pubblicit&agrave; n&eacute; cookie.</p>
+<nav class="briciole" aria-label="Percorso"><a href="/">Home</a> &rsaquo; <span aria-current="page">Contatti</span></nav>
+<div class="etichetta-pag">Segnalazioni e domande</div>
+<h1>Scrivimi</h1>
+<p class="sottotitolo">Per segnalare un risultato che non torna, proporre un calcolatore che manca o chiedere conto di una fonte.</p>
+
+<form name="contatto" method="POST" data-netlify="true" netlify-honeypot="lascia-vuoto" action="/grazie.html" class="card">
+<input type="hidden" name="form-name" value="contatto">
+<p class="esca"><label>Se sei umano lascia vuoto questo campo: <input name="lascia-vuoto" tabindex="-1" autocomplete="off"></label></p>
+<fieldset>
+<legend>Scrivimi</legend>
+<div class="campo">
+<label for="nome">Come ti chiami</label>
+<input type="text" id="nome" name="nome" required autocomplete="name">
+</div>
+<div class="campo">
+<label for="email">La tua email</label>
+<input type="email" id="email" name="email" required autocomplete="email">
+<p class="aiuto">Serve solo per risponderti. Non finisce in nessuna lista.</p>
+</div>
+<div class="campo">
+<label for="messaggio">Il messaggio</label>
+<textarea id="messaggio" name="messaggio" rows="7" required></textarea>
+<p class="aiuto">Se segnali un risultato sbagliato, indica quale calcolatore, i dati che hai inserito e la cifra che ti aspettavi.</p>
+</div>
+</fieldset>
+<button type="submit">Invia il messaggio</button>
+</form>
 
 <section class="metodo">
-<h2>Chi c'&egrave; dietro</h2>
-<p class="nota">Ciao, sono Francesco e lavoro nel settore delle risorse umane e della formazione da oltre 20 anni. Mi occupo quotidianamente di pratiche che riguardano contratti a termine, indennit&agrave; e adempimenti previdenziali.</p>
-<p class="nota" style="margin-top:15px">Non &egrave; una consulenza professionale e non sostituisce un patronato o un commercialista. &Egrave; la traduzione in strumenti pratici di regole che vedo applicate tutti i giorni, e che quasi nessun calcolatore online gestisce quando la carriera lavorativa &egrave; frammentata.</p>
-</section>
-
-<section class="metodo">
-<h2>Come sono costruiti i calcolatori</h2>
-<p class="nota">Ogni parametro viene ricavato dal testo della norma o dalla circolare che lo fissa, non da riassunti di seconda mano. In fondo a ciascuna pagina trovi gli articoli precisi e la data in cui sono stati controllati.</p>
-<p class="nota" style="margin-top:15px">Questo importa pi&ugrave; di quanto sembri: durante la costruzione del sito ho trovato fonti autorevoli che pubblicavano la formula sbagliata, applicando ai lavoratori dipendenti la detrazione prevista per i pensionati. Chi copia da quelle fonti propaga l'errore.</p>
-<p class="nota" style="margin-top:15px">I valori vengono aggiornati a gennaio di ogni anno, quando escono la legge di bilancio e la circolare INPS con la rivalutazione degli importi.</p>
-</section>
-
-<section class="metodo">
-<h2>Se un risultato non torna</h2>
-<p class="nota">Se una cifra non coincide con quella che hai ricevuto davvero dall'INPS o letto nel cedolino, &egrave; un'informazione preziosa. Le segnalazioni sono l'unico modo di correggere i casi limite che la norma scritta non lascia prevedere: <a href="/contatti.html">scrivimi dalla pagina contatti</a> indicando i dati che hai inserito e la cifra che ti aspettavi.</p>
-</section>
-
-<section class="metodo">
-<h2>Privacy e finanziamento</h2>
-<p class="nota">Il sito non usa cookie, non ha sistemi di statistica e non carica caratteri o script da server esterni. I calcoli avvengono interamente nel tuo browser: i numeri che digiti nei calcolatori non vengono mai inviati da nessuna parte e nessuno pu&ograve; leggerli.</p>
-<p class="nota" style="margin-top:15px">L'unica eccezione &egrave; il modulo di contatto: quello che scrivi l&igrave; passa dai server di Netlify, che ospita il sito, e mi arriva per posta elettronica. Uso quei dati solo per risponderti e non li cedo a nessuno.</p>
-<p class="nota" style="margin-top:15px">Non ci sono banner pubblicitari n&eacute; moduli da compilare per ottenere un risultato. Se in futuro questo dovesse cambiare, sar&agrave; scritto qui.</p>
+<h2>Che fine fa quello che scrivi</h2>
+<p class="nota">Il messaggio passa dai server di Netlify, che ospita il sito, e mi arriva per posta elettronica. Nome, email e testo servono soltanto a risponderti: non finiscono in nessuna lista, non vengono ceduti e non alimentano statistiche.</p>
+<p class="nota" style="margin-top:15px">Non c'&egrave; nessun sistema antispam di terze parti, quindi anche questa pagina non fa richieste a server esterni, esattamente come tutte le altre.</p>
 </section>
 
 <section class="altri"><h2>Gli altri calcolatori</h2><div class="altri-griglia"><a href="/naspi.html"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V5"/><path d="M9.3 20V9"/><path d="M14.6 20V13.5"/><path d="M20 20V16.5"/></svg></span><span><span class="altri-nome">Calcolo NASpI</span><span class="altri-desc">Importo, durata e décalage</span></span></a><a href="/netto.html"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></span><span><span class="altri-nome">Lordo e netto</span><span class="altri-desc">Busta paga con IRPEF 2026</span></span></a><a href="/tfr.html"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5h16"/><path d="M6 14.8h12"/><path d="M8 10.1h8"/><path d="M10 5.4h4"/></svg></span><span><span class="altri-nome">Calcolo TFR</span><span class="altri-desc">Anche con più contratti</span></span></a><a href="/naspi-anticipata.html"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 20V4"/><path d="M16 20V12.5"/></svg></span><span><span class="altri-nome">NASpI anticipata</span><span class="altri-desc">Le due rate 70% e 30%</span></span></a></div></section></main>
@@ -76,9 +80,9 @@
  "@graph": [
   {
    "@type": "WebPage",
-   "name": "Chi c'è dietro questo sito",
+   "name": "Scrivimi",
    "inLanguage": "it-IT",
-   "url": "https://calcolichiari.it/chi-siamo.html",
+   "url": "https://calcolichiari.it/contatti.html",
    "isPartOf": {
     "@type": "WebSite",
     "name": "calcolichiari.it",
@@ -98,8 +102,8 @@
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Chi c'è dietro",
-     "item": "https://calcolichiari.it/chi-siamo.html"
+     "name": "Contatti",
+     "item": "https://calcolichiari.it/contatti.html"
     }
    ]
   }

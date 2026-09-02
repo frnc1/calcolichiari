@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /grazie.html
 
 Sitemap: https://calcolichiari.it/sitemap.xml
