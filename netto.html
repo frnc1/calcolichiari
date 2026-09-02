@@ -14,33 +14,35 @@
 <meta property="og:image" content="https://calcolichiari.it/social-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="calcolichiari.it, calcolatori per NASpI, TFR, tredicesima e busta paga">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://calcolichiari.it/netto.html">
 <meta name="theme-color" content="#0a6b5f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a6b5f'/%3E%3Crect x='7' y='9' width='4' height='14' rx='1.5' fill='%23fff'/%3E%3Crect x='14' y='11' width='4' height='12' rx='1.5' fill='%23fff'/%3E%3Crect x='21' y='14' width='4' height='9' rx='1.5' fill='%237fd4c4'/%3E%3C/svg%3E">
-<link rel="preload" href="/poppins-700.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="/stile.css">
+<link rel="preload" href="/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/stile.css?v=6">
 </head>
 <body>
 <header class="testata"><div class="testata-interno"><a class="marchio" href="/"><svg width='34' height='34' viewBox='0 0 32 32' aria-hidden='true' focusable='false'><rect width='32' height='32' rx='7' fill='#0a6b5f'/><rect x='7' y='9' width='4' height='14' rx='1.5' fill='#fff'/><rect x='14' y='11' width='4' height='12' rx='1.5' fill='#fff'/><rect x='21' y='14' width='4' height='9' rx='1.5' fill='#7fd4c4'/></svg><span class="marchio-nome">calcoli<b>chiari</b></span></a><nav class="nav-sito" aria-label="Calcolatori"><a href="/naspi.html">NASpI</a><a href="/naspi-anticipata.html">NASpI anticipata</a><a href="/tredicesima.html">Tredicesima</a><a href="/tfr.html">TFR</a><a href="/netto.html" aria-current="page">Busta paga</a></nav></div></header>
 <main class="foglio">
-<nav class="briciole" aria-label="Percorso"><a href="/">Home</a> &rsaquo; <span aria-current="page">Lordo e netto</span></nav>
+<nav class="briciole" aria-label="Percorso"><a href="/">Home</a> › <span aria-current="page">Lordo e netto</span></nav>
 <div class="etichetta-pag">Aliquote IRPEF 2026</div>
 <h1>Dal lordo al netto in busta paga</h1>
-<p class="sottotitolo">Stima con i tre scaglioni IRPEF 2026 e le detrazioni per lavoro dipendente. Il risultato &egrave; una forbice, perch&eacute; le addizionali cambiano da comune a comune.</p>
+<p class="sottotitolo">Stima con i tre scaglioni IRPEF 2026 e le detrazioni per lavoro dipendente. Il risultato è una forbice, perché le addizionali cambiano da comune a comune.</p>
 <form id="modulo" class="card">
 <fieldset><legend>Dati contrattuali</legend>
-<div class="campo"><label for="ral">Retribuzione annua lorda &mdash; RAL (&euro;)</label>
+<div class="campo"><label for="ral">Retribuzione annua lorda — RAL (€)</label>
 <input type="number" id="ral" inputmode="decimal" step="100" min="0" max="500000" value="25000">
 <p class="aiuto">Il totale lordo dell'anno indicato nel contratto o nella CU.</p></div>
-<div class="campo"><label for="mensilita">Numero di mensilit&agrave;</label>
+<div class="campo"><label for="mensilita">Numero di mensilità</label>
 <select id="mensilita"><option value="12">12</option><option value="13" selected>13</option><option value="14">14</option></select></div>
 <div class="campo"><label>Tipologia contrattuale</label>
 <div class="scelte">
 <label class="scelta"><input type="radio" name="tipo" value="ind" checked><span>Indeterminato</span></label>
 <label class="scelta"><input type="radio" name="tipo" value="det"><span>A termine</span></label>
 </div>
-<p class="aiuto">Sui contratti a termine la detrazione minima garantita sale da 690 &euro; a 1.380 &euro;, come prevede l'art. 13 comma 1 lettera a) del TUIR.</p></div>
+<p class="aiuto">Sui contratti a termine la detrazione minima garantita sale da 690 € a 1.380 €, come prevede l'art. 13 comma 1 lettera a) del TUIR.</p></div>
 </fieldset>
 <button type="submit">Calcola netto</button>
 </form>
@@ -48,17 +50,17 @@
 <section id="esito" class="card esito" hidden aria-live="polite">
 <div class="hero-risultato">
 <div class="hero-titolo">Netto mensile stimato</div>
-<div class="cifra forbice" id="mensile">&mdash;</div>
+<div class="cifra forbice" id="mensile">—</div>
 <p class="cifra-nota" id="notaMensile"></p>
 </div>
 <div class="dettagli-lista">
-<div class="riga-dato"><span>Netto annuo</span><strong id="annuo">&mdash;</strong></div>
-<div class="riga-dato"><span>Contributi INPS a tuo carico</span><strong id="contributi">&mdash;</strong></div>
-<div class="riga-dato"><span>Imponibile fiscale</span><strong id="imponibile">&mdash;</strong></div>
-<div class="riga-dato"><span>IRPEF lorda</span><strong id="irpefLorda">&mdash;</strong></div>
-<div class="riga-dato"><span>Detrazione lavoro dipendente</span><strong id="detrazione">&mdash;</strong></div>
-<div class="riga-dato"><span>IRPEF effettivamente trattenuta</span><strong id="irpefNetta">&mdash;</strong></div>
-<div class="riga-dato"><span>Integrazioni in busta</span><strong id="bonus">&mdash;</strong></div>
+<div class="riga-dato"><span>Netto annuo</span><strong id="annuo">—</strong></div>
+<div class="riga-dato"><span>Contributi INPS a tuo carico</span><strong id="contributi">—</strong></div>
+<div class="riga-dato"><span>Imponibile fiscale</span><strong id="imponibile">—</strong></div>
+<div class="riga-dato"><span>IRPEF lorda</span><strong id="irpefLorda">—</strong></div>
+<div class="riga-dato"><span>Detrazione lavoro dipendente</span><strong id="detrazione">—</strong></div>
+<div class="riga-dato"><span>IRPEF effettivamente trattenuta</span><strong id="irpefNetta">—</strong></div>
+<div class="riga-dato"><span>Integrazioni in busta</span><strong id="bonus">—</strong></div>
 </div>
 <div id="avvisi"></div>
 </section>
@@ -68,15 +70,15 @@
 <details><summary>Quali sono gli scaglioni IRPEF 2026?</summary><div class="faq-contenuto">Tre: 23% fino a 28.000 euro, 33% da 28.001 a 50.000 euro, 43% oltre. Il secondo scaglione è sceso dal 35% al 33% con la legge 199/2025.</div></details>
 <details><summary>Perché il mio cedolino dice una cifra diversa?</summary><div class="faq-contenuto">Le cause più comuni sono i familiari a carico, che qui non sono considerati, le trattenute sindacali o le cessioni del quinto, i fringe benefit e i buoni pasto, e il conguaglio di fine anno se hai iniziato a lavorare a metà anno o hai cambiato datore.</div></details>
 </section>
-<section class="metodo"><h2>Come &egrave; calcolato</h2>
+<section class="metodo"><h2>Come è calcolato</h2>
 <p class="aggiornamento"><span aria-hidden="true">✓</span> Valori e norme verificati il <time datetime="2026-09-01">1 settembre 2026</time>.</p>
 <p class="nota">
 <strong>Contributi.</strong> 9,19% della retribuzione lorda, aliquota ordinaria a carico del lavoratore dipendente del settore privato.<br><br>
-<strong>IRPEF 2026.</strong> Tre scaglioni: 23% fino a 28.000 &euro;, 33% da 28.001 a 50.000 &euro;, 43% oltre. Il secondo scaglione &egrave; stato ridotto dal 35% al 33% dalla legge 199/2025.<br><br>
-<strong>Detrazione per lavoro dipendente.</strong> Art. 13 comma 1 del TUIR: 1.955 &euro; fino a 15.000 &euro; di reddito; poi 1.910 + 1.190 &times; (28.000 &minus; reddito) / 13.000 fino a 28.000 &euro;; poi 1.910 &times; (50.000 &minus; reddito) / 22.000 fino a 50.000 &euro;, dove si azzera. Minimo garantito 690 &euro;, elevato a 1.380 &euro; per i contratti a termine. Il comma 1.1 aggiunge 65 &euro; fra 25.000 e 35.000 &euro;.<br><br>
-<strong>Integrazioni.</strong> Trattamento integrativo fino a 1.200 &euro; sotto i 15.000 &euro; con verifica di capienza, somma esente sui redditi fino a 20.000 &euro;, ulteriore detrazione decrescente fra 20.000 e 40.000 &euro;.<br><br>
-<strong>Addizionali.</strong> Stimate in una forbice fra 1,2% e 3,3% dell'imponibile, che copre la quasi totalit&agrave; delle combinazioni regione-comune.<br><br>
-<strong>Cosa questo strumento non fa.</strong> Non considera familiari a carico, oneri detraibili, fringe benefit, premi di risultato detassati, cessioni del quinto, part time con orario variabile, apprendistato con aliquota contributiva al 5,84%, n&eacute; il settore pubblico. &Egrave; una stima: fa fede il cedolino.<br><br>
+<strong>IRPEF 2026.</strong> Tre scaglioni: 23% fino a 28.000 €, 33% da 28.001 a 50.000 €, 43% oltre. Il secondo scaglione è stato ridotto dal 35% al 33% dalla legge 199/2025.<br><br>
+<strong>Detrazione per lavoro dipendente.</strong> Art. 13 comma 1 del TUIR: 1.955 € fino a 15.000 € di reddito; poi 1.910 + 1.190 &times; (28.000 − reddito) / 13.000 fino a 28.000 €; poi 1.910 &times; (50.000 − reddito) / 22.000 fino a 50.000 €, dove si azzera. Minimo garantito 690 €, elevato a 1.380 € per i contratti a termine. Il comma 1.1 aggiunge 65 € fra 25.000 e 35.000 €.<br><br>
+<strong>Integrazioni.</strong> Trattamento integrativo fino a 1.200 € sotto i 15.000 € con verifica di capienza, somma esente sui redditi fino a 20.000 €, ulteriore detrazione decrescente fra 20.000 e 40.000 €.<br><br>
+<strong>Addizionali.</strong> Stimate in una forbice fra 1,2% e 3,3% dell'imponibile, che copre la quasi totalità delle combinazioni regione-comune.<br><br>
+<strong>Cosa questo strumento non fa.</strong> Non considera familiari a carico, oneri detraibili, fringe benefit, premi di risultato detassati, cessioni del quinto, part time con orario variabile, apprendistato con aliquota contributiva al 5,84%, né il settore pubblico. È una stima: fa fede il cedolino.<br><br>
 <strong>Fonti.</strong> Art. 11 e art. 13 del TUIR, DPR 917/1986, testo vigente. Legge 30 dicembre 2025 n. 199 per la riduzione del secondo scaglione.</p></section>
 <section class="altri"><h2>Gli altri calcolatori</h2><div class="altri-griglia"><a href="/naspi.html"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V5"/><path d="M9.3 20V9"/><path d="M14.6 20V13.5"/><path d="M20 20V16.5"/></svg></span><span><span class="altri-nome">Calcolo NASpI</span><span class="altri-desc">Importo, durata e décalage</span></span></a><a href="/tredicesima.html"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V9"/><path d="M8.5 20V9"/><path d="M13 20V9"/><path d="M19.5 20V4.5"/></svg></span><span><span class="altri-nome">Calcolo tredicesima</span><span class="altri-desc">Anche con ratei parziali</span></span></a><a href="/tfr.html"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5h16"/><path d="M6 14.8h12"/><path d="M8 10.1h8"/><path d="M10 5.4h4"/></svg></span><span><span class="altri-nome">Calcolo TFR</span><span class="altri-desc">Anche con più contratti</span></span></a><a href="/naspi-anticipata.html"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 20V4"/><path d="M16 20V12.5"/></svg></span><span><span class="altri-nome">NASpI anticipata</span><span class="altri-desc">Le due rate 70% e 30%</span></span></a></div></section></main>
 <footer class="piede"><div class="piede-interno">
@@ -85,61 +87,68 @@
 <p class="piede-intro">Calcolatori per chi ha contratti brevi, a termine o in somministrazione. Ogni risultato dichiara la norma da cui viene.</p></div>
 <div><h3>Calcolatori</h3><ul><li><a href="/naspi.html">Calcolo NASpI</a></li><li><a href="/netto.html">Lordo e netto</a></li><li><a href="/tredicesima.html">Calcolo tredicesima</a></li><li><a href="/tfr.html">Calcolo TFR</a></li><li><a href="/naspi-anticipata.html">NASpI anticipata</a></li></ul></div>
 <div><h3>Il sito</h3><ul>
-<li><a href="/chi-siamo.html">Chi c'&egrave; dietro</a></li>
+<li><a href="/chi-siamo.html">Chi c'è dietro</a></li>
 <li><a href="/contatti.html">Contatti</a></li>
 <li><a href="/privacy.html">Privacy</a></li>
 <li><a href="/">Tutti gli strumenti</a></li>
 </ul></div></div>
-<p class="piede-legale"><strong>calcolichiari.it</strong> &mdash; I calcoli hanno scopo informativo e si basano sui testi normativi vigenti, citati per esteso in fondo a ogni pagina. Fanno fede unicamente i provvedimenti degli enti previdenziali e fiscali competenti. I calcoli avvengono nel tuo browser e i numeri che digiti non vengono inviati da nessuna parte. Come vengono trattati i dati &egrave; spiegato nella <a href="/privacy.html">pagina privacy</a>.</p>
+<p class="piede-legale"><strong>calcolichiari.it</strong> — I calcoli hanno scopo informativo e si basano sui testi normativi vigenti, citati per esteso in fondo a ogni pagina. Fanno fede unicamente i provvedimenti degli enti previdenziali e fiscali competenti. I calcoli avvengono nel tuo browser e i numeri che digiti non vengono inviati da nessuna parte. Come vengono trattati i dati è spiegato nella <a href="/privacy.html">pagina privacy</a>.</p>
 </div></footer>
+<script src="/dati-2026.js?v=6"></script>
 <script>
 const euro = n => n.toLocaleString('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' \u20ac';
 const num = (n,d) => n.toLocaleString('it-IT',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});
-const leggi = (id,min,max) => { const e=document.getElementById(id); if(!e) return min;
-  const v=parseFloat(e.value); if(!isFinite(v)) return min; return Math.min(max,Math.max(min,v)); };
+let limitato = [];
+const leggi = (id,min,max,eti) => {
+  const e=document.getElementById(id); if(!e) return min;
+  const v=parseFloat(e.value); if(!isFinite(v)) return min;
+  const c=Math.min(max,Math.max(min,v));
+  if(eti && Math.abs(c-v)>0.001) limitato.push(eti+': ho usato '+num(c,c%1?2:0)+' invece di '+num(v,v%1?2:0));
+  return c;
+};
+const avvisoLimiti = () => limitato.length
+  ? '<div class="avviso">Un valore era fuori dai limiti previsti dalla norma. '+limitato.join('. ')+'.</div>' : '';
 
-const P={contrib:.0919,sc1:28000,sc2:50000,a1:.23,a2:.33,a3:.43,
-det1:1955,detMin:690,detMinDet:1380,detB1:1910,detB2:1190,detB3:13000,detC:1910,detC2:22000,
-magg:65,maggDa:25000,maggA:35000,ti:1200,tiSoglia:15000,tiRid:75,
-esente1:.071,esente2:.053,esente3:.048,ulterior:1000,addMin:.012,addMax:.033};
+const I=DATI.irpef, DT=DATI.detrazione, CU=DATI.cuneo, AD=DATI.addizionali, CB=DATI.contributi.dipendente;
 function detrazione(R,termine){
   let d;
-  if(R<=15000) d=P.det1;
-  else if(R<=28000) d=P.detB1+P.detB2*(28000-R)/P.detB3;
-  else if(R<=50000) d=P.detC*(50000-R)/P.detC2;
+  if(R<=15000) d=DT.fascia1;
+  else if(R<=I.sc1) d=DT.b1+DT.b2*(I.sc1-R)/DT.b3;
+  else if(R<=I.sc2) d=DT.c1*(I.sc2-R)/DT.c2;
   else d=0;
-  if(R>P.maggDa && R<=P.maggA) d+=P.magg;
-  if(R<=50000) d=Math.max(d, termine?P.detMinDet:P.detMin);
+  if(R>DT.maggDa && R<=DT.maggA) d+=DT.magg;
+  if(R<=I.sc2) d=Math.max(d, termine?DT.minimoTermine:DT.minimo);
   return d;
 }
 function irpefLorda(R){
-  if(R<=P.sc1) return R*P.a1;
-  if(R<=P.sc2) return P.sc1*P.a1+(R-P.sc1)*P.a2;
-  return P.sc1*P.a1+(P.sc2-P.sc1)*P.a2+(R-P.sc2)*P.a3;
+  if(R<=I.sc1) return R*I.a1;
+  if(R<=I.sc2) return I.sc1*I.a1+(R-I.sc1)*I.a2;
+  return I.sc1*I.a1+(I.sc2-I.sc1)*I.a2+(R-I.sc2)*I.a3;
 }
 function calcola(){
-  const ral=leggi('ral',0,500000);
+  limitato=[];
+  const ral=leggi('ral',0,500000,'RAL');
   const mens=parseInt(document.getElementById('mensilita').value,10);
   const termine=document.querySelector('input[name=tipo]:checked').value==='det';
-  const contrib=ral*P.contrib, imp=ral-contrib;
+  const contrib=ral*CB, imp=ral-contrib;
   const lorda=irpefLorda(imp), det=detrazione(imp,termine);
   const netta=Math.max(0,lorda-det);
-  let ti=0; if(imp<=P.tiSoglia && lorda>(det-P.tiRid)) ti=P.ti;
+  let ti=0; if(imp<=CU.trattamentoSoglia && lorda>(det-CU.trattamentoRid)) ti=CU.trattamento;
   let esente=0;
-  if(imp<=8500) esente=ral*P.esente1;
-  else if(imp<=15000) esente=ral*P.esente2;
-  else if(imp<=20000) esente=ral*P.esente3;
+  if(imp<=8500) esente=ral*CU.esente1;
+  else if(imp<=15000) esente=ral*CU.esente2;
+  else if(imp<=20000) esente=ral*CU.esente3;
   let ult=0;
-  if(imp>20000 && imp<=32000) ult=P.ulterior;
-  else if(imp>32000 && imp<=40000) ult=P.ulterior*(40000-imp)/8000;
+  if(imp>20000 && imp<=32000) ult=CU.ulteriore;
+  else if(imp>32000 && imp<=40000) ult=CU.ulteriore*(40000-imp)/8000;
   const integrazioni=ti+esente+ult;
   return {ral,mens,contrib,imp,lorda,det,netta,integrazioni,termine,
-    nettoAlto: imp-netta-imp*P.addMin+integrazioni,
-    nettoBasso: imp-netta-imp*P.addMax+integrazioni};
+    nettoAlto: imp-netta-imp*AD.min+integrazioni,
+    nettoBasso: imp-netta-imp*AD.max+integrazioni};
 }
 function mostra(r,scorri){
   document.getElementById('mensile').textContent=euro(r.nettoBasso/r.mens)+' \u2013 '+euro(r.nettoAlto/r.mens);
-  document.getElementById('notaMensile').textContent='Su '+r.mens+' mensilit\u00e0. La forbice dipende da regione e comune di residenza.';
+  document.getElementById('notaMensile').textContent='Su '+r.mens+' mensilita. La forbice dipende da regione e comune di residenza.';
   document.getElementById('annuo').textContent=euro(r.nettoBasso)+' \u2013 '+euro(r.nettoAlto);
   document.getElementById('contributi').textContent=euro(r.contrib);
   document.getElementById('imponibile').textContent=euro(r.imp);
@@ -147,10 +156,10 @@ function mostra(r,scorri){
   document.getElementById('detrazione').textContent=euro(r.det);
   document.getElementById('irpefNetta').textContent=euro(r.netta);
   document.getElementById('bonus').textContent = r.integrazioni>0 ? euro(r.integrazioni) : 'nessuna';
-  let h='';
+  let h=avvisoLimiti();
   if(r.netta<=0) h+='<div class="avviso successo">A questo livello di reddito le detrazioni assorbono tutta l\'IRPEF: non versi imposta sul reddito.</div>';
-  if(r.termine && r.imp<=50000) h+='<div class="avviso">Contratto a termine: applicata la detrazione minima garantita di '+euro(P.detMinDet)+' prevista dall\'art. 13 comma 1 lettera a) del TUIR.</div>';
-  if(r.imp>50000) h+='<div class="avviso">Sopra i 50.000 &euro; di reddito la detrazione per lavoro dipendente si azzera del tutto.</div>';
+  if(r.termine && r.imp<=I.sc2) h+='<div class="avviso">Contratto a termine: applicata la detrazione minima garantita di '+euro(DT.minimoTermine)+' prevista dall\'art. 13 comma 1 lettera a) del TUIR.</div>';
+  if(r.imp>I.sc2) h+='<div class="avviso">Sopra i '+num(I.sc2)+' \u20ac di reddito la detrazione per lavoro dipendente si azzera del tutto.</div>';
   document.getElementById('avvisi').innerHTML=h;
   const e=document.getElementById('esito'); e.hidden=false;
   if(scorri) e.scrollIntoView({behavior:'smooth',block:'start'});
@@ -175,7 +184,7 @@ document.getElementById('modulo').addEventListener('change',()=>{if(attivo)mostr
     "name": "calcolichiari.it",
     "url": "https://calcolichiari.it/"
    },
-   "dateModified": "2026-09-02",
+   "dateModified": "2026-09-01",
    "applicationCategory": "FinanceApplication",
    "operatingSystem": "Qualsiasi browser",
    "offers": {

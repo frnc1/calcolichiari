@@ -1,6 +1,6 @@
 /* calcolichiari.it — foglio di stile unico. Font locali, nessuna richiesta a terzi. */
-@font-face{font-family:'Poppins';src:url('/poppins-500.woff') format('woff');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'Poppins';src:url('/poppins-700.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('/poppins-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('/poppins-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
 
 :root{
   --bg:#f4f7f6; --bg-card:#fff; --bg-tenue:#eef3f2; --bg-hero:#e8f4f1; --bg-scuro:#0d2b28;
@@ -29,13 +29,17 @@ a{color:var(--brand-scuro)}
 .testata{background:var(--bg-card);border-bottom:1px solid var(--bordo);
   border-top:3px solid var(--brand);position:sticky;top:0;z-index:20}
 .testata-interno{max-width:1000px;margin:0 auto;padding:0 20px;display:flex;
-  align-items:center;justify-content:space-between;gap:18px;min-height:74px}
+  align-items:center;justify-content:space-between;gap:14px;min-height:74px;flex-wrap:wrap}
 .marchio{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);flex:0 0 auto}
 .marchio svg{display:block;flex:0 0 auto}
 .marchio-nome{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.025em}
 .marchio-nome b{color:var(--brand-scuro);font-weight:700}
-.nav-sito{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
-.nav-sito::-webkit-scrollbar{display:none}
+.nav-sito{display:flex;gap:2px;flex-wrap:wrap}
+@media(max-width:760px){
+  .testata-interno{padding-top:12px;padding-bottom:10px;min-height:0}
+  .nav-sito{width:100%;gap:4px}
+  .nav-sito a{padding:7px 11px;font-size:.85rem;background:var(--bg-tenue)}
+}
 .nav-sito a{font-size:.88rem;font-weight:600;color:var(--ink-tenue);text-decoration:none;
   padding:8px 12px;border-radius:var(--r-sm);white-space:nowrap;transition:all .14s}
 .nav-sito a:hover{color:var(--brand-scuro);background:var(--bg-tenue)}
@@ -124,6 +128,8 @@ button.secondario:hover{background:var(--brand-chiaro)}
   border-bottom:1px solid var(--bordo);font-variant-numeric:tabular-nums;font-size:.93rem}
 .riga-dato span:first-child{color:var(--ink-tenue)}
 .riga-dato strong{font-weight:700;white-space:nowrap}
+
+#risultato[hidden]{display:none}
 
 /* ============ tabella ============ */
 .tabella-wrap{overflow-x:auto;margin-top:14px;border:1px solid var(--bordo);border-radius:var(--r-md)}
