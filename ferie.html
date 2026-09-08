@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calcolo ferie non godute 2026: indennità sostitutiva | calcolichiari.it</title>
+<meta name="description" content="Calcola l'indennità per le ferie non godute alla fine del rapporto. Gestisce i ratei di chi ha lavorato solo parte dell'anno e i contratti a termine.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="calcolichiari.it">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Quanto valgono le ferie che non hai preso">
+<meta property="og:description" content="Calcola l'indennità per le ferie non godute alla fine del rapporto. Gestisce i ratei di chi ha lavorato solo parte dell'anno e i contratti a termine.">
+<meta property="og:url" content="https://calcolichiari.it/ferie">
+<meta property="og:image" content="https://calcolichiari.it/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="calcolichiari.it, calcolatori per NASpI, TFR, tredicesima e busta paga">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://calcolichiari.it/ferie">
+<meta name="theme-color" content="#0a6b5f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a6b5f'/%3E%3Crect x='7' y='9' width='4' height='14' rx='1.5' fill='%23fff'/%3E%3Crect x='14' y='11' width='4' height='12' rx='1.5' fill='%23fff'/%3E%3Crect x='21' y='14' width='4' height='9' rx='1.5' fill='%237fd4c4'/%3E%3C/svg%3E">
+<link rel="preload" href="/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/stile.css?v=8">
+</head>
+<body>
+<header class="testata"><div class="testata-interno"><a class="marchio" href="/"><svg width='34' height='34' viewBox='0 0 32 32' aria-hidden='true' focusable='false'><rect width='32' height='32' rx='7' fill='#0a6b5f'/><rect x='7' y='9' width='4' height='14' rx='1.5' fill='#fff'/><rect x='14' y='11' width='4' height='12' rx='1.5' fill='#fff'/><rect x='21' y='14' width='4' height='9' rx='1.5' fill='#7fd4c4'/></svg><span class="marchio-nome">calcoli<b>chiari</b></span></a><nav class="nav-sito" aria-label="Calcolatori"><a href="/">NASpI</a><a href="/naspi-anticipata">NASpI anticipata</a><a href="/tredicesima">Tredicesima</a><a href="/ferie" aria-current="page">Ferie</a><a href="/tfr">TFR</a><a href="/netto">Busta paga</a></nav></div></header>
+<main class="foglio">
+<div class="solo-stampa intestazione-stampa"><strong>calcolichiari.it</strong><span>Stima informativa — fa fede solo l'ente competente</span></div>
+<nav class="briciole" aria-label="Percorso"><a href="/">Home</a> › <span aria-current="page">Ferie non godute</span></nav>
+<div class="etichetta-pag">Art. 10 D.Lgs. 66/2003</div>
+<h1>Quanto valgono le ferie che non hai preso</h1>
+<p class="sottotitolo">Alla fine del rapporto i giorni residui vanno pagati. Qui calcoli quanto, anche se hai lavorato solo qualche mese.</p>
+
+<form id="modulo" class="card">
+<fieldset><legend>1. La tua retribuzione</legend>
+<div class="scelte">
+<label class="scelta"><input type="radio" name="modo" value="ral" checked><span>So la RAL</span></label>
+<label class="scelta"><input type="radio" name="modo" value="mens"><span>So il lordo mensile</span></label>
+</div>
+<div class="campo" id="campoRal">
+<label for="ral">Retribuzione annua lorda — RAL (€)</label>
+<input type="number" id="ral" inputmode="decimal" step="100" min="0" max="500000" value="26000">
+</div>
+<div class="campo" id="campoNum">
+<label for="mensilita">Su quante mensilità</label>
+<select id="mensilita"><option value="13" selected>13</option><option value="14">14</option><option value="12">12</option></select>
+</div>
+<div class="campo" id="campoMens" hidden>
+<label for="lordo">Retribuzione lorda mensile (€)</label>
+<input type="number" id="lordo" inputmode="decimal" step="10" min="0" max="40000" value="2000">
+<p class="aiuto">La paga di un mese pieno, senza straordinari né rimborsi.</p>
+</div>
+</fieldset>
+
+<fieldset><legend>2. Le ferie che non hai preso</legend>
+<div class="scelte">
+<label class="scelta"><input type="radio" name="conteggio" value="giorni" checked><span>So i giorni</span></label>
+<label class="scelta"><input type="radio" name="conteggio" value="ratei"><span>Calcolali tu</span></label>
+</div>
+<div class="campo" id="campoGiorni">
+<label for="giorni">Giorni di ferie non goduti</label>
+<input type="number" id="giorni" inputmode="decimal" step="0.5" min="0" max="120" value="12">
+<p class="aiuto">Il residuo indicato nel cedolino, di solito nella sezione dei ratei.</p>
+</div>
+<div id="bloccoRatei" hidden>
+<div class="campo">
+<label for="mesi">Mesi lavorati nell'anno</label>
+<input type="number" id="mesi" inputmode="numeric" step="1" min="0" max="12" value="7">
+<p class="aiuto">Un mese matura il rateo se hai lavorato almeno 15 giorni. Con più contratti somma i mesi utili di tutti.</p>
+</div>
+<div class="campo">
+<label for="annui">Giorni di ferie spettanti per un anno intero</label>
+<input type="number" id="annui" inputmode="decimal" step="1" min="0" max="60" value="26">
+<p class="aiuto">26 con la settimana su 6 giorni, 20 o 22 con la settimana su 5. Lo trovi nel tuo CCNL.</p>
+</div>
+<div class="campo">
+<label for="gia">Giorni già goduti</label>
+<input type="number" id="gia" inputmode="decimal" step="0.5" min="0" max="60" value="0">
+</div>
+</div>
+</fieldset>
+
+<fieldset><legend>3. Base di calcolo</legend>
+<div class="campo">
+<label for="divisore">Divisore mensile</label>
+<input type="number" id="divisore" inputmode="numeric" step="1" min="1" max="31" value="26">
+<p class="aiuto">La quota giornaliera si ottiene dividendo la retribuzione mensile per questo numero. Quasi tutti i contratti collettivi usano 26; alcuni usano 30. Se il conto non torna, è quasi sempre qui.</p>
+</div>
+</fieldset>
+
+<button type="submit">Calcola indennità</button>
+</form>
+
+<section id="esito" class="card esito" hidden aria-live="polite">
+<div class="solo-stampa riepilogo-stampa" id="riepilogoStampa"></div>
+<div id="avvisi"></div>
+<div id="risultato">
+<div class="hero-risultato">
+<div class="hero-titolo">Indennità sostitutiva lorda</div>
+<div class="cifra" id="lordoTot">—</div>
+<p class="cifra-nota" id="notaLordo"></p>
+</div>
+<div class="dettagli-lista">
+<div class="riga-dato"><span>Quota giornaliera</span><strong id="quota">—</strong></div>
+<div class="riga-dato"><span>Giorni conteggiati</span><strong id="ngiorni">—</strong></div>
+<div class="riga-dato"><span>Contributi INPS (9,19%)</span><strong id="contributi">—</strong></div>
+<div class="riga-dato"><span>Imponibile fiscale</span><strong id="imponibile">—</strong></div>
+<div class="riga-dato"><span>Stima netta in busta</span><strong id="netto">—</strong></div>
+</div>
+<div class="azioni">
+<button type="button" class="azione" id="stampa"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg>Salva in PDF o stampa</button>
+</div>
+</div>
+</section>
+
+<section class="faq-box"><h2>Domande frequenti</h2>
+<details><summary>Il datore può pagarmi le ferie invece di farmele fare?</summary><div class="faq-contenuto">No, non mentre il rapporto è in corso. L'art. 10 del D.Lgs. 66/2003 vieta di sostituire con un'indennità le quattro settimane di ferie minime garantite, proprio perché le ferie servono a riposare e non a integrare lo stipendio. Il divieto cade solo alla fine del rapporto: a quel punto i giorni non goduti vanno pagati per forza.</div></details>
+<details><summary>Ho fatto quattro contratti a termine in un anno. Come funziona?</summary><div class="faq-contenuto">Ogni contratto fa storia a sé. Le ferie maturate durante quel rapporto e non godute ti vengono liquidate nell'ultima busta paga di quel contratto, non accumulate fino all'ultimo. È il motivo per cui chi lavora in somministrazione vede quasi sempre le ferie monetizzate: un contratto di tre mesi matura sei o sette giorni, e prenderli davvero è quasi impossibile.</div></details>
+<details><summary>Le ferie si perdono se non le prendo entro l'anno?</summary><div class="faq-contenuto">No, non si perdono. La legge stabilisce che almeno due settimane vanno godute nell'anno di maturazione e le restanti entro diciotto mesi dalla fine di quell'anno. Se scade quel termine il diritto al riposo resta, e in caso di cessazione i giorni vanno comunque pagati: quello che scatta è semmai un obbligo contributivo per il datore.</div></details>
+<details><summary>Perché il netto è indicato come stima e non come cifra esatta?</summary><div class="faq-contenuto">Perché l'indennità sostitutiva è reddito ordinario: si somma alla retribuzione del mese in cui viene pagata e viene tassata insieme a quella, con le detrazioni e le addizionali che ti spettano in quel mese. Il risultato dipende quindi da quanto hai guadagnato nell'anno e da dove risiedi. Il lordo invece è determinabile con precisione, ed è quello che questo strumento calcola.</div></details>
+<details><summary>ROL, permessi ed ex festività rientrano in questo calcolo?</summary><div class="faq-contenuto">No. Qui si contano solo le ferie. I permessi ROL e le ex festività sono istituti previsti dai contratti collettivi, non dalla legge, e seguono regole di maturazione e monetizzazione proprie. Nel cedolino compaiono in righe separate: usa quella delle ferie.</div></details>
+</section>
+<section class="metodo"><h2>Come è calcolato</h2>
+<p class="aggiornamento"><span aria-hidden="true">✓</span> Norme verificate il <time datetime="2026-09-05">5 settembre 2026</time>.</p>
+<p class="nota">
+<strong>Diritto.</strong> Le ferie annuali retribuite sono garantite dall'art. 36 comma 3 della Costituzione, che le dichiara irrinunciabili, e dall'art. 2109 del Codice Civile. L'art. 10 del D.Lgs. 66/2003 fissa il minimo in quattro settimane l'anno, in attuazione della direttiva europea 2003/88/CE.<br><br>
+<strong>Quando si pagano.</strong> Durante il rapporto di lavoro le quattro settimane minime non possono essere sostituite da denaro. Alla cessazione del rapporto, invece, i giorni maturati e non goduti vanno liquidati come indennità sostitutiva.<br><br>
+<strong>Importo.</strong> Quota giornaliera moltiplicata per i giorni residui. La quota giornaliera si ricava dividendo la retribuzione mensile lorda per il divisore previsto dal contratto collettivo, di norma 26. Poiché il divisore cambia da contratto a contratto, qui è un parametro che imposti tu.<br><br>
+<strong>Maturazione.</strong> Un dodicesimo del monte ferie annuo per ogni mese utile, con la regola dei quindici giorni diffusa nella contrattazione collettiva.<br><br>
+<strong>Tassazione.</strong> L'indennità è reddito da lavoro dipendente ordinario: subisce i contributi previdenziali e concorre all'IRPEF del mese in cui viene erogata, con detrazioni e addizionali ordinarie. Per questo il lordo è esatto e il netto è una stima.<br><br>
+<strong>Cosa questo strumento non fa.</strong> Non calcola permessi ROL, ex festività e banca ore, che sono istituti contrattuali con regole proprie. Non conosce il monte ferie del tuo CCNL né le maggiorazioni per anzianità, non gestisce il part time verticale, e non verifica quali assenze abbiano interrotto la maturazione. È una stima: fa fede il cedolino.<br><br>
+<strong>Fonti.</strong> Art. 36 comma 3 della Costituzione; art. 2109 del Codice Civile; art. 10 del D.Lgs. 8 aprile 2003 n. 66; direttiva 2003/88/CE del Parlamento europeo e del Consiglio.</p></section>
+<section class="altri"><h2>Gli altri calcolatori</h2><div class="altri-griglia"><a href="/netto"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></span><span><span class="altri-nome">Lordo e netto</span><span class="altri-desc">Busta paga con IRPEF 2026</span></span></a><a href="/tredicesima"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V9"/><path d="M8.5 20V9"/><path d="M13 20V9"/><path d="M19.5 20V4.5"/></svg></span><span><span class="altri-nome">Calcolo tredicesima</span><span class="altri-desc">Anche con ratei parziali</span></span></a><a href="/tfr"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5h16"/><path d="M6 14.8h12"/><path d="M8 10.1h8"/><path d="M10 5.4h4"/></svg></span><span><span class="altri-nome">Calcolo TFR</span><span class="altri-desc">Anche con più contratti</span></span></a><a href="/naspi-anticipata"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 20V4"/><path d="M16 20V12.5"/></svg></span><span><span class="altri-nome">NASpI anticipata</span><span class="altri-desc">Le due rate 70% e 30%</span></span></a></div></section></main>
+<footer class="piede"><div class="piede-interno">
+<div class="piede-griglia">
+<div><a class="marchio" href="/"><svg width='34' height='34' viewBox='0 0 32 32' aria-hidden='true' focusable='false'><rect width='32' height='32' rx='7' fill='#0a6b5f'/><rect x='7' y='9' width='4' height='14' rx='1.5' fill='#fff'/><rect x='14' y='11' width='4' height='12' rx='1.5' fill='#fff'/><rect x='21' y='14' width='4' height='9' rx='1.5' fill='#7fd4c4'/></svg><span class="marchio-nome">calcoli<b>chiari</b></span></a>
+<p class="piede-intro">Calcolatori per chi ha contratti brevi, a termine o in somministrazione. Ogni risultato dichiara la norma da cui viene.</p></div>
+<div><h3>Calcolatori</h3><ul><li><a href="/">Calcolo NASpI</a></li><li><a href="/netto">Lordo e netto</a></li><li><a href="/tredicesima">Calcolo tredicesima</a></li><li><a href="/ferie">Ferie non godute</a></li><li><a href="/tfr">Calcolo TFR</a></li><li><a href="/naspi-anticipata">NASpI anticipata</a></li></ul></div>
+<div><h3>Il sito</h3><ul>
+<li><a href="/chi-siamo">Chi c'è dietro</a></li>
+<li><a href="/contatti">Contatti</a></li>
+<li><a href="/privacy">Privacy</a></li>
+</ul></div></div>
+<p class="piede-legale"><strong>calcolichiari.it</strong> — I calcoli hanno scopo informativo e si basano sui testi normativi vigenti, citati per esteso in fondo a ogni pagina. Fanno fede unicamente i provvedimenti degli enti previdenziali e fiscali competenti. I calcoli avvengono nel tuo browser e i numeri che digiti non vengono inviati da nessuna parte. Come vengono trattati i dati è spiegato nella <a href="/privacy">pagina privacy</a>.</p>
+</div></footer>
+<script src="/dati-2026.js?v=8"></script>
+<script>
+const euro = n => n.toLocaleString('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' \u20ac';
+const num = (n,d) => n.toLocaleString('it-IT',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});
+let limitato = [];
+const leggi = (id,min,max,eti) => {
+  const e=document.getElementById(id); if(!e) return min;
+  const v=parseFloat(e.value); if(!isFinite(v)) return min;
+  const c=Math.min(max,Math.max(min,v));
+  if(eti && Math.abs(c-v)>0.001) limitato.push(eti+': ho usato '+num(c,c%1?2:0)+' invece di '+num(v,v%1?2:0));
+  return c;
+};
+const avvisoLimiti = () => limitato.length
+  ? '<div class="avviso">Un valore era fuori dai limiti previsti dalla norma. '+limitato.join('. ')+'.</div>' : '';
+function collegaStampa(riepilogo){
+  const b=document.getElementById('stampa');
+  if(b) b.addEventListener('click',()=>{
+    const r=document.getElementById('riepilogoStampa');
+    if(r && riepilogo) r.innerHTML=riepilogo();
+    window.print();
+  });
+}
+
+const CB=DATI.contributi.dipendente, I=DATI.irpef, AD=DATI.addizionali;
+function irpef(R){
+  if(R<=0) return 0;
+  if(R<=I.sc1) return R*I.a1;
+  if(R<=I.sc2) return I.sc1*I.a1+(R-I.sc1)*I.a2;
+  return I.sc1*I.a1+(I.sc2-I.sc1)*I.a2+(R-I.sc2)*I.a3;
+}
+const cR=document.getElementById('campoRal'), cN=document.getElementById('campoNum'),
+      cM=document.getElementById('campoMens'), cG=document.getElementById('campoGiorni'),
+      bR=document.getElementById('bloccoRatei');
+document.querySelectorAll('input[name=modo]').forEach(r=>r.addEventListener('change',e=>{
+  const ral=e.target.value==='ral'; cR.hidden=!ral; cN.hidden=!ral; cM.hidden=ral;
+  if(attivo) mostra(calcola(),false); }));
+document.querySelectorAll('input[name=conteggio]').forEach(r=>r.addEventListener('change',e=>{
+  const gg=e.target.value==='giorni'; cG.hidden=!gg; bR.hidden=gg;
+  if(attivo) mostra(calcola(),false); }));
+function calcola(){
+  limitato=[];
+  const modo=document.querySelector('input[name=modo]:checked').value;
+  const nMens=parseInt(document.getElementById('mensilita').value,10);
+  const lordoMese = modo==='ral' ? leggi('ral',0,500000,'RAL')/nMens : leggi('lordo',0,40000,'Lordo mensile');
+  const div=leggi('divisore',1,31,'Divisore');
+  const perRatei = document.querySelector('input[name=conteggio]:checked').value==='ratei';
+  let giorni, mesi=0, annui=0, gia=0;
+  if(perRatei){
+    mesi=leggi('mesi',0,12,'Mesi lavorati'); annui=leggi('annui',0,60,'Giorni annui');
+    gia=leggi('gia',0,60,'Giorni gia goduti');
+    giorni=Math.max(0, annui*mesi/12 - gia);
+  } else {
+    giorni=leggi('giorni',0,120,'Giorni non goduti');
+  }
+  const quota=lordoMese/div, lordo=quota*giorni;
+  const contrib=lordo*CB, imponibile=lordo-contrib;
+  // stima: aliquota marginale sul reddito annuo, piu la forbice delle addizionali
+  const annuoBase=lordoMese*(perRatei?Math.max(mesi,1):12);
+  const impSenza=annuoBase*(1-CB), impCon=impSenza+imponibile;
+  const irp=Math.max(0, irpef(impCon)-irpef(impSenza));
+  return {lordoMese,div,quota,giorni,lordo,contrib,imponibile,perRatei,mesi,annui,gia,
+    nettoAlto: Math.max(0, imponibile-irp-imponibile*AD.min),
+    nettoBasso: Math.max(0, imponibile-irp-imponibile*AD.max)};
+}
+let ultimo=null;
+function mostra(r,scorri){
+  ultimo=r;
+  let h=avvisoLimiti();
+  const box=document.getElementById('risultato');
+  const e=document.getElementById('esito'); e.hidden=false;
+  if(r.giorni<=0){
+    h+='<div class="avviso"><strong>Nessun giorno da liquidare.</strong> Con i dati inseriti non risultano ferie residue: o non hai maturato ratei, o hai gia goduto tutto quello che ti spettava.</div>';
+    box.hidden=true; document.getElementById('avvisi').innerHTML=h;
+    if(scorri) e.scrollIntoView({behavior:'smooth',block:'start'});
+    return;
+  }
+  box.hidden=false;
+  document.getElementById('lordoTot').textContent=euro(r.lordo);
+  document.getElementById('notaLordo').textContent='Per '+num(r.giorni,r.giorni%1?1:0)+' giorni, alla quota giornaliera di '+euro(r.quota)+'.';
+  document.getElementById('quota').textContent=euro(r.quota)+' (mensile / '+num(r.div)+')';
+  document.getElementById('ngiorni').textContent=num(r.giorni,r.giorni%1?1:0)+' giorni';
+  document.getElementById('contributi').textContent=euro(r.contrib);
+  document.getElementById('imponibile').textContent=euro(r.imponibile);
+  document.getElementById('netto').textContent=euro(r.nettoBasso)+' \u2013 '+euro(r.nettoAlto);
+  h+='<div class="avviso">Finche il rapporto e in corso le quattro settimane minime <strong>non possono essere pagate</strong> al posto del riposo: lo vieta l\'art. 10 del D.Lgs. 66/2003. Questa indennita spetta alla cessazione del rapporto.</div>';
+  if(r.perRatei && r.mesi<12) h+='<div class="avviso">Con piu contratti nello stesso anno ogni rapporto liquida le proprie ferie alla sua scadenza. Il totale coincide, ma arriva in piu buste paga diverse.</div>';
+  if(r.div!==26) h+='<div class="avviso">Stai usando un divisore diverso da 26: assicurati che sia quello previsto dal tuo contratto collettivo, perche cambia il risultato in proporzione.</div>';
+  document.getElementById('avvisi').innerHTML=h;
+  if(scorri) e.scrollIntoView({behavior:'smooth',block:'start'});
+}
+collegaStampa(function(){
+  if(!ultimo) return '';
+  const d=new Date().toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric'});
+  return '<b>Ferie non godute</b> &middot; calcolo del '+d+'<br>'+
+   'Retribuzione lorda mensile: <b>'+euro(ultimo.lordoMese)+'</b> &middot; divisore <b>'+num(ultimo.div)+'</b><br>'+
+   'Giorni conteggiati: <b>'+num(ultimo.giorni,ultimo.giorni%1?1:0)+'</b>'+
+   (ultimo.perRatei ? ' (maturati su '+num(ultimo.mesi)+' mesi, '+num(ultimo.annui)+' giorni annui, '+num(ultimo.gia,ultimo.gia%1?1:0)+' gia goduti)' : '');
+});
+let attivo=false;
+document.getElementById('modulo').addEventListener('submit',e=>{e.preventDefault();mostra(calcola(),!attivo);attivo=true;});
+document.getElementById('modulo').addEventListener('input',()=>{if(attivo)mostra(calcola(),false);});
+document.getElementById('modulo').addEventListener('change',()=>{if(attivo)mostra(calcola(),false);});
+
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Quanto valgono le ferie che non hai preso",
+   "inLanguage": "it-IT",
+   "url": "https://calcolichiari.it/ferie",
+   "isPartOf": {
+    "@type": "WebSite",
+    "name": "calcolichiari.it",
+    "url": "https://calcolichiari.it/"
+   },
+   "dateModified": "2026-09-05",
+   "applicationCategory": "FinanceApplication",
+   "operatingSystem": "Qualsiasi browser",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://calcolichiari.it/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Ferie non godute",
+     "item": "https://calcolichiari.it/ferie"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Il datore può pagarmi le ferie invece di farmele fare?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No, non mentre il rapporto è in corso. L'art. 10 del D.Lgs. 66/2003 vieta di sostituire con un'indennità le quattro settimane di ferie minime garantite, proprio perché le ferie servono a riposare e non a integrare lo stipendio. Il divieto cade solo alla fine del rapporto: a quel punto i giorni non goduti vanno pagati per forza."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ho fatto quattro contratti a termine in un anno. Come funziona?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ogni contratto fa storia a sé. Le ferie maturate durante quel rapporto e non godute ti vengono liquidate nell'ultima busta paga di quel contratto, non accumulate fino all'ultimo. È il motivo per cui chi lavora in somministrazione vede quasi sempre le ferie monetizzate: un contratto di tre mesi matura sei o sette giorni, e prenderli davvero è quasi impossibile."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Le ferie si perdono se non le prendo entro l'anno?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No, non si perdono. La legge stabilisce che almeno due settimane vanno godute nell'anno di maturazione e le restanti entro diciotto mesi dalla fine di quell'anno. Se scade quel termine il diritto al riposo resta, e in caso di cessazione i giorni vanno comunque pagati: quello che scatta è semmai un obbligo contributivo per il datore."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Perché il netto è indicato come stima e non come cifra esatta?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Perché l'indennità sostitutiva è reddito ordinario: si somma alla retribuzione del mese in cui viene pagata e viene tassata insieme a quella, con le detrazioni e le addizionali che ti spettano in quel mese. Il risultato dipende quindi da quanto hai guadagnato nell'anno e da dove risiedi. Il lordo invece è determinabile con precisione, ed è quello che questo strumento calcola."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ROL, permessi ed ex festività rientrano in questo calcolo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Qui si contano solo le ferie. I permessi ROL e le ex festività sono istituti previsti dai contratti collettivi, non dalla legge, e seguono regole di maturazione e monetizzazione proprie. Nel cedolino compaiono in righe separate: usa quella delle ferie."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

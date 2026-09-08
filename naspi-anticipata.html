@@ -21,11 +21,12 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a6b5f'/%3E%3Crect x='7' y='9' width='4' height='14' rx='1.5' fill='%23fff'/%3E%3Crect x='14' y='11' width='4' height='12' rx='1.5' fill='%23fff'/%3E%3Crect x='21' y='14' width='4' height='9' rx='1.5' fill='%237fd4c4'/%3E%3C/svg%3E">
 <link rel="preload" href="/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/stile.css?v=6">
+<link rel="stylesheet" href="/stile.css?v=8">
 </head>
 <body>
-<header class="testata"><div class="testata-interno"><a class="marchio" href="/"><svg width='34' height='34' viewBox='0 0 32 32' aria-hidden='true' focusable='false'><rect width='32' height='32' rx='7' fill='#0a6b5f'/><rect x='7' y='9' width='4' height='14' rx='1.5' fill='#fff'/><rect x='14' y='11' width='4' height='12' rx='1.5' fill='#fff'/><rect x='21' y='14' width='4' height='9' rx='1.5' fill='#7fd4c4'/></svg><span class="marchio-nome">calcoli<b>chiari</b></span></a><nav class="nav-sito" aria-label="Calcolatori"><a href="/naspi">NASpI</a><a href="/naspi-anticipata" aria-current="page">NASpI anticipata</a><a href="/tredicesima">Tredicesima</a><a href="/tfr">TFR</a><a href="/netto">Busta paga</a></nav></div></header>
+<header class="testata"><div class="testata-interno"><a class="marchio" href="/"><svg width='34' height='34' viewBox='0 0 32 32' aria-hidden='true' focusable='false'><rect width='32' height='32' rx='7' fill='#0a6b5f'/><rect x='7' y='9' width='4' height='14' rx='1.5' fill='#fff'/><rect x='14' y='11' width='4' height='12' rx='1.5' fill='#fff'/><rect x='21' y='14' width='4' height='9' rx='1.5' fill='#7fd4c4'/></svg><span class="marchio-nome">calcoli<b>chiari</b></span></a><nav class="nav-sito" aria-label="Calcolatori"><a href="/">NASpI</a><a href="/naspi-anticipata" aria-current="page">NASpI anticipata</a><a href="/tredicesima">Tredicesima</a><a href="/ferie">Ferie</a><a href="/tfr">TFR</a><a href="/netto">Busta paga</a></nav></div></header>
 <main class="foglio">
+<div class="solo-stampa intestazione-stampa"><strong>calcolichiari.it</strong><span>Stima informativa — fa fede solo l'ente competente</span></div>
 <nav class="briciole" aria-label="Percorso"><a href="/">Home</a> › <span aria-current="page">NASpI anticipata</span></nav>
 <div class="etichetta-pag">Novità legge 199/2025</div>
 <h1>Quanto arriva con la NASpI anticipata</h1>
@@ -34,7 +35,7 @@
 <fieldset><legend>Dati della NASpI riconosciuta</legend>
 <div class="campo"><label for="importo">Importo mensile lordo del 1° mese (€)</label>
 <input type="number" id="importo" inputmode="decimal" step="0.01" min="0" max="2000" value="1050">
-<p class="aiuto">Lo trovi nel provvedimento INPS. Se non ce l'hai ancora, stimalo con il <a href="/naspi">calcolatore NASpI</a>.</p></div>
+<p class="aiuto">Lo trovi nel provvedimento INPS. Se non ce l'hai ancora, stimalo con il <a href="/">calcolatore NASpI</a>.</p></div>
 <div class="campo"><label for="durata">Durata totale riconosciuta, in mesi</label>
 <input type="number" id="durata" inputmode="decimal" step="0.5" min="1" max="24" value="15">
 <p class="aiuto">Il massimo di legge è 24 mesi.</p></div>
@@ -49,6 +50,7 @@
 </form>
 
 <section id="esito" class="card esito" hidden aria-live="polite">
+<div class="solo-stampa riepilogo-stampa" id="riepilogoStampa"></div>
 <div id="avvisi"></div>
 <div id="risultato">
 <div class="hero-risultato">
@@ -69,6 +71,7 @@
 <thead><tr><th scope="col">Mese</th><th scope="col">Lordo</th><th scope="col">Riduzione</th></tr></thead>
 <tbody id="tabella"></tbody></table></div>
 </div>
+<div class="azioni"><button type="button" class="azione" id="stampa"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg>Salva in PDF o stampa</button></div>
 </section>
 <section class="faq-box"><h2>Domande frequenti</h2>
 <details><summary>Cosa è cambiato nel 2026?</summary><div class="faq-contenuto">Fino al 2025 l'anticipazione arrivava in un'unica soluzione. Dal 2026, con la legge 199/2025, viene erogata in due rate: il 70% all'accoglimento della domanda e il restante 30% alla fine. È l'unica modifica che quella legge ha introdotto sulla NASpI.</div></details>
@@ -83,21 +86,20 @@
 <strong>Due rate.</strong> Dal 2026 l'erogazione è divisa in 70% e 30% per effetto della legge 30 dicembre 2025 n. 199.<br><br>
 <strong>Fonti.</strong> Art. 8 del D.Lgs. 22/2015 per l'anticipazione; art. 4 comma 3 dello stesso decreto per il décalage; legge 199/2025 per la suddivisione in due rate.<br><br>
 <strong>Cosa questo strumento non fa.</strong> Non verifica se hai i requisiti per l'anticipazione, non calcola la tassazione, non considera gli incentivi all'autoimprenditorialità previsti da misure regionali. Gli importi sono lordi. È una stima: fa fede solo l'INPS.</p></section>
-<section class="altri"><h2>Gli altri calcolatori</h2><div class="altri-griglia"><a href="/naspi"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V5"/><path d="M9.3 20V9"/><path d="M14.6 20V13.5"/><path d="M20 20V16.5"/></svg></span><span><span class="altri-nome">Calcolo NASpI</span><span class="altri-desc">Importo, durata e décalage</span></span></a><a href="/netto"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></span><span><span class="altri-nome">Lordo e netto</span><span class="altri-desc">Busta paga con IRPEF 2026</span></span></a><a href="/tredicesima"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V9"/><path d="M8.5 20V9"/><path d="M13 20V9"/><path d="M19.5 20V4.5"/></svg></span><span><span class="altri-nome">Calcolo tredicesima</span><span class="altri-desc">Anche con ratei parziali</span></span></a><a href="/tfr"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5h16"/><path d="M6 14.8h12"/><path d="M8 10.1h8"/><path d="M10 5.4h4"/></svg></span><span><span class="altri-nome">Calcolo TFR</span><span class="altri-desc">Anche con più contratti</span></span></a></div></section></main>
+<section class="altri"><h2>Gli altri calcolatori</h2><div class="altri-griglia"><a href="/netto"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></span><span><span class="altri-nome">Lordo e netto</span><span class="altri-desc">Busta paga con IRPEF 2026</span></span></a><a href="/tredicesima"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V9"/><path d="M8.5 20V9"/><path d="M13 20V9"/><path d="M19.5 20V4.5"/></svg></span><span><span class="altri-nome">Calcolo tredicesima</span><span class="altri-desc">Anche con ratei parziali</span></span></a><a href="/ferie"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v7"/><path d="M5.5 10h13l-1.6 9.5a1.4 1.4 0 0 1-1.4 1.2H8.5a1.4 1.4 0 0 1-1.4-1.2z"/><path d="M9 3h6"/></svg></span><span><span class="altri-nome">Ferie non godute</span><span class="altri-desc">Indennità sostitutiva</span></span></a><a href="/tfr"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5h16"/><path d="M6 14.8h12"/><path d="M8 10.1h8"/><path d="M10 5.4h4"/></svg></span><span><span class="altri-nome">Calcolo TFR</span><span class="altri-desc">Anche con più contratti</span></span></a></div></section></main>
 <footer class="piede"><div class="piede-interno">
 <div class="piede-griglia">
 <div><a class="marchio" href="/"><svg width='34' height='34' viewBox='0 0 32 32' aria-hidden='true' focusable='false'><rect width='32' height='32' rx='7' fill='#0a6b5f'/><rect x='7' y='9' width='4' height='14' rx='1.5' fill='#fff'/><rect x='14' y='11' width='4' height='12' rx='1.5' fill='#fff'/><rect x='21' y='14' width='4' height='9' rx='1.5' fill='#7fd4c4'/></svg><span class="marchio-nome">calcoli<b>chiari</b></span></a>
 <p class="piede-intro">Calcolatori per chi ha contratti brevi, a termine o in somministrazione. Ogni risultato dichiara la norma da cui viene.</p></div>
-<div><h3>Calcolatori</h3><ul><li><a href="/naspi">Calcolo NASpI</a></li><li><a href="/netto">Lordo e netto</a></li><li><a href="/tredicesima">Calcolo tredicesima</a></li><li><a href="/tfr">Calcolo TFR</a></li><li><a href="/naspi-anticipata">NASpI anticipata</a></li></ul></div>
+<div><h3>Calcolatori</h3><ul><li><a href="/">Calcolo NASpI</a></li><li><a href="/netto">Lordo e netto</a></li><li><a href="/tredicesima">Calcolo tredicesima</a></li><li><a href="/ferie">Ferie non godute</a></li><li><a href="/tfr">Calcolo TFR</a></li><li><a href="/naspi-anticipata">NASpI anticipata</a></li></ul></div>
 <div><h3>Il sito</h3><ul>
 <li><a href="/chi-siamo">Chi c'è dietro</a></li>
 <li><a href="/contatti">Contatti</a></li>
 <li><a href="/privacy">Privacy</a></li>
-<li><a href="/">Tutti gli strumenti</a></li>
 </ul></div></div>
 <p class="piede-legale"><strong>calcolichiari.it</strong> — I calcoli hanno scopo informativo e si basano sui testi normativi vigenti, citati per esteso in fondo a ogni pagina. Fanno fede unicamente i provvedimenti degli enti previdenziali e fiscali competenti. I calcoli avvengono nel tuo browser e i numeri che digiti non vengono inviati da nessuna parte. Come vengono trattati i dati è spiegato nella <a href="/privacy">pagina privacy</a>.</p>
 </div></footer>
-<script src="/dati-2026.js?v=6"></script>
+<script src="/dati-2026.js?v=8"></script>
 <script>
 const euro = n => n.toLocaleString('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' \u20ac';
 const num = (n,d) => n.toLocaleString('it-IT',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});
@@ -129,7 +131,9 @@ function calcola(){
   const residue=tutte.filter(x=>x.mese>perc);
   return {imp,durata,perc,residue,totale:residue.reduce((s,x)=>s+x.importo,0),decDa,nRate};
 }
+let ultimo=null;
 function mostra(r,scorri){
+  ultimo=r;
   let h=avvisoLimiti();
   const box=document.getElementById('risultato');
   if(r.residue.length===0){
@@ -162,6 +166,9 @@ let attivo=false;
 document.getElementById('modulo').addEventListener('submit',e=>{e.preventDefault();mostra(calcola(),!attivo);attivo=true;});
 document.getElementById('modulo').addEventListener('input',()=>{if(attivo)mostra(calcola(),false);});
 
+collegaStampa(function(){ if(!ultimo) return '';
+  const d=new Date().toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric'});
+  return '<b>NASpI anticipata</b> &middot; calcolo del '+d+'<br>Importo mensile: <b>'+euro(ultimo.imp)+'</b> &middot; durata <b>'+num(ultimo.durata,ultimo.durata%1?1:0)+'</b> mesi<br>Gia percepite: <b>'+num(ultimo.perc)+'</b> mensilita'; });
 </script>
 <script type="application/ld+json">
 {

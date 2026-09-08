@@ -249,3 +249,55 @@ details[open] summary::after{transform:rotate(180deg);color:var(--brand)}
 .piede-legale strong{color:#d3e6e2}
 
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* ============ grafico dell'andamento ============ */
+.grafico{margin:20px 0 4px}
+.grafico svg{display:block;width:100%;height:auto}
+.grafico-legenda{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:.78rem;color:var(--ink-tenue)}
+.grafico-legenda span{display:inline-flex;align-items:center;gap:6px}
+.grafico-legenda i{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+/* ============ azioni sul risultato ============ */
+.azioni{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.azione{flex:1 1 auto;min-width:150px;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:var(--display);font-size:.9rem;font-weight:700;padding:12px 16px;border-radius:var(--r-md);
+  background:var(--bg-tenue);color:var(--brand-scuro);border:1px solid var(--bordo);cursor:pointer;
+  font-family:inherit;transition:all .14s}
+.azione:hover{background:var(--brand-chiaro);border-color:var(--brand)}
+.azione svg{flex:0 0 auto}
+
+/* ============ intestazione che compare solo in stampa ============ */
+.solo-stampa{display:none}
+
+@media print{
+  .testata,.piede,.briciole,.altri,.faq-box,.etichetta-pag,.sottotitolo,
+  form,.azioni,.tool-cta,.elenco-grid{display:none!important}
+  .solo-stampa{display:block!important}
+  html,body{background:#fff!important;color:#000!important;font-size:10.5pt}
+  .foglio{max-width:none;padding:0}
+  h1{font-size:19pt;margin-bottom:4mm}
+  h2{font-size:12pt;margin:5mm 0 2mm;page-break-after:avoid}
+  .card,.esito,.metodo{border:1px solid #999!important;box-shadow:none!important;
+    border-radius:0!important;padding:4mm!important;margin-bottom:4mm!important;
+    page-break-inside:avoid;animation:none!important}
+  .hero-risultato{background:#f2f2f2!important;border:1px solid #999!important;border-radius:0!important}
+  .cifra{color:#000!important;font-size:26pt!important}
+  .riga-dato{font-size:9.5pt;padding:1.6mm 0}
+  .avviso{background:#f4f4f4!important;border-left:3px solid #666!important;color:#000!important;
+    page-break-inside:avoid;font-size:9pt}
+  .barra{background:#666!important}
+  tr.ridotto .barra{background:#bbb!important}
+  table{font-size:8.5pt}
+  .tabella-wrap{overflow:visible;border:1px solid #999!important;border-radius:0!important}
+  th{background:#eee!important;color:#000!important}
+  .nota,.aggiornamento{color:#000!important;background:none!important;border:0!important;
+    padding:0!important;font-size:9pt}
+  a{color:#000!important;text-decoration:none}
+  .intestazione-stampa{border-bottom:2px solid #000;padding-bottom:3mm;margin-bottom:5mm;
+    display:flex;justify-content:space-between;align-items:baseline;gap:8mm}
+  .intestazione-stampa strong{font-size:13pt}
+  .intestazione-stampa span{font-size:9pt}
+  .riepilogo-stampa{border:1px solid #999;padding:3mm;margin-bottom:4mm;font-size:9.5pt;line-height:1.7}
+  .riepilogo-stampa b{font-weight:700}
+  @page{margin:14mm}
+}
