@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Calcolo tredicesima netta 2026, anche con ratei e contratti a termine</title>
-<meta name="description" content="Calcola la tredicesima netta 2026 dal lordo o dalla RAL. Gestisce i ratei di chi non ha lavorato tutto l'anno e i mesi sommati su piu contratti a termine.">
+<title>Calcolo tredicesima netta 2026 (13esima): ratei, part-time, contratti a termine</title>
+<meta name="description" content="Calcola la tredicesima netta 2026 dal lordo o dalla RAL, con la tabella degli importi per stipendio. Gestisce ratei parziali, part-time e più contratti a termine.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="calcolichiari.it">
 <meta property="og:locale" content="it_IT">
 <meta property="og:title" content="Quanto ti arriva di tredicesima">
-<meta property="og:description" content="Calcola la tredicesima netta 2026 dal lordo o dalla RAL. Gestisce i ratei di chi non ha lavorato tutto l'anno e i mesi sommati su piu contratti a termine.">
+<meta property="og:description" content="Calcola la tredicesima netta 2026 dal lordo o dalla RAL, con la tabella degli importi per stipendio. Gestisce ratei parziali, part-time e più contratti a termine.">
 <meta property="og:url" content="https://calcolichiari.it/tredicesima">
 <meta property="og:image" content="https://calcolichiari.it/social-card.png">
 <meta property="og:image:width" content="1200">
@@ -17,22 +17,21 @@
 <meta property="og:image:alt" content="calcolichiari.it, calcolatori per NASpI, TFR, tredicesima e busta paga">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://calcolichiari.it/tredicesima">
-<meta name="theme-color" content="#0a6b5f">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a6b5f'/%3E%3Crect x='7' y='9' width='4' height='14' rx='1.5' fill='%23fff'/%3E%3Crect x='14' y='11' width='4' height='12' rx='1.5' fill='%23fff'/%3E%3Crect x='21' y='14' width='4' height='9' rx='1.5' fill='%237fd4c4'/%3E%3C/svg%3E">
-<link rel="preload" href="/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/stile.css?v=8">
+<meta name="theme-color" content="#1f2547">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%231f2547'/%3E%3Cpath d='M27.80 14.58A11.5 11.5 0 1 0 27.80 33.42' fill='none' stroke='%23ffffff' stroke-width='6.6' stroke-linecap='round'/%3E%3Crect x='20.60' y='17.40' width='20.60' height='4.4' rx='2.2' fill='%23ff6a55'/%3E%3Crect x='20.60' y='26.20' width='20.60' height='4.4' rx='2.2' fill='%23ff6a55'/%3E%3C/svg%3E">
+<link rel="preload" href="/mona-titoli.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/mona-cifre.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/stile.css?v=10">
 </head>
 <body>
-<header class="testata"><div class="testata-interno"><a class="marchio" href="/"><svg width='34' height='34' viewBox='0 0 32 32' aria-hidden='true' focusable='false'><rect width='32' height='32' rx='7' fill='#0a6b5f'/><rect x='7' y='9' width='4' height='14' rx='1.5' fill='#fff'/><rect x='14' y='11' width='4' height='12' rx='1.5' fill='#fff'/><rect x='21' y='14' width='4' height='9' rx='1.5' fill='#7fd4c4'/></svg><span class="marchio-nome">calcoli<b>chiari</b></span></a><nav class="nav-sito" aria-label="Calcolatori"><a href="/">NASpI</a><a href="/naspi-anticipata">NASpI anticipata</a><a href="/tredicesima" aria-current="page">Tredicesima</a><a href="/ferie">Ferie</a><a href="/tfr">TFR</a><a href="/netto">Busta paga</a></nav></div></header>
+<header class="testata"><div class="testata-interno"><a class="marchio" href="/" aria-label="calcolichiari.it, pagina iniziale"><svg class="segno" width="36" height="36" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect class="segno-fondo" width="48" height="48" rx="12"/><path class="segno-c" d="M27.80 14.58A11.5 11.5 0 1 0 27.80 33.42" fill="none" stroke-width="6.6" stroke-linecap="round"/><rect class="segno-u" x="20.60" y="17.40" width="20.60" height="4.4" rx="2.2"/><rect class="segno-u" x="20.60" y="26.20" width="20.60" height="4.4" rx="2.2"/></svg><span class="marchio-nome">calcolichiari</span></a><nav class="nav-sito" aria-label="Calcolatori"><a href="/">NASpI</a><a href="/naspi-anticipata">NASpI anticipata</a><a href="/tredicesima" aria-current="page">Tredicesima</a><a href="/malattia">Malattia</a><a href="/ferie">Ferie</a><a href="/tfr">TFR</a><a href="/netto">Busta paga</a></nav></div></header>
 <main class="foglio">
 <div class="solo-stampa intestazione-stampa"><strong>calcolichiari.it</strong><span>Stima informativa — fa fede solo l'ente competente</span></div>
-<nav class="briciole" aria-label="Percorso"><a href="/">Home</a> › <span aria-current="page">Calcolo tredicesima</span></nav>
-<div class="etichetta-pag">Gratifica natalizia</div>
-<h1>Quanto ti arriva di tredicesima</h1>
-<p class="sottotitolo">Netto reale, non una percentuale a occhio: sulla tredicesima le detrazioni non si applicano e l'IRPEF pesa di più. Gestisce anche i ratei parziali.</p>
+<div class="calc">
+<div class="calc-testa"><nav class="briciole" aria-label="Percorso"><a href="/">Home</a> › <span aria-current="page">Calcolo tredicesima</span></nav><h1>Quanto ti arriva di tredicesima</h1><p class="sottotitolo">Il netto reale della tredicesima, la 13esima mensilità di dicembre, non una percentuale a occhio: sulla tredicesima le detrazioni non si applicano e l'IRPEF pesa di più. Gestisce anche i ratei di chi ha lavorato solo una parte dell'anno.</p><ul class="garanzie"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h10l4 4v12H5z"/><path d="M9 12h6"/><path d="M9 16h6"/></svg><span>D.P.R. 1070/1960 e art. 23 DPR 600/1973</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><path d="m9 15 2 2 4-4"/></svg><span>Norme verificate il 9 ottobre 2026</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>I numeri che inserisci restano nel tuo browser</span></li></ul></div>
+
 <form id="modulo" class="card">
-<fieldset><legend>1. La tua retribuzione</legend>
+<fieldset><legend><span class="passo">1</span>La tua retribuzione</legend>
 <div class="scelte">
 <label class="scelta"><input type="radio" name="modo" value="ral" checked><span>So la RAL</span></label>
 <label class="scelta"><input type="radio" name="modo" value="mens"><span>So il lordo mensile</span></label>
@@ -40,7 +39,7 @@
 <div class="campo" id="campoRal">
 <label for="ral">Retribuzione annua lorda — RAL (€)</label>
 <input type="number" id="ral" inputmode="decimal" step="100" min="0" max="500000" value="26000">
-<p class="aiuto">Il lordo dell'anno indicato nel contratto o nella CU, tredicesima compresa.</p>
+<p class="aiuto">Il lordo dell'anno indicato nel contratto o nella CU, tredicesima compresa. Se sei part-time, usa la RAL del tuo contratto part-time.</p>
 </div>
 <div class="campo" id="campoNum">
 <label for="mensilita">Su quante mensilità</label>
@@ -49,11 +48,11 @@
 <div class="campo" id="campoMens" hidden>
 <label for="lordo">Retribuzione lorda mensile (€)</label>
 <input type="number" id="lordo" inputmode="decimal" step="10" min="0" max="40000" value="2000">
-<p class="aiuto">La retribuzione lorda di un mese pieno, senza straordinari né rimborsi.</p>
+<p class="aiuto">La retribuzione lorda di un mese pieno, senza straordinari né rimborsi. Se sei part-time, quella del tuo orario ridotto.</p>
 </div>
 </fieldset>
 
-<fieldset><legend>2. Il periodo lavorato nell'anno</legend>
+<fieldset><legend><span class="passo">2</span>Il periodo lavorato nell'anno</legend>
 <div class="scelte">
 <label class="scelta"><input type="radio" name="periodo" value="pieno" checked><span>Tutto l'anno</span></label>
 <label class="scelta"><input type="radio" name="periodo" value="parte"><span>Solo una parte</span></label>
@@ -85,32 +84,60 @@
 <div class="riga-dato"><span>IRPEF trattenuta</span><strong id="irpef">—</strong></div>
 <div class="riga-dato"><span>Prelievo complessivo</span><strong id="prelievo">—</strong></div>
 </div>
-</div>
 <div class="azioni"><button type="button" class="azione" id="stampa"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg>Salva in PDF o stampa</button></div>
+</div>
 </section>
+
+<section class="card non-stampare" id="esempi">
+<h2 style="margin-top:0">Quanto è la tredicesima: esempi per stipendio</h2>
+<p class="nota">La 13esima lorda è uguale a una mensilità. Qui sotto quanto arriva netto nella busta di dicembre a chi ha lavorato tutto l'anno, nel settore privato, con 13 mensilità.</p>
+<div class="tabella-wrap"><table class="tabella-esempi">
+<caption class="solo-lettori">Tredicesima netta per stipendio lordo mensile, con contributi e IRPEF trattenuti, anno intero, 2026</caption>
+<thead><tr><th scope="col">Lordo mensile</th><th scope="col">13esima netta</th><th scope="col">Contributi</th><th scope="col">IRPEF</th></tr></thead>
+<tbody>
+<tr><td>1.000 €</td><td>699,24 €</td><td>91,90 €</td><td>208,86 €</td></tr>
+<tr><td>1.200 €</td><td>839,08 €</td><td>110,28 €</td><td>250,64 €</td></tr>
+<tr><td>1.400 €</td><td>978,93 €</td><td>128,66 €</td><td>292,41 €</td></tr>
+<tr><td>1.600 €</td><td>1.118,78 €</td><td>147,04 €</td><td>334,18 €</td></tr>
+<tr><td>1.800 €</td><td>1.258,63 €</td><td>165,42 €</td><td>375,95 €</td></tr>
+<tr><td>2.000 €</td><td>1.398,47 €</td><td>183,80 €</td><td>417,73 €</td></tr>
+<tr><td>2.500 €</td><td>1.748,09 €</td><td>229,75 €</td><td>522,16 €</td></tr>
+<tr><td>3.000 €</td><td>2.058,61 €</td><td>275,70 €</td><td>665,69 €</td></tr>
+<tr><td>3.500 €</td><td>2.362,83 €</td><td>321,65 €</td><td>815,52 €</td></tr>
+</tbody></table></div>
+<p class="nota" style="margin-top:16px"><strong>Con 1.000 € lordi al mese</strong> la tredicesima è di 1.000 € lordi, cioè 699,24 € netti. Se invece 1.000 € è quello che ti arriva netto ogni mese, prendi dal cedolino la retribuzione lorda e usa quella: la tredicesima si calcola sempre sul lordo.</p>
+<p class="nota" style="margin-top:12px"><strong>Con sei mesi di lavoro</strong> ne spetta la metà: con 1.500 € lordi al mese sono 750,00 € lordi e 524,43 € netti.</p>
+</section>
+
+</div>
+<div class="dopo">
 <section class="faq-box"><h2>Domande frequenti</h2>
-<details><summary>Ho avuto tre contratti a termine quest'anno. La tredicesima come funziona?</summary><div class="faq-contenuto">Ogni contratto matura i propri ratei e te li liquida alla fine, di solito nell'ultima busta paga di quel rapporto. Non aspetti dicembre e non ricevi una tredicesima unica: ricevi tanti pezzi quanti sono i contratti. Per sapere quanto hai preso in tutto nell'anno, somma i mesi utili di tutti i rapporti e inseriscili qui: il totale è lo stesso, cambia solo il momento in cui arriva.</div></details>
-<details><summary>Perché la tredicesima netta è più bassa di una busta paga normale?</summary><div class="faq-contenuto">Perché su di lei non si applicano le detrazioni per lavoro dipendente né il trattamento integrativo: quelle vengono distribuite sulle dodici mensilità ordinarie e sulla tredicesima non resta nulla da scalare. L'IRPEF quindi la colpisce piena, all'aliquota del tuo scaglione più alto. È la ragione per cui a dicembre molti si aspettano una mensilità intera e ne ricevono circa il settanta per cento.</div></details>
+<details><summary>Ho avuto tre contratti a termine quest'anno. La tredicesima come funziona?</summary><div class="faq-contenuto">Ogni contratto matura i propri ratei e te li liquida alla fine, di solito nell'ultima busta paga di quel rapporto. Non aspetti dicembre e non ricevi una tredicesima unica: ricevi tanti pezzi quanti sono i contratti. Per sapere quanto hai preso in tutto nell'anno, somma i mesi utili di tutti i rapporti e inseriscili qui: il totale lordo è lo stesso, cambia solo il momento in cui arriva.</div></details>
+<details><summary>Quanto è la tredicesima di 1.000 euro?</summary><div class="faq-contenuto">Con 1.000 euro lordi al mese e un anno intero di lavoro, la tredicesima lorda è di 1.000 euro e quella netta di 699,24 euro: si tolgono 91,90 euro di contributi e 208,86 euro di IRPEF. Se 1.000 euro è il tuo stipendio netto, il lordo è più alto: lo trovi sul cedolino, ed è quello da inserire nel calcolatore.</div></details>
+<details><summary>Perché la tredicesima netta è più bassa di una busta paga normale?</summary><div class="faq-contenuto">Perché su di lei non si applicano le detrazioni per lavoro dipendente né il trattamento integrativo, che vengono distribuiti sulle dodici mensilità ordinarie, e in busta paga nemmeno i benefici del taglio del cuneo fiscale. La ritenuta IRPEF si calcola sull'intero importo, con gli scaglioni annui ragguagliati a mese. È la ragione per cui a dicembre molti si aspettano una mensilità intera e ne ricevono circa il settanta per cento.</div></details>
+<details><summary>Sono part-time: come si calcola la tredicesima?</summary><div class="faq-contenuto">Come per tutti, ma sulla tua retribuzione: per legge il trattamento economico di chi lavora a tempo parziale è riproporzionato all'orario ridotto (art. 7 comma 2 del D.Lgs. 81/2015). Basta inserire nel calcolatore il lordo del tuo contratto part-time. Se durante l'anno sei passato dal tempo pieno al part-time o viceversa, i ratei si calcolano separatamente per ciascun periodo, ognuno con la sua retribuzione. Per il part-time verticale, il contratto collettivo può legare il rateo ai giorni effettivamente lavorati nel mese.</div></details>
 <details><summary>Quando un mese conta come rateo?</summary><div class="faq-contenuto">La regola più diffusa nei contratti collettivi è che un mese matura il rateo se hai lavorato almeno quindici giorni. Sotto quella soglia il mese non conta. È una regola contrattuale e non di legge, quindi il tuo CCNL può stabilire un criterio diverso: se il conto non torna di un dodicesimo, la causa è quasi sempre questa.</div></details>
 <details><summary>Ci sono assenze che fanno perdere il rateo?</summary><div class="faq-contenuto">Sì. Non maturano ratei i periodi di aspettativa non retribuita, lo sciopero e in genere le assenze non retribuite. Maturano invece normalmente le ferie, la maternità obbligatoria e, entro i limiti fissati dal contratto collettivo, la malattia e l'infortunio. Questo calcolatore parte dai mesi utili che indichi tu e non fa questa verifica al posto tuo.</div></details>
-<details><summary>Il risultato è una cifra sola e non una forbice: perché?</summary><div class="faq-contenuto">Perché sulla tredicesima le addizionali regionali e comunali non vengono calcolate. Quelle si conteggiano sul reddito complessivo dell'anno e si trattengono a rate sulle mensilità ordinarie dell'anno successivo. Non essendoci il fattore che cambia da comune a comune, qui la cifra può essere una.</div></details>
+<details><summary>Il netto di dicembre è definitivo?</summary><div class="faq-contenuto">Quasi sempre no. Con la busta di dicembre, o al più tardi entro febbraio, il datore di lavoro fa il conguaglio: ricalcola l'IRPEF sull'intero anno e trattiene o restituisce la differenza rispetto a quanto ha già trattenuto mese per mese. Per questo il netto della busta di dicembre può discostarsi da quello della sola tredicesima. Le addizionali regionali e comunali, invece, sulla tredicesima non si calcolano: si trattengono a rate sulle buste dell'anno successivo.</div></details>
 </section>
 <section class="metodo"><h2>Come è calcolato</h2>
-<p class="aggiornamento"><span aria-hidden="true">✓</span> Norme verificate il <time datetime="2026-09-02">2 settembre 2026</time>.</p>
+<p class="aggiornamento"><span aria-hidden="true">✓</span> Norme verificate il <time datetime="2026-10-09">9 ottobre 2026</time>.</p>
 <p class="nota">
 <strong>Diritto.</strong> La tredicesima, o gratifica natalizia, spetta a tutti i lavoratori dipendenti per effetto del D.P.R. 28 luglio 1960 n. 1070, che ne ha esteso l'obbligo oltre i contratti collettivi che già la prevedevano.<br><br>
-<strong>Importo.</strong> Corrisponde a una mensilità della retribuzione. Chi non ha lavorato l'anno intero matura un dodicesimo per ogni mese utile: la regola contrattuale più diffusa considera utile il mese in cui si sono lavorati almeno quindici giorni.<br><br>
+<strong>Importo.</strong> Corrisponde a una mensilità della retribuzione. Chi non ha lavorato l'anno intero matura un dodicesimo per ogni mese utile: la regola contrattuale più diffusa considera utile il mese in cui si sono lavorati almeno quindici giorni. Per chi è part-time la retribuzione è riproporzionata all'orario.<br><br>
 <strong>Contributi.</strong> Si applicano come su una mensilità ordinaria: 9,19% a carico del lavoratore, aliquota del settore privato.<br><br>
-<strong>IRPEF.</strong> Qui sta la differenza che sorprende quasi tutti. Sulla tredicesima <strong>non si applicano le detrazioni per lavoro dipendente dell'art. 13 del TUIR, né il trattamento integrativo</strong>: sono già distribuiti sulle dodici mensilità ordinarie. L'imposta colpisce quindi l'intero importo. Questo calcolatore non usa una percentuale fissa: calcola l'IRPEF sul reddito annuo con e senza la tredicesima e prende la differenza, così il conto resta corretto anche quando la tredicesima fa passare parte del reddito allo scaglione superiore.<br><br>
+<strong>IRPEF.</strong> Qui sta la differenza che sorprende quasi tutti. Sulla tredicesima <strong>non si applicano le detrazioni per lavoro dipendente dell'art. 13 del TUIR, né il trattamento integrativo</strong>. La ritenuta si calcola sull'intero importo applicando le aliquote IRPEF agli scaglioni annui ragguagliati a mese, come prescrive l'art. 23 comma 2 lettera b) del DPR 600/1973: 23% fino a 2.333,33 €, 33% fino a 4.166,67 €, 43% oltre.<br><br>
+<strong>Conguaglio.</strong> A fine anno, o alla cessazione del rapporto, il datore ricalcola l'imposta sull'intero anno e regola la differenza: il netto della busta di dicembre può quindi discostarsi da quello della sola tredicesima.<br><br>
 <strong>Addizionali.</strong> Non vengono calcolate sulla tredicesima. Si determinano sul reddito complessivo dell'anno e si trattengono a rate sulle buste paga ordinarie dell'anno seguente.<br><br>
 <strong>Cosa questo strumento non fa.</strong> Non verifica quali assenze abbiano interrotto la maturazione dei ratei, non conosce le regole particolari del tuo CCNL, non considera familiari a carico o altri redditi, non tratta apprendistato, settore pubblico, part time con orario variabile né la quattordicesima. Se il tuo reddito annuo è basso, la trattenuta di dicembre può esserti restituita in tutto o in parte con il conguaglio di fine anno. È una stima: fa fede il cedolino.<br><br>
-<strong>Fonti.</strong> D.P.R. 28 luglio 1960 n. 1070; art. 11 e art. 13 del TUIR (DPR 917/1986); legge 30 dicembre 2025 n. 199 per le aliquote 2026; art. 50 D.Lgs. 446/1997 per le addizionali regionali.</p></section>
-<section class="altri"><h2>Gli altri calcolatori</h2><div class="altri-griglia"><a href="/netto"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></span><span><span class="altri-nome">Lordo e netto</span><span class="altri-desc">Busta paga con IRPEF 2026</span></span></a><a href="/ferie"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v7"/><path d="M5.5 10h13l-1.6 9.5a1.4 1.4 0 0 1-1.4 1.2H8.5a1.4 1.4 0 0 1-1.4-1.2z"/><path d="M9 3h6"/></svg></span><span><span class="altri-nome">Ferie non godute</span><span class="altri-desc">Indennità sostitutiva</span></span></a><a href="/tfr"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5h16"/><path d="M6 14.8h12"/><path d="M8 10.1h8"/><path d="M10 5.4h4"/></svg></span><span><span class="altri-nome">Calcolo TFR</span><span class="altri-desc">Anche con più contratti</span></span></a><a href="/naspi-anticipata"><span class="altri-icona"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 20V4"/><path d="M16 20V12.5"/></svg></span><span><span class="altri-nome">NASpI anticipata</span><span class="altri-desc">Le due rate 70% e 30%</span></span></a></div></section></main>
+<strong>Fonti.</strong> D.P.R. 28 luglio 1960 n. 1070; art. 23 comma 2 lettera b) del DPR 600/1973 per la ritenuta sulle mensilità aggiuntive; art. 11 e art. 13 del TUIR (DPR 917/1986); legge 30 dicembre 2025 n. 199 per le aliquote 2026; art. 7 comma 2 del D.Lgs. 81/2015 per il part-time; art. 50 D.Lgs. 446/1997 per le addizionali regionali.</p></section>
+</div>
+<section class="altri"><h2>Gli altri calcolatori</h2><div class="altri-griglia"><a href="/"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V5"/><path d="M9.3 20V9"/><path d="M14.6 20V13.5"/><path d="M20 20V16.5"/></svg></span><span><span class="altri-nome">Calcolo NASpI</span><span class="altri-desc">Importo e durata mese per mese</span></span></a><a href="/netto"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></span><span><span class="altri-nome">Lordo e netto</span><span class="altri-desc">Anche per pochi mesi di lavoro</span></span></a><a href="/malattia"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4.5a2 2 0 0 0-4 0v9.9a4 4 0 1 0 4 0z"/><path d="M12 9.5v7"/></svg></span><span><span class="altri-nome">Indennità di malattia</span><span class="altri-desc">Giorno per giorno</span></span></a><a href="/ferie"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v7"/><path d="M5.5 10h13l-1.6 9.5a1.4 1.4 0 0 1-1.4 1.2H8.5a1.4 1.4 0 0 1-1.4-1.2z"/><path d="M9 3h6"/></svg></span><span><span class="altri-nome">Ferie non godute</span><span class="altri-desc">Indennità sostitutiva</span></span></a><a href="/tfr"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5h16"/><path d="M6 14.8h12"/><path d="M8 10.1h8"/><path d="M10 5.4h4"/></svg></span><span><span class="altri-nome">Calcolo TFR</span><span class="altri-desc">Anche con più contratti</span></span></a><a href="/naspi-anticipata"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 20V4"/><path d="M16 20V12.5"/></svg></span><span><span class="altri-nome">NASpI anticipata</span><span class="altri-desc">Le due rate 70% e 30%</span></span></a></div></section></main>
 <footer class="piede"><div class="piede-interno">
 <div class="piede-griglia">
-<div><a class="marchio" href="/"><svg width='34' height='34' viewBox='0 0 32 32' aria-hidden='true' focusable='false'><rect width='32' height='32' rx='7' fill='#0a6b5f'/><rect x='7' y='9' width='4' height='14' rx='1.5' fill='#fff'/><rect x='14' y='11' width='4' height='12' rx='1.5' fill='#fff'/><rect x='21' y='14' width='4' height='9' rx='1.5' fill='#7fd4c4'/></svg><span class="marchio-nome">calcoli<b>chiari</b></span></a>
+<div><a class="marchio" href="/" aria-label="calcolichiari.it, pagina iniziale"><svg class="segno" width="36" height="36" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect class="segno-fondo" width="48" height="48" rx="12"/><path class="segno-c" d="M27.80 14.58A11.5 11.5 0 1 0 27.80 33.42" fill="none" stroke-width="6.6" stroke-linecap="round"/><rect class="segno-u" x="20.60" y="17.40" width="20.60" height="4.4" rx="2.2"/><rect class="segno-u" x="20.60" y="26.20" width="20.60" height="4.4" rx="2.2"/></svg><span class="marchio-nome">calcolichiari</span></a>
 <p class="piede-intro">Calcolatori per chi ha contratti brevi, a termine o in somministrazione. Ogni risultato dichiara la norma da cui viene.</p></div>
-<div><h3>Calcolatori</h3><ul><li><a href="/">Calcolo NASpI</a></li><li><a href="/netto">Lordo e netto</a></li><li><a href="/tredicesima">Calcolo tredicesima</a></li><li><a href="/ferie">Ferie non godute</a></li><li><a href="/tfr">Calcolo TFR</a></li><li><a href="/naspi-anticipata">NASpI anticipata</a></li></ul></div>
+<div><h3>Calcolatori</h3><ul><li><a href="/">Calcolo NASpI</a></li><li><a href="/netto">Lordo e netto</a></li><li><a href="/tredicesima">Calcolo tredicesima</a></li><li><a href="/malattia">Indennità di malattia</a></li><li><a href="/ferie">Ferie non godute</a></li><li><a href="/tfr">Calcolo TFR</a></li><li><a href="/naspi-anticipata">NASpI anticipata</a></li></ul></div>
 <div><h3>Il sito</h3><ul>
 <li><a href="/chi-siamo">Chi c'è dietro</a></li>
 <li><a href="/contatti">Contatti</a></li>
@@ -118,7 +145,7 @@
 </ul></div></div>
 <p class="piede-legale"><strong>calcolichiari.it</strong> — I calcoli hanno scopo informativo e si basano sui testi normativi vigenti, citati per esteso in fondo a ogni pagina. Fanno fede unicamente i provvedimenti degli enti previdenziali e fiscali competenti. I calcoli avvengono nel tuo browser e i numeri che digiti non vengono inviati da nessuna parte. Come vengono trattati i dati è spiegato nella <a href="/privacy">pagina privacy</a>.</p>
 </div></footer>
-<script src="/dati-2026.js?v=8"></script>
+<script src="/dati-2026.js?v=10"></script>
 <script>
 const euro = n => n.toLocaleString('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' \u20ac';
 const num = (n,d) => n.toLocaleString('it-IT',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});
@@ -132,14 +159,16 @@ const leggi = (id,min,max,eti) => {
 };
 const avvisoLimiti = () => limitato.length
   ? '<div class="avviso">Un valore era fuori dai limiti previsti dalla norma. '+limitato.join('. ')+'.</div>' : '';
-
-const I=DATI.irpef, CB=DATI.contributi.dipendente;
-function irpef(R){
-  if(R<=0) return 0;
-  if(R<=I.sc1) return R*I.a1;
-  if(R<=I.sc2) return I.sc1*I.a1+(R-I.sc1)*I.a2;
-  return I.sc1*I.a1+(I.sc2-I.sc1)*I.a2+(R-I.sc2)*I.a3;
+function collegaStampa(riepilogo){
+  const b=document.getElementById('stampa');
+  if(b) b.addEventListener('click',()=>{
+    const r=document.getElementById('riepilogoStampa');
+    if(r && riepilogo) r.innerHTML=riepilogo();
+    window.print();
+  });
 }
+
+const CB=DATI.contributi.dipendente;
 const cR=document.getElementById('campoRal'), cN=document.getElementById('campoNum'),
       cM=document.getElementById('campoMens'), cMesi=document.getElementById('campoMesi');
 document.querySelectorAll('input[name=modo]').forEach(r=>r.addEventListener('change',e=>{
@@ -155,53 +184,66 @@ function calcola(){
   const nMens = parseInt(document.getElementById('mensilita').value,10);
   const lordoMese = modo==='ral' ? leggi('ral',0,500000,'RAL')/nMens : leggi('lordo',0,40000,'Lordo mensile');
   const tred = lordoMese*mesi/12;
-  const annuoSenza = lordoMese*mesi, annuoCon = annuoSenza+tred;
-  const impSenza = annuoSenza*(1-CB), impCon = annuoCon*(1-CB);
-  const irpefTred = Math.max(0, irpef(impCon)-irpef(impSenza));
   const contrib = tred*CB, imponibile = tred-contrib;
-  return {tred,mesi,contrib,imponibile,irpefTred,impCon,nMens,modo,
-          netto: Math.max(0, imponibile-irpefTred),
-          prelievo: tred>0 ? (tred-Math.max(0,imponibile-irpefTred))/tred : 0};
+  const irpefTred = FISCO.irpefMese(imponibile);
+  const netto = Math.max(0, imponibile-irpefTred);
+  const impAnno = (lordoMese*mesi + tred)*(1-CB);
+  return {tred,mesi,contrib,imponibile,irpefTred,netto,impAnno,nMens,modo,lordoMese,
+          prelievo: tred>0 ? (tred-netto)/tred : 0};
 }
 let ultimo=null;
 function mostra(r,scorri){
   ultimo=r;
   let h=avvisoLimiti();
   const box=document.getElementById('risultato');
+  const e=document.getElementById('esito'); e.hidden=false;
   if(r.mesi<=0 || r.tred<=0){
     h+='<div class="avviso"><strong>Non matura nessun rateo.</strong> Con zero mesi utili la tredicesima non spetta. Ricorda che un mese conta se hai lavorato almeno '+DATI.tredicesima.giorniPerRateo+' giorni.</div>';
     box.hidden=true;
     document.getElementById('avvisi').innerHTML=h;
-    const e0=document.getElementById('esito'); e0.hidden=false;
-    if(scorri) e0.scrollIntoView({behavior:'smooth',block:'start'});
+    if(scorri) e.scrollIntoView({behavior:'smooth',block:'start'});
     return;
   }
   box.hidden=false;
   document.getElementById('netto').textContent=euro(r.netto);
   document.getElementById('notaNetto').textContent = r.mesi>=12
     ? 'Cifra unica: sulla tredicesima le addizionali regionali e comunali non si applicano.'
-    : 'Su '+num(r.mesi)+' mesi utili su 12. Le addizionali non si applicano, quindi la cifra e una sola.';
+    : 'Su '+num(r.mesi)+' mesi utili su 12. Le addizionali non si applicano, quindi la cifra è una sola.';
   document.getElementById('lordoTot').textContent=euro(r.tred);
   document.getElementById('ratei').textContent=num(r.mesi)+'/12';
   document.getElementById('contributi').textContent=euro(r.contrib);
   document.getElementById('imponibile').textContent=euro(r.imponibile);
   document.getElementById('irpef').textContent=euro(r.irpefTred);
   document.getElementById('prelievo').textContent=num(r.prelievo*100,1)+'%';
-  if(r.modo==='ral' && r.nMens===12) h+='<div class="avviso">Con 12 mensilita la tredicesima di solito non esiste come voce separata: e gia distribuita nelle buste paga mensili. Se il tuo contratto la prevede comunque, usa il lordo mensile invece della RAL.</div>';
-  if(r.impCon>0 && r.impCon<15000) h+='<div class="avviso">Con un reddito annuo di questo livello la trattenuta IRPEF di dicembre puo esserti restituita in tutto o in parte con il conguaglio di fine anno, perche le detrazioni annue potrebbero superare l\'imposta dovuta.</div>';
-  if(r.prelievo>0.30) h+='<div class="avviso">Il prelievo supera il 30% perche sulla tredicesima non si applicano ne le detrazioni per lavoro dipendente ne il trattamento integrativo: l\'IRPEF colpisce l\'intero importo all\'aliquota del tuo scaglione.</div>';
+  if(r.modo==='ral' && r.nMens===12) h+='<div class="avviso">Con 12 mensilità la tredicesima di solito non esiste come voce separata: è già distribuita nelle buste paga mensili. Se il tuo contratto la prevede comunque, usa il lordo mensile invece della RAL.</div>';
+  if(r.impAnno>0 && r.impAnno<15000) h+='<div class="avviso">Con un reddito annuo di questo livello la trattenuta IRPEF di dicembre può esserti restituita in tutto o in parte con il conguaglio di fine anno, perché le detrazioni annue potrebbero superare l\'imposta dovuta.</div>';
+  if(r.imponibile>DATI.irpef.sc1/12) h+='<div class="avviso">Una parte della tredicesima supera 2.333,33 € imponibili, la soglia mensile del primo scaglione: su quella parte la ritenuta è del 33%. Al conguaglio di fine anno l\'imposta viene ricalcolata sul reddito di tutto l\'anno.</div>';
   document.getElementById('avvisi').innerHTML=h;
-  const e=document.getElementById('esito'); e.hidden=false;
   if(scorri) e.scrollIntoView({behavior:'smooth',block:'start'});
 }
+collegaStampa(function(){ if(!ultimo) return '';
+  const d=new Date().toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric'});
+  return '<b>Tredicesima</b> &middot; calcolo del '+d+'<br>Lordo mensile: <b>'+euro(ultimo.lordoMese)+'</b> &middot; ratei maturati: <b>'+num(ultimo.mesi)+'/12</b><br>Lorda: <b>'+euro(ultimo.tred)+'</b> &middot; prelievo <b>'+num(ultimo.prelievo*100,1)+'%</b>'; });
 let attivo=false;
 document.getElementById('modulo').addEventListener('submit',e=>{e.preventDefault();mostra(calcola(),!attivo);attivo=true;});
 document.getElementById('modulo').addEventListener('input',()=>{if(attivo)mostra(calcola(),false);});
 document.getElementById('modulo').addEventListener('change',()=>{if(attivo)mostra(calcola(),false);});
 
-collegaStampa(function(){ if(!ultimo) return '';
-  const d=new Date().toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric'});
-  return '<b>Tredicesima</b> &middot; calcolo del '+d+'<br>Ratei maturati: <b>'+num(ultimo.mesi)+'/12</b><br>Lorda: <b>'+euro(ultimo.tred)+'</b> &middot; prelievo <b>'+num(ultimo.prelievo*100,1)+'%</b>'; });
+
+(function(){
+  const es=document.getElementById('esito'), f=document.getElementById('modulo');
+  const sottolinea=()=>document.querySelectorAll('#esito .cifra').forEach(c=>{
+    c.classList.remove('ridisegna'); void c.offsetWidth; c.classList.add('ridisegna'); });
+  if(f) f.addEventListener('submit',()=>setTimeout(sottolinea,0));
+  if(!es||!f||!window.matchMedia||!matchMedia('(min-width: 1040px)').matches) return;
+  if(typeof calcola!=='function'||typeof mostra!=='function') return;
+  try{ mostra(calcola(),false); attivo=true; }catch(e){ return; }
+  const n=document.createElement('p'); n.className='nota-esempio';
+  n.textContent='Esempio con i valori di partenza. Cambia i tuoi dati e il conto si aggiorna.';
+  es.insertBefore(n,es.firstChild); sottolinea();
+  const via=()=>{ n.remove(); ['input','change','submit'].forEach(t=>f.removeEventListener(t,via)); };
+  ['input','change','submit'].forEach(t=>f.addEventListener(t,via));
+})();
 </script>
 <script type="application/ld+json">
 {
@@ -217,7 +259,7 @@ collegaStampa(function(){ if(!ultimo) return '';
     "name": "calcolichiari.it",
     "url": "https://calcolichiari.it/"
    },
-   "dateModified": "2026-09-02",
+   "dateModified": "2026-10-09",
    "applicationCategory": "FinanceApplication",
    "operatingSystem": "Qualsiasi browser",
    "offers": {
@@ -251,7 +293,15 @@ collegaStampa(function(){ if(!ultimo) return '';
      "name": "Ho avuto tre contratti a termine quest'anno. La tredicesima come funziona?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Ogni contratto matura i propri ratei e te li liquida alla fine, di solito nell'ultima busta paga di quel rapporto. Non aspetti dicembre e non ricevi una tredicesima unica: ricevi tanti pezzi quanti sono i contratti. Per sapere quanto hai preso in tutto nell'anno, somma i mesi utili di tutti i rapporti e inseriscili qui: il totale è lo stesso, cambia solo il momento in cui arriva."
+      "text": "Ogni contratto matura i propri ratei e te li liquida alla fine, di solito nell'ultima busta paga di quel rapporto. Non aspetti dicembre e non ricevi una tredicesima unica: ricevi tanti pezzi quanti sono i contratti. Per sapere quanto hai preso in tutto nell'anno, somma i mesi utili di tutti i rapporti e inseriscili qui: il totale lordo è lo stesso, cambia solo il momento in cui arriva."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quanto è la tredicesima di 1.000 euro?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Con 1.000 euro lordi al mese e un anno intero di lavoro, la tredicesima lorda è di 1.000 euro e quella netta di 699,24 euro: si tolgono 91,90 euro di contributi e 208,86 euro di IRPEF. Se 1.000 euro è il tuo stipendio netto, il lordo è più alto: lo trovi sul cedolino, ed è quello da inserire nel calcolatore."
      }
     },
     {
@@ -259,7 +309,15 @@ collegaStampa(function(){ if(!ultimo) return '';
      "name": "Perché la tredicesima netta è più bassa di una busta paga normale?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Perché su di lei non si applicano le detrazioni per lavoro dipendente né il trattamento integrativo: quelle vengono distribuite sulle dodici mensilità ordinarie e sulla tredicesima non resta nulla da scalare. L'IRPEF quindi la colpisce piena, all'aliquota del tuo scaglione più alto. È la ragione per cui a dicembre molti si aspettano una mensilità intera e ne ricevono circa il settanta per cento."
+      "text": "Perché su di lei non si applicano le detrazioni per lavoro dipendente né il trattamento integrativo, che vengono distribuiti sulle dodici mensilità ordinarie, e in busta paga nemmeno i benefici del taglio del cuneo fiscale. La ritenuta IRPEF si calcola sull'intero importo, con gli scaglioni annui ragguagliati a mese. È la ragione per cui a dicembre molti si aspettano una mensilità intera e ne ricevono circa il settanta per cento."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sono part-time: come si calcola la tredicesima?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Come per tutti, ma sulla tua retribuzione: per legge il trattamento economico di chi lavora a tempo parziale è riproporzionato all'orario ridotto (art. 7 comma 2 del D.Lgs. 81/2015). Basta inserire nel calcolatore il lordo del tuo contratto part-time. Se durante l'anno sei passato dal tempo pieno al part-time o viceversa, i ratei si calcolano separatamente per ciascun periodo, ognuno con la sua retribuzione. Per il part-time verticale, il contratto collettivo può legare il rateo ai giorni effettivamente lavorati nel mese."
      }
     },
     {
@@ -280,10 +338,10 @@ collegaStampa(function(){ if(!ultimo) return '';
     },
     {
      "@type": "Question",
-     "name": "Il risultato è una cifra sola e non una forbice: perché?",
+     "name": "Il netto di dicembre è definitivo?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Perché sulla tredicesima le addizionali regionali e comunali non vengono calcolate. Quelle si conteggiano sul reddito complessivo dell'anno e si trattengono a rate sulle mensilità ordinarie dell'anno successivo. Non essendoci il fattore che cambia da comune a comune, qui la cifra può essere una."
+      "text": "Quasi sempre no. Con la busta di dicembre, o al più tardi entro febbraio, il datore di lavoro fa il conguaglio: ricalcola l'IRPEF sull'intero anno e trattiene o restituisce la differenza rispetto a quanto ha già trattenuto mese per mese. Per questo il netto della busta di dicembre può discostarsi da quello della sola tredicesima. Le addizionali regionali e comunali, invece, sulla tredicesima non si calcolano: si trattengono a rate sulle buste dell'anno successivo."
      }
     }
    ]
