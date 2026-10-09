@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calcolo indennità di malattia INPS 2026, giorno per giorno, anche a termine</title>
+<meta name="description" content="Calcola l'indennità di malattia INPS giorno per giorno: carenza, 50% e 66,66%, domeniche e festivi, limiti per contratti a termine e somministrazione.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="calcolichiari.it">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Quanto ti paga l'INPS per la malattia">
+<meta property="og:description" content="Calcola l'indennità di malattia INPS giorno per giorno: carenza, 50% e 66,66%, domeniche e festivi, limiti per contratti a termine e somministrazione.">
+<meta property="og:url" content="https://calcolichiari.it/malattia">
+<meta property="og:image" content="https://calcolichiari.it/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="calcolichiari.it, calcolatori per NASpI, TFR, tredicesima e busta paga">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://calcolichiari.it/malattia">
+<meta name="theme-color" content="#1f2547">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%231f2547'/%3E%3Cpath d='M27.80 14.58A11.5 11.5 0 1 0 27.80 33.42' fill='none' stroke='%23ffffff' stroke-width='6.6' stroke-linecap='round'/%3E%3Crect x='20.60' y='17.40' width='20.60' height='4.4' rx='2.2' fill='%23ff6a55'/%3E%3Crect x='20.60' y='26.20' width='20.60' height='4.4' rx='2.2' fill='%23ff6a55'/%3E%3C/svg%3E">
+<link rel="preload" href="/mona-titoli.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/mona-cifre.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/stile.css?v=10">
+</head>
+<body>
+<header class="testata"><div class="testata-interno"><a class="marchio" href="/" aria-label="calcolichiari.it, pagina iniziale"><svg class="segno" width="36" height="36" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect class="segno-fondo" width="48" height="48" rx="12"/><path class="segno-c" d="M27.80 14.58A11.5 11.5 0 1 0 27.80 33.42" fill="none" stroke-width="6.6" stroke-linecap="round"/><rect class="segno-u" x="20.60" y="17.40" width="20.60" height="4.4" rx="2.2"/><rect class="segno-u" x="20.60" y="26.20" width="20.60" height="4.4" rx="2.2"/></svg><span class="marchio-nome">calcolichiari</span></a><nav class="nav-sito" aria-label="Calcolatori"><a href="/">NASpI</a><a href="/naspi-anticipata">NASpI anticipata</a><a href="/tredicesima">Tredicesima</a><a href="/malattia" aria-current="page">Malattia</a><a href="/ferie">Ferie</a><a href="/tfr">TFR</a><a href="/netto">Busta paga</a></nav></div></header>
+<main class="foglio">
+<div class="solo-stampa intestazione-stampa"><strong>calcolichiari.it</strong><span>Stima informativa — fa fede solo l'ente competente</span></div>
+<div class="calc">
+<div class="calc-testa"><nav class="briciole" aria-label="Percorso"><a href="/">Home</a> › <span aria-current="page">Indennità di malattia</span></nav><h1>Quanto ti paga l'INPS per la malattia</h1><p class="sottotitolo">L'indennità giorno per giorno sul calendario: carenza, 50% e 66,66%, domeniche e festivi, e i limiti di chi ha un contratto a termine o lavora in somministrazione.</p><ul class="garanzie"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h10l4 4v12H5z"/><path d="M9 12h6"/><path d="M9 16h6"/></svg><span>Guida INPS e D.L. 463/1983</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><path d="m9 15 2 2 4-4"/></svg><span>Norme verificate il 9 ottobre 2026</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>I numeri che inserisci restano nel tuo browser</span></li></ul></div>
+
+<form id="modulo" class="card">
+<fieldset><legend><span class="passo">1</span>Il tuo lavoro</legend>
+<div class="campo"><label>Qualifica</label>
+<div class="scelte">
+<label class="scelta"><input type="radio" name="qualifica" value="imp" checked><span>Impiegato</span></label>
+<label class="scelta"><input type="radio" name="qualifica" value="op"><span>Operaio</span></label>
+</div>
+<p class="aiuto">Per gli operai l'INPS non paga le domeniche e le festività, che paga il datore. Per gli impiegati paga tutti i giorni, tranne le festività che cadono di domenica.</p></div>
+<div class="campo"><label for="settore">Settore del datore di lavoro</label>
+<select id="settore">
+<option value="terziario" selected>Commercio, terziario, turismo e servizi</option>
+<option value="somministrazione">Agenzia per il lavoro (sei in somministrazione)</option>
+<option value="industria">Industria, artigianato, edilizia</option>
+<option value="pubblici">Pubblici esercizi e laboratori di pasticceria non artigiani</option>
+</select>
+<p class="aiuto">In somministrazione conta il settore dell'agenzia, non quello dell'azienda dove lavori.</p></div>
+<div class="campo"><label>Contratto</label>
+<div class="scelte">
+<label class="scelta"><input type="radio" name="contratto" value="ind" checked><span>Indeterminato</span></label>
+<label class="scelta"><input type="radio" name="contratto" value="det"><span>A termine</span></label>
+</div></div>
+<div id="bloccoTermine" hidden>
+<div class="campo"><label for="lavorati">Giorni lavorati negli ultimi 12 mesi</label>
+<input type="number" id="lavorati" inputmode="numeric" step="1" min="0" max="366" value="90">
+<p class="aiuto">I giorni di calendario coperti da contratto nei 12 mesi prima della malattia, sommando tutti i rapporti. Se sono 30 o meno, l'indennità spetta al massimo per 30 giorni nell'anno.</p></div>
+<div class="campo"><label for="scadenza">Fine del contratto</label>
+<input type="date" id="scadenza">
+<p class="aiuto">Dal giorno dopo l'INPS non paga più, anche se il certificato prosegue.</p></div>
+</div>
+</fieldset>
+
+<fieldset><legend><span class="passo">2</span>La malattia</legend>
+<div class="due-campi">
+<div class="campo"><label for="inizio">Primo giorno</label><input type="date" id="inizio"></div>
+<div class="campo"><label for="fine">Ultimo giorno</label><input type="date" id="fine"></div>
+</div>
+<p class="aiuto">Le date del certificato medico. Se la malattia è stata prolungata, usa la fine dell'ultimo certificato.</p>
+<div class="campo"><label for="usati">Giorni di malattia già avuti quest'anno</label>
+<input type="number" id="usati" inputmode="numeric" step="1" min="0" max="366" value="0">
+<p class="aiuto">L'INPS paga al massimo 180 giorni nell'anno solare. Comprendi anche quelli di un'eventuale malattia precedente.</p></div>
+<div class="campo"><label class="campo-check"><input type="checkbox" id="ricaduta"><span>È una ricaduta: la stessa malattia, o una sua conseguenza, ripresa entro 30 giorni dalla fine della precedente</span></label></div>
+<div class="campo" id="campoPrec" hidden><label for="prec">Giorni della malattia precedente</label>
+<input type="number" id="prec" inputmode="numeric" step="1" min="1" max="180" value="5">
+<p class="aiuto">La ricaduta continua la malattia precedente: i giorni di carenza non si ripetono e il conteggio prosegue da dove era arrivato.</p></div>
+</fieldset>
+
+<fieldset><legend><span class="passo">3</span>La tua retribuzione</legend>
+<div class="campo"><label for="lordo">Retribuzione lorda del mese precedente (€)</label>
+<input type="number" id="lordo" inputmode="decimal" step="10" min="0" max="40000" value="1800">
+<p class="aiuto">Il totale lordo dell'ultimo mese pieno prima della malattia, come da cedolino.</p></div>
+<div class="campo"><label for="mensilita">Mensilità previste dal contratto</label>
+<select id="mensilita"><option value="13" selected>13</option><option value="14">14</option><option value="12">12</option></select>
+<p class="aiuto">Tredicesima e quattordicesima entrano nella retribuzione giornaliera come ratei.</p></div>
+</fieldset>
+<button type="submit">Calcola indennità</button>
+</form>
+
+<section id="esito" class="card esito" hidden aria-live="polite">
+<div class="solo-stampa riepilogo-stampa" id="riepilogoStampa"></div>
+<div id="avvisi"></div>
+<div id="risultato">
+<div class="hero-risultato">
+<div class="hero-titolo">Indennità INPS lorda</div>
+<div class="cifra" id="totale">—</div>
+<p class="cifra-nota" id="notaTot"></p>
+</div>
+<div class="calendario" id="calendario"></div>
+<div class="legenda" id="legenda"></div>
+<div class="dettagli-lista">
+<div class="riga-dato"><span>Retribuzione media giornaliera<small id="etiRmg"></small></span><strong id="rmg">—</strong></div>
+<div class="riga-dato"><span>Durata della malattia<small>giorni di calendario</small></span><strong id="giorni">—</strong></div>
+<div class="riga-dato"><span>Carenza<small>non li paga l'INPS: li paga il datore se il contratto collettivo lo prevede</small></span><strong id="carenza">—</strong></div>
+<div class="riga-dato" id="riga1"><span id="eti1">Pagati al 50%</span><strong id="f1">—</strong></div>
+<div class="riga-dato" id="riga2"><span id="eti2">Pagati al 66,66%</span><strong id="f2">—</strong></div>
+<div class="riga-dato"><span id="etiNP">Non pagati dall'INPS</span><strong id="nonpagati">—</strong></div>
+<div class="riga-dato"><span>Integrazione fino al 100%<small>se il contratto collettivo la prevede, sui giorni pagati dall'INPS</small></span><strong id="gap">—</strong></div>
+</div>
+<div id="note"></div>
+<div class="azioni"><button type="button" class="azione" id="stampa"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg>Salva in PDF o stampa</button></div>
+</div>
+</section>
+
+</div>
+<div class="dopo">
+<section class="faq-box"><h2>Domande frequenti</h2>
+<details><summary>Perché i primi tre giorni di malattia non li paga l'INPS?</summary><div class="faq-contenuto">Sono i giorni di carenza: l'indennità INPS parte dal quarto giorno. Molti contratti collettivi li fanno pagare al datore di lavoro, in tutto o in parte, a volte solo per un certo numero di malattie all'anno. Se ti ammali di nuovo della stessa malattia, o di una sua conseguenza certificata dal medico, entro 30 giorni dalla fine della precedente, è una ricaduta: la carenza non si ripete e il conteggio dei giorni prosegue. Una malattia diversa è invece un evento nuovo, con una nuova carenza.</div></details>
+<details><summary>Ho un contratto a termine: cosa cambia?</summary><div class="faq-contenuto">Tre cose. L'indennità spetta al massimo per tanti giorni quanti ne hai lavorati nei 12 mesi prima della malattia. Se in quei 12 mesi hai lavorato 30 giorni o meno, spetta al massimo per 30 giorni nell'anno e la paga direttamente l'INPS. E soprattutto si ferma alla scadenza del contratto: per i giorni successivi non è dovuta, anche se il certificato prosegue. Lo prevede l'art. 5 del D.L. 463/1983.</div></details>
+<details><summary>Sono in somministrazione e faccio l'impiegato in un'azienda industriale: l'indennità mi spetta?</summary><div class="faq-contenuto">Sì. Per la malattia conta l'inquadramento dell'agenzia per il lavoro, che è nel settore terziario, non quello dell'azienda dove lavori: l'indennità INPS spetta sia agli operai sia agli impiegati somministrati, come chiarito dalla circolare INPS n. 41 del 2006. Chi invece è assunto direttamente come impiegato da un'azienda industriale non la riceve dall'INPS: lo paga il datore, secondo il contratto collettivo.</div></details>
+<details><summary>L'INPS paga le domeniche e le festività?</summary><div class="faq-contenuto">Dipende dalla qualifica. Agli operai l'INPS non paga né le domeniche né le festività nazionali: le festività le paga il datore di lavoro, che le deve anche durante la malattia. Agli impiegati l'INPS paga tutti i giorni di calendario, domeniche e festività comprese, tranne le festività che cadono di domenica: per quelle il datore deve già una giornata di retribuzione in più. Il calcolatore conta i giorni uno per uno, compreso il 4 ottobre, festa nazionale dal 2026; non conosce invece il santo patrono del tuo comune.</div></details>
+<details><summary>Il datore mi deve pagare la differenza fino al 100%?</summary><div class="faq-contenuto">Dipende dal contratto collettivo, non dalla legge. Molti contratti integrano l'indennità INPS, in tutto o in parte e per periodi diversi; altri no. Nel risultato trovi quanto vale l'integrazione fino al 100% sui giorni pagati dall'INPS: confrontala con quello che prevede il tuo contratto.</div></details>
+</section>
+<section class="metodo"><h2>Come è calcolato</h2>
+<p class="aggiornamento"><span aria-hidden="true">✓</span> Norme verificate il <time datetime="2026-10-09">9 ottobre 2026</time>.</p>
+<p class="nota">
+<strong>Chi ne ha diritto.</strong> Gli operai di tutti i settori, gli impiegati di commercio, terziario, turismo e servizi, gli apprendisti e i lavoratori in somministrazione, per i quali conta l'inquadramento dell'agenzia nel settore terziario. Non ricevono l'indennità dall'INPS gli impiegati dell'industria, i quadri e i dirigenti, il lavoro domestico e il pubblico impiego: per loro la malattia la paga il datore, secondo il contratto.<br><br>
+<strong>Importo.</strong> I primi tre giorni sono di carenza e l'INPS non li paga. Dal quarto al ventesimo giorno spetta il 50% della retribuzione media giornaliera, dal ventunesimo al centottantesimo il 66,66%. Nei pubblici esercizi e nei laboratori di pasticceria non artigiani l'indennità è dell'80% per tutto il periodo, sempre dal quarto giorno.<br><br>
+<strong>Retribuzione media giornaliera.</strong> Per gli impiegati: retribuzione lorda del mese precedente più i ratei mensili di tredicesima e quattordicesima, divisi per 30. Per gli operai con paga mensile: retribuzione del mese precedente divisa per 26, più i ratei mensili divisi per 25. Per gli operai pagati a ore il divisore è il numero di giorni lavorati o retribuiti nel periodo, moltiplicato per 1,20 con la settimana corta: con un mese pieno il risultato è vicino a quello con 26.<br><br>
+<strong>Giorni pagati.</strong> Per gli impiegati tutti i giorni di calendario, tranne le festività nazionali che cadono di domenica, per cui il datore deve una giornata di retribuzione in più. Per gli operai sono escluse le domeniche e tutte le festività nazionali, che paga il datore. Le festività considerate sono quelle della legge 260/1949, il lunedì dell'Angelo e, dal 2026, il 4 ottobre. Le soglie del quarto, del ventesimo e del centottantesimo giorno si contano sui giorni di calendario.<br><br>
+<strong>Limiti.</strong> Al massimo 180 giorni nell'anno solare. Per i contratti a termine l'indennità spetta per non più dei giorni lavorati nei dodici mesi precedenti, al massimo 30 giorni nell'anno se quei giorni sono 30 o meno, e mai oltre la scadenza del contratto. Una ricaduta della stessa malattia, o di una conseguente, entro 30 giorni dalla fine della precedente ne è la continuazione.<br><br>
+<strong>Chi la paga.</strong> Di solito la anticipa il datore di lavoro in busta paga, per conto dell'INPS, ed è soggetta a IRPEF. Nei contratti a termine molto brevi, e per i giorni oltre quelli lavorati alle dipendenze di quel datore, la paga direttamente l'INPS.<br><br>
+<strong>Cosa questo strumento non fa.</strong> Non applica le integrazioni del tuo contratto collettivo, che vanno verificate caso per caso, né le regole sul ricovero ospedaliero. Non tratta lavoratori agricoli, dello spettacolo e marittimi, disoccupati e sospesi, part time verticale e orari non standard. Non conosce il santo patrono del tuo comune e non calcola il netto. È una stima: fa fede l'INPS.<br><br>
+<strong>Fonti.</strong> Guida INPS alla tutela previdenziale della malattia; art. 5 del D.L. 12 settembre 1983 n. 463, convertito dalla legge 11 novembre 1983 n. 638, per i contratti a termine; circolare INPS n. 41 del 13 marzo 2006 per la somministrazione; circolare INPS n. 134368 del 1981 per le ricadute; circolare INPS n. 107 del 1982 e messaggio INPS n. 9970 del 3 maggio 2011 per le giornate indennizzabili; art. 2 della legge 31 marzo 1954 n. 90 per le festività degli operai; legge 27 maggio 1949 n. 260 e legge 8 ottobre 2025 n. 151 per le festività.</p></section>
+</div>
+<section class="altri"><h2>Gli altri calcolatori</h2><div class="altri-griglia"><a href="/"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V5"/><path d="M9.3 20V9"/><path d="M14.6 20V13.5"/><path d="M20 20V16.5"/></svg></span><span><span class="altri-nome">Calcolo NASpI</span><span class="altri-desc">Importo e durata mese per mese</span></span></a><a href="/netto"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></span><span><span class="altri-nome">Lordo e netto</span><span class="altri-desc">Anche per pochi mesi di lavoro</span></span></a><a href="/tredicesima"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V9"/><path d="M8.5 20V9"/><path d="M13 20V9"/><path d="M19.5 20V4.5"/></svg></span><span><span class="altri-nome">Calcolo tredicesima</span><span class="altri-desc">Anche con ratei parziali</span></span></a><a href="/ferie"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v7"/><path d="M5.5 10h13l-1.6 9.5a1.4 1.4 0 0 1-1.4 1.2H8.5a1.4 1.4 0 0 1-1.4-1.2z"/><path d="M9 3h6"/></svg></span><span><span class="altri-nome">Ferie non godute</span><span class="altri-desc">Indennità sostitutiva</span></span></a><a href="/tfr"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5h16"/><path d="M6 14.8h12"/><path d="M8 10.1h8"/><path d="M10 5.4h4"/></svg></span><span><span class="altri-nome">Calcolo TFR</span><span class="altri-desc">Anche con più contratti</span></span></a><a href="/naspi-anticipata"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 20V4"/><path d="M16 20V12.5"/></svg></span><span><span class="altri-nome">NASpI anticipata</span><span class="altri-desc">Le due rate 70% e 30%</span></span></a></div></section></main>
+<footer class="piede"><div class="piede-interno">
+<div class="piede-griglia">
+<div><a class="marchio" href="/" aria-label="calcolichiari.it, pagina iniziale"><svg class="segno" width="36" height="36" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect class="segno-fondo" width="48" height="48" rx="12"/><path class="segno-c" d="M27.80 14.58A11.5 11.5 0 1 0 27.80 33.42" fill="none" stroke-width="6.6" stroke-linecap="round"/><rect class="segno-u" x="20.60" y="17.40" width="20.60" height="4.4" rx="2.2"/><rect class="segno-u" x="20.60" y="26.20" width="20.60" height="4.4" rx="2.2"/></svg><span class="marchio-nome">calcolichiari</span></a>
+<p class="piede-intro">Calcolatori per chi ha contratti brevi, a termine o in somministrazione. Ogni risultato dichiara la norma da cui viene.</p></div>
+<div><h3>Calcolatori</h3><ul><li><a href="/">Calcolo NASpI</a></li><li><a href="/netto">Lordo e netto</a></li><li><a href="/tredicesima">Calcolo tredicesima</a></li><li><a href="/malattia">Indennità di malattia</a></li><li><a href="/ferie">Ferie non godute</a></li><li><a href="/tfr">Calcolo TFR</a></li><li><a href="/naspi-anticipata">NASpI anticipata</a></li></ul></div>
+<div><h3>Il sito</h3><ul>
+<li><a href="/chi-siamo">Chi c'è dietro</a></li>
+<li><a href="/contatti">Contatti</a></li>
+<li><a href="/privacy">Privacy</a></li>
+</ul></div></div>
+<p class="piede-legale"><strong>calcolichiari.it</strong> — I calcoli hanno scopo informativo e si basano sui testi normativi vigenti, citati per esteso in fondo a ogni pagina. Fanno fede unicamente i provvedimenti degli enti previdenziali e fiscali competenti. I calcoli avvengono nel tuo browser e i numeri che digiti non vengono inviati da nessuna parte. Come vengono trattati i dati è spiegato nella <a href="/privacy">pagina privacy</a>.</p>
+</div></footer>
+<script src="/dati-2026.js?v=10"></script>
+<script>
+const euro = n => n.toLocaleString('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' \u20ac';
+const num = (n,d) => n.toLocaleString('it-IT',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});
+let limitato = [];
+const leggi = (id,min,max,eti) => {
+  const e=document.getElementById(id); if(!e) return min;
+  const v=parseFloat(e.value); if(!isFinite(v)) return min;
+  const c=Math.min(max,Math.max(min,v));
+  if(eti && Math.abs(c-v)>0.001) limitato.push(eti+': ho usato '+num(c,c%1?2:0)+' invece di '+num(v,v%1?2:0));
+  return c;
+};
+const avvisoLimiti = () => limitato.length
+  ? '<div class="avviso">Un valore era fuori dai limiti previsti dalla norma. '+limitato.join('. ')+'.</div>' : '';
+function collegaStampa(riepilogo){
+  const b=document.getElementById('stampa');
+  if(b) b.addEventListener('click',()=>{
+    const r=document.getElementById('riepilogoStampa');
+    if(r && riepilogo) r.innerHTML=riepilogo();
+    window.print();
+  });
+}
+
+const M=DATI.malattia, GIORNO=86400000;
+const bT=document.getElementById('bloccoTermine'), cP=document.getElementById('campoPrec');
+const iso = ms => new Date(ms).toISOString().slice(0,10);
+const leggiData = id => { const v=document.getElementById(id).value; if(!/^\d{4}-\d{2}-\d{2}$/.test(v)) return null;
+  const [y,m,d]=v.split('-').map(Number); return Date.UTC(y,m-1,d); };
+(function(){ const o=new Date(), oggi=Date.UTC(o.getFullYear(),o.getMonth(),o.getDate());
+  document.getElementById('inizio').value=iso(oggi);
+  document.getElementById('fine').value=iso(oggi+9*GIORNO);
+  document.getElementById('scadenza').value=iso(oggi+60*GIORNO); })();
+document.querySelectorAll('input[name=contratto]').forEach(r=>r.addEventListener('change',e=>{
+  bT.hidden = e.target.value!=='det'; if(attivo) mostra(calcola(),false); }));
+document.getElementById('ricaduta').addEventListener('change',e=>{ cP.hidden=!e.target.checked; });
+const GSET=['dom','lun','mar','mer','gio','ven','sab'], MESI=['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
+const fmtData = ms => { const d=new Date(ms); return GSET[d.getUTCDay()]+' '+d.getUTCDate()+' '+MESI[d.getUTCMonth()]+' '+d.getUTCFullYear(); };
+
+function calcola(){
+  limitato=[];
+  const qual=document.querySelector('input[name=qualifica]:checked').value;
+  const settore=document.getElementById('settore').value;
+  const det=document.querySelector('input[name=contratto]:checked').value==='det';
+  const inizio=leggiData('inizio'), fine=leggiData('fine'), scad=det?leggiData('scadenza'):null;
+  const lordo=leggi('lordo',0,40000,'Retribuzione lorda'), nMens=parseInt(document.getElementById('mensilita').value,10);
+  const usati=leggi('usati',0,366,'Giorni già avuti'), lavorati=det?leggi('lavorati',0,366,'Giorni lavorati'):0;
+  const ric=document.getElementById('ricaduta').checked, prec=ric?leggi('prec',1,180,'Giorni della malattia precedente'):0;
+  const r={qual,settore,det,inizio,fine,scad,lordo,nMens,usati,lavorati,ric,prec,errore:null};
+  if(inizio===null||fine===null){ r.errore='Inserisci il primo e l\'ultimo giorno della malattia.'; return r; }
+  if(fine<inizio){ r.errore='L\'ultimo giorno non può venire prima del primo.'; return r; }
+  r.coperto = !(qual==='imp' && settore==='industria');
+  const ratei=lordo*(nMens-12)/12;
+  r.rmg = qual==='imp' ? (lordo+ratei)/M.divImpiegati : lordo/M.divOperai + ratei/M.divRateiOperai;
+  const N=Math.min(366, Math.round((fine-inizio)/GIORNO)+1);
+  r.N=N; r.troncato = Math.round((fine-inizio)/GIORNO)+1 > 366;
+  const pe = settore==='pubblici';
+  let anno=new Date(inizio).getUTCFullYear(), cont=usati;
+  const giorni=[]; let tot=0, gap=0;
+  const c={carenza:0,p1:0,p2:0,imp1:0,imp2:0,dom:0,fest:0,fineContr:0,cap180:0,capTermine:0};
+  for(let i=0;i<N;i++){
+    const ms=inizio+i*GIORNO, dt=new Date(ms), n=prec+i+1;
+    if(dt.getUTCFullYear()!==anno){ anno=dt.getUTCFullYear(); cont=0; }
+    cont++;
+    let stato, motivo='', imp=0, perc=0;
+    if(det && scad!==null && ms>scad){ stato='limite'; motivo='dopo la fine del contratto'; c.fineContr++; }
+    else if(cont>M.durataMax){ stato='limite'; motivo='oltre i 180 giorni dell\'anno'; c.cap180++; }
+    else if(det && lavorati<=M.termineMinimo && cont>M.termineMinimo){ stato='limite'; motivo='oltre i 30 giorni dell\'anno'; c.capTermine++; }
+    else if(det && lavorati>M.termineMinimo && n>lavorati){ stato='limite'; motivo='oltre i giorni lavorati'; c.capTermine++; }
+    else if(n<=M.carenza){ stato='carenza'; motivo='carenza'; c.carenza++; }
+    else if(CALENDARIO.festivo(ms) && (qual==='op' || dt.getUTCDay()===0)){
+      /* operai: ogni festività la paga il datore (art. 2 legge 90/1954); impiegati: l'INPS paga anche le
+         festività, tranne quelle che cadono di domenica, per cui il datore deve una giornata in più */
+      stato='festivo'; motivo = qual==='op' ? 'festività, la paga il datore' : 'festività di domenica, il datore paga una giornata in più'; c.fest++; }
+    else if(qual==='op' && dt.getUTCDay()===0){ stato='domenica'; motivo='domenica, non pagata agli operai'; c.dom++; }
+    else {
+      perc = pe ? M.percPubbliciEsercizi : (n<=M.fascia1Fino ? M.perc1 : M.perc2);
+      imp = r.rmg*perc; tot+=imp; gap+=r.rmg-imp;
+      stato = pe ? 'p80' : (n<=M.fascia1Fino ? 'p50' : 'p66');
+      if(stato==='p66'){ c.p2++; c.imp2+=imp; } else { c.p1++; c.imp1+=imp; }
+      motivo = num(perc*100, perc===M.perc2?2:0)+'%';
+    }
+    giorni.push({ms,stato,motivo,imp,n});
+  }
+  Object.assign(r,{giorni,tot,gap,c,pe});
+  return r;
+}
+
+/* i colori di ogni stato stanno nel foglio di stile: classi k-carenza, k-p50, k-p66, k-p80, k-domenica, k-festivo, k-limite */
+const ETICHETTE={carenza:'carenza',p50:'pagato al 50%',p66:'pagato al 66,66%',p80:'pagato all\'80%',
+  domenica:'domenica, non pagata',festivo:'festività, la paga il datore',limite:'oltre i limiti, non pagato'};
+function disegnaCalendario(r){
+  const el=document.getElementById('calendario'), gg=r.giorni;
+  const cel=36, gap=4, sx=40, sy=22, passo=cel+gap;
+  const dow0=(new Date(gg[0].ms).getUTCDay()+6)%7, righe=Math.ceil((dow0+gg.length)/7);
+  const W=sx+7*passo, H=sy+righe*passo;
+  let s='';
+  ['L','M','M','G','V','S','D'].forEach((t,k)=>{ s+='<text class="k-intest" x="'+(sx+k*passo+cel/2)+'" y="14" text-anchor="middle" font-size="11" font-weight="600">'+t+'</text>'; });
+  let ultimaRigaMese=-1;
+  gg.forEach((x,i)=>{
+    const slot=dow0+i, row=Math.floor(slot/7), col=slot%7, X=sx+col*passo, Y=sy+row*passo, d=new Date(x.ms);
+    if((i===0||d.getUTCDate()===1) && row!==ultimaRigaMese){
+      s+='<text class="k-intest" x="0" y="'+(Y+cel/2+4)+'" font-size="11" font-weight="600">'+MESI[d.getUTCMonth()]+'</text>'; ultimaRigaMese=row; }
+    s+='<g class="k-'+x.stato+'"><title>'+fmtData(x.ms)+': '+x.motivo+(x.imp>0?' — '+euro(x.imp):'')+'</title>'+
+       '<rect x="'+X+'" y="'+Y+'" width="'+cel+'" height="'+cel+'" rx="7"/>'+
+       '<text x="'+(X+cel/2)+'" y="'+(Y+cel/2+4)+'" text-anchor="middle" font-size="12" font-weight="600">'+d.getUTCDate()+'</text></g>';
+  });
+  el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Calendario della malattia: giorni di carenza, giorni pagati e non pagati dall\'INPS">'+s+'</svg>';
+  const presenti=[...new Set(gg.map(x=>x.stato))];
+  const ordine=['carenza','p50','p66','p80','domenica','festivo','limite'].filter(k=>presenti.includes(k));
+  document.getElementById('legenda').innerHTML=ordine.map(k=>'<span><i class="k-'+k+'"></i>'+ETICHETTE[k]+'</span>').join('');
+}
+
+let ultimo=null;
+function mostra(r,scorri){
+  ultimo=r;
+  let h=avvisoLimiti();
+  const box=document.getElementById('risultato'), e=document.getElementById('esito');
+  e.hidden=false;
+  if(r.errore){ h+='<div class="avviso">'+r.errore+'</div>'; box.hidden=true; document.getElementById('avvisi').innerHTML=h; return; }
+  if(!r.coperto){
+    h+='<div class="avviso"><strong>L\'INPS non paga la malattia agli impiegati dell\'industria.</strong> Durante la malattia la retribuzione la paga direttamente il datore di lavoro, nella misura e per i periodi stabiliti dal contratto collettivo. Se sei in somministrazione, scegli il settore «Agenzia per il lavoro»: lì l\'indennità INPS spetta anche agli impiegati.</div>';
+    box.hidden=true; document.getElementById('avvisi').innerHTML=h;
+    if(scorri) e.scrollIntoView({behavior:'smooth',block:'start'}); return;
+  }
+  box.hidden=false;
+  const c=r.c;
+  document.getElementById('totale').textContent=euro(r.tot);
+  document.getElementById('notaTot').textContent = (r.det && r.lavorati<=M.termineMinimo)
+    ? 'Lorda. Con 30 giorni di lavoro o meno nei 12 mesi la paga direttamente l\'INPS.'
+    : 'Lorda. Di solito la anticipa il datore di lavoro in busta paga, dove è soggetta a IRPEF.';
+  disegnaCalendario(r);
+  const gTxt = k => k===0 ? 'nessuno' : (k===1 ? '1 giorno' : num(k)+' giorni');
+  document.getElementById('rmg').textContent=euro(r.rmg);
+  document.getElementById('etiRmg').textContent = r.qual==='imp'
+    ? 'lordo del mese precedente più i ratei, diviso 30' : 'lordo del mese precedente diviso 26, ratei diviso 25';
+  document.getElementById('giorni').textContent=gTxt(r.N);
+  document.getElementById('carenza').textContent=gTxt(c.carenza);
+  if(r.pe){
+    document.getElementById('eti1').innerHTML='Pagati all\'80%<small>dal 4° giorno in poi: '+gTxt(c.p1)+'</small>';
+    document.getElementById('f1').textContent=euro(c.imp1);
+    document.getElementById('riga2').hidden=true;
+  } else {
+    document.getElementById('eti1').innerHTML='Pagati al 50%<small>dal 4° al 20° giorno: '+gTxt(c.p1)+'</small>';
+    document.getElementById('f1').textContent=euro(c.imp1);
+    document.getElementById('riga2').hidden=false;
+    document.getElementById('eti2').innerHTML='Pagati al 66,66%<small>dal 21° giorno: '+gTxt(c.p2)+'</small>';
+    document.getElementById('f2').textContent=euro(c.imp2);
+  }
+  const parti=[];
+  if(c.dom) parti.push(num(c.dom)+(c.dom===1?' domenica':' domeniche'));
+  if(c.fest) parti.push(num(c.fest)+' festività');
+  const lim=c.fineContr+c.cap180+c.capTermine;
+  if(lim) parti.push(num(lim)+' oltre i limiti');
+  document.getElementById('nonpagati').textContent=gTxt(c.dom+c.fest+lim);
+  document.getElementById('etiNP').innerHTML='Non pagati dall\'INPS'+(parti.length?'<small>'+parti.join(', ')+'</small>':'');
+  document.getElementById('gap').textContent = r.gap>0 ? euro(r.gap) : '—';
+  if(r.N<=M.carenza && r.prec===0) h+='<div class="avviso">Una malattia di tre giorni o meno ricade tutta nella carenza: l\'INPS non paga nulla e il trattamento dipende dal tuo contratto collettivo.</div>';
+  if(c.fineContr) h+='<div class="avviso"><strong>Dal giorno dopo la fine del contratto l\'indennità non è più dovuta</strong>, anche se il certificato prosegue: lo prevede l\'art. 5 comma 2 del D.L. 463/1983. Qui pesa per '+num(c.fineContr)+(c.fineContr===1?' giorno.':' giorni.')+'</div>';
+  if(r.det && r.lavorati<=M.termineMinimo && c.capTermine) h+='<div class="avviso">Con 30 giorni di lavoro o meno nei 12 mesi precedenti, l\'indennità spetta al massimo per 30 giorni nell\'anno solare.</div>';
+  if(r.det && r.lavorati>M.termineMinimo && c.capTermine) h+='<div class="avviso">Con un contratto a termine l\'indennità spetta al massimo per tanti giorni quanti ne hai lavorati nei 12 mesi precedenti: qui '+num(r.lavorati)+'.</div>';
+  if(c.cap180) h+='<div class="avviso">Hai superato i 180 giorni di malattia indennizzabili nell\'anno solare: per i giorni oltre l\'INPS non paga.</div>';
+  if(r.troncato) h+='<div class="avviso">Il calcolo si ferma a un anno di malattia.</div>';
+  document.getElementById('avvisi').innerHTML=h;
+  let n='';
+  if(r.settore==='somministrazione') n+='<div class="avviso successo">In somministrazione conta l\'inquadramento dell\'agenzia, che è nel settore terziario: l\'indennità INPS spetta sia agli operai sia agli impiegati, anche se lavori in un\'azienda industriale.</div>';
+  if(r.pe) n+='<div class="avviso successo">Nei pubblici esercizi e nei laboratori di pasticceria non artigiani l\'indennità è dell\'80% per tutto il periodo, invece del 50% e del 66,66%.</div>';
+  if(c.fest) n+='<div class="avviso">'+(r.qual==='op'
+      ? 'Le festività non le paga l\'INPS: agli operai le paga il datore, anche durante la malattia.'
+      : 'Una festività che cade di domenica non la paga l\'INPS: il datore ti deve una giornata di retribuzione in più.')+
+      ' Il santo patrono del tuo comune non è compreso nel calcolo.</div>';
+  if(r.gap>0) n+='<div class="avviso">Molti contratti collettivi fanno pagare al datore la carenza e integrano l\'indennità fino al 100%, in tutto o in parte: l\'integrazione completa sui giorni pagati dall\'INPS varrebbe '+euro(r.gap)+'. Controlla cosa prevede il tuo contratto.</div>';
+  document.getElementById('note').innerHTML=n;
+  if(scorri) e.scrollIntoView({behavior:'smooth',block:'start'});
+}
+collegaStampa(function(){ if(!ultimo||ultimo.errore) return '';
+  const u=ultimo, d=new Date().toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric'});
+  const sett={terziario:'commercio, terziario, turismo e servizi',somministrazione:'agenzia per il lavoro',industria:'industria',pubblici:'pubblici esercizi e laboratori di pasticceria non artigiani'}[u.settore];
+  return '<b>Indennità di malattia</b> &middot; calcolo del '+d+'<br>Dal <b>'+fmtData(u.inizio)+'</b> al <b>'+fmtData(u.fine)+'</b>'+(u.ric?' (ricaduta, dopo '+num(u.prec)+' giorni)':'')+'<br>'+
+    (u.qual==='imp'?'Impiegato':'Operaio')+', '+sett+', contratto '+(u.det?'a termine'+(u.scad!==null?' fino al '+fmtData(u.scad):'')+' ('+num(u.lavorati)+' giorni lavorati nei 12 mesi)':'a tempo indeterminato')+'<br>'+
+    'Retribuzione lorda del mese precedente: <b>'+euro(u.lordo)+'</b> su '+u.nMens+' mensilità'; });
+let attivo=false;
+document.getElementById('modulo').addEventListener('submit',e=>{e.preventDefault();mostra(calcola(),!attivo);attivo=true;});
+document.getElementById('modulo').addEventListener('input',()=>{if(attivo)mostra(calcola(),false);});
+document.getElementById('modulo').addEventListener('change',()=>{if(attivo)mostra(calcola(),false);});
+
+
+(function(){
+  const es=document.getElementById('esito'), f=document.getElementById('modulo');
+  const sottolinea=()=>document.querySelectorAll('#esito .cifra').forEach(c=>{
+    c.classList.remove('ridisegna'); void c.offsetWidth; c.classList.add('ridisegna'); });
+  if(f) f.addEventListener('submit',()=>setTimeout(sottolinea,0));
+  if(!es||!f||!window.matchMedia||!matchMedia('(min-width: 1040px)').matches) return;
+  if(typeof calcola!=='function'||typeof mostra!=='function') return;
+  try{ mostra(calcola(),false); attivo=true; }catch(e){ return; }
+  const n=document.createElement('p'); n.className='nota-esempio';
+  n.textContent='Esempio con i valori di partenza. Cambia i tuoi dati e il conto si aggiorna.';
+  es.insertBefore(n,es.firstChild); sottolinea();
+  const via=()=>{ n.remove(); ['input','change','submit'].forEach(t=>f.removeEventListener(t,via)); };
+  ['input','change','submit'].forEach(t=>f.addEventListener(t,via));
+})();
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Quanto ti paga l'INPS per la malattia",
+   "inLanguage": "it-IT",
+   "url": "https://calcolichiari.it/malattia",
+   "isPartOf": {
+    "@type": "WebSite",
+    "name": "calcolichiari.it",
+    "url": "https://calcolichiari.it/"
+   },
+   "dateModified": "2026-10-09",
+   "applicationCategory": "FinanceApplication",
+   "operatingSystem": "Qualsiasi browser",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://calcolichiari.it/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Indennità di malattia",
+     "item": "https://calcolichiari.it/malattia"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Perché i primi tre giorni di malattia non li paga l'INPS?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sono i giorni di carenza: l'indennità INPS parte dal quarto giorno. Molti contratti collettivi li fanno pagare al datore di lavoro, in tutto o in parte, a volte solo per un certo numero di malattie all'anno. Se ti ammali di nuovo della stessa malattia, o di una sua conseguenza certificata dal medico, entro 30 giorni dalla fine della precedente, è una ricaduta: la carenza non si ripete e il conteggio dei giorni prosegue. Una malattia diversa è invece un evento nuovo, con una nuova carenza."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ho un contratto a termine: cosa cambia?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tre cose. L'indennità spetta al massimo per tanti giorni quanti ne hai lavorati nei 12 mesi prima della malattia. Se in quei 12 mesi hai lavorato 30 giorni o meno, spetta al massimo per 30 giorni nell'anno e la paga direttamente l'INPS. E soprattutto si ferma alla scadenza del contratto: per i giorni successivi non è dovuta, anche se il certificato prosegue. Lo prevede l'art. 5 del D.L. 463/1983."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sono in somministrazione e faccio l'impiegato in un'azienda industriale: l'indennità mi spetta?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sì. Per la malattia conta l'inquadramento dell'agenzia per il lavoro, che è nel settore terziario, non quello dell'azienda dove lavori: l'indennità INPS spetta sia agli operai sia agli impiegati somministrati, come chiarito dalla circolare INPS n. 41 del 2006. Chi invece è assunto direttamente come impiegato da un'azienda industriale non la riceve dall'INPS: lo paga il datore, secondo il contratto collettivo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "L'INPS paga le domeniche e le festività?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dipende dalla qualifica. Agli operai l'INPS non paga né le domeniche né le festività nazionali: le festività le paga il datore di lavoro, che le deve anche durante la malattia. Agli impiegati l'INPS paga tutti i giorni di calendario, domeniche e festività comprese, tranne le festività che cadono di domenica: per quelle il datore deve già una giornata di retribuzione in più. Il calcolatore conta i giorni uno per uno, compreso il 4 ottobre, festa nazionale dal 2026; non conosce invece il santo patrono del tuo comune."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Il datore mi deve pagare la differenza fino al 100%?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dipende dal contratto collettivo, non dalla legge. Molti contratti integrano l'indennità INPS, in tutto o in parte e per periodi diversi; altri no. Nel risultato trovi quanto vale l'integrazione fino al 100% sui giorni pagati dall'INPS: confrontala con quello che prevede il tuo contratto."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>
