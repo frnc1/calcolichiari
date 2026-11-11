@@ -1,2 +1,6 @@
 # il calcolatore NASpI ora e in homepage
 /naspi   /   301!
+# lingue: l'indirizzo breve porta al calcolatore NASpI tradotto
+/en   /en/naspi   302
+/ro   /ro/naspi   302
+/ar   /ar/naspi   302

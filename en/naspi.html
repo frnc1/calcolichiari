@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NASpI calculator 2026: unemployment benefit in Italy | calcolichiari.it</title>
+<meta name="description" content="Work out your NASpI, the Italian unemployment benefit: amount month by month, exact duration in weeks and the 3% monthly cut. Works with short contracts and different agencies.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="calcolichiari.it">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="How much NASpI you're entitled to">
+<meta property="og:description" content="Work out your NASpI, the Italian unemployment benefit: amount month by month, exact duration in weeks and the 3% monthly cut. Works with short contracts and different agencies.">
+<meta property="og:url" content="https://calcolichiari.it/en/naspi">
+<meta property="og:image" content="https://calcolichiari.it/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="calcolichiari.it, calculators for NASpI, TFR, thirteenth-month pay and payslips">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://calcolichiari.it/en/naspi">
+<link rel="alternate" hreflang="it" href="https://calcolichiari.it/">
+<link rel="alternate" hreflang="en" href="https://calcolichiari.it/en/naspi">
+<link rel="alternate" hreflang="ro" href="https://calcolichiari.it/ro/naspi">
+<link rel="alternate" hreflang="ar" href="https://calcolichiari.it/ar/naspi">
+<link rel="alternate" hreflang="x-default" href="https://calcolichiari.it/">
+<meta name="theme-color" content="#1f2547">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%231f2547'/%3E%3Cpath d='M27.80 14.58A11.5 11.5 0 1 0 27.80 33.42' fill='none' stroke='%23ffffff' stroke-width='6.6' stroke-linecap='round'/%3E%3Crect x='20.60' y='17.40' width='20.60' height='4.4' rx='2.2' fill='%23ff6a55'/%3E%3Crect x='20.60' y='26.20' width='20.60' height='4.4' rx='2.2' fill='%23ff6a55'/%3E%3C/svg%3E">
+<link rel="preload" href="/mona-titoli.woff2?v=2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/mona-cifre.woff2?v=2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/stile.css?v=11">
+</head>
+<body>
+<header class="testata"><div class="testata-interno"><a class="marchio" href="/en/naspi" aria-label="calcolichiari.it, NASpI calculator in English"><svg class="segno" width="36" height="36" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect class="segno-fondo" width="48" height="48" rx="12"/><path class="segno-c" d="M27.80 14.58A11.5 11.5 0 1 0 27.80 33.42" fill="none" stroke-width="6.6" stroke-linecap="round"/><rect class="segno-u" x="20.60" y="17.40" width="20.60" height="4.4" rx="2.2"/><rect class="segno-u" x="20.60" y="26.20" width="20.60" height="4.4" rx="2.2"/></svg><span class="marchio-nome">calcolichiari</span></a><nav class="nav-sito nav-lingue" aria-label="Language"><a href="/" hreflang="it" lang="it">Italiano</a><a href="/en/naspi" hreflang="en" lang="en" aria-current="page">English</a><a href="/ro/naspi" hreflang="ro" lang="ro">Română</a><a href="/ar/naspi" hreflang="ar" lang="ar" dir="rtl">العربية</a></nav></div></header>
+<main class="foglio">
+<div class="solo-stampa intestazione-stampa"><strong>calcolichiari.it</strong><span>Estimate for information only — only the competent body’s decision is binding</span></div>
+<div class="calc">
+<div class="calc-testa"><h1>How much NASpI you're entitled to</h1><p class="sottotitolo">NASpI is the unemployment benefit paid by INPS in Italy. Short contracts, agency work, weeks already paid out: each one changes the result. Enter them all here and see the payment month by month.</p><ul class="garanzie"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h10l4 4v12H5z"/><path d="M9 12h6"/><path d="M9 16h6"/></svg><span>INPS Circular 4/2026</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><path d="m9 15 2 2 4-4"/></svg><span>Rules checked on 11 November 2026</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>The numbers you enter stay in your browser</span></li></ul></div>
+<form id="modulo" class="card">
+<fieldset><legend><span class="passo">1</span>Your pay</legend>
+<div class="scelte">
+<label class="scelta"><input type="radio" name="modo" value="media" checked><span>Monthly average</span></label>
+<label class="scelta"><input type="radio" name="modo" value="totale"><span>4-year total</span></label>
+</div>
+<div class="campo" id="campoMedia">
+<label for="media">Average gross monthly pay (€)</label>
+<input type="number" id="media" inputmode="decimal" step="0.01" min="0" max="99999" value="1400">
+<p class="aiuto">Average pay subject to social security contributions (<i lang="it">imponibile previdenziale</i>) over the last 4 years, not just your last payslip.</p></div>
+<div class="campo" id="campoTotale" hidden>
+<label for="totale">Total pay subject to contributions over the 4 years (€)</label>
+<input type="number" id="totale" inputmode="decimal" step="0.01" min="0" max="9999999" value="42000">
+<p class="aiuto">Add up the <i lang="it">imponibile previdenziale</i> on your CU forms (<i lang="it">Certificazione Unica</i>) or on your INPS contribution statement.</p></div>
+</fieldset>
+<fieldset><legend><span class="passo">2</span>Your contributions</legend>
+<div class="campo"><label for="settimane">Weeks of contributions in the last 4 years</label>
+<input type="number" id="settimane" inputmode="numeric" step="1" min="0" max="208" value="130">
+<p class="aiuto">Add up all your contracts, even short ones and with different agencies. The theoretical maximum is 208.</p></div>
+<div class="campo"><label for="indennizzate">Weeks already covered by a previous NASpI</label>
+<input type="number" id="indennizzate" inputmode="numeric" step="1" min="0" max="208" value="0">
+<p class="aiuto">Those weeks don't count towards a new benefit. Leave 0 if this doesn't apply to you.</p></div>
+<div class="campo"><label for="eta">Your age when you apply</label>
+<input type="number" id="eta" inputmode="numeric" step="1" min="16" max="80" value="40">
+<p class="aiuto">From age 55, the 3% cut starts in month 8 instead of month 6.</p></div>
+</fieldset>
+<button type="submit">Calculate benefit</button>
+</form>
+
+<section id="esito" class="card esito" hidden aria-live="polite">
+<div class="solo-stampa riepilogo-stampa" id="riepilogoStampa"></div>
+<div id="avvisi"></div>
+<div id="risultato">
+<div class="hero-risultato">
+<div class="hero-titolo">Estimated first month</div>
+<div class="cifra" id="primoMese">—</div>
+<p class="cifra-nota" id="notaNetto"></p>
+</div>
+<div class="dettagli-lista">
+<div class="riga-dato"><span>Duration</span><strong id="durata">—</strong></div>
+<div class="riga-dato"><span>Last month without cuts</span><strong id="ultimoPieno">—</strong></div>
+<div class="riga-dato"><span>Amount of the last payment</span><strong id="ultimoImporto">—</strong></div>
+<div class="riga-dato"><span>Total gross amount</span><strong id="totaleLordo">—</strong></div>
+</div>
+<div class="grafico" id="grafico"></div>
+<div class="grafico-legenda"><span><i class="g-pieno"></i>full amount</span><span><i class="g-rid"></i>reduced by the monthly cut</span></div>
+<h2>Month by month</h2>
+<div class="tabella-wrap"><table>
+<thead><tr><th scope="col">Month</th><th scope="col">Gross</th><th scope="col">Cut</th></tr></thead>
+<tbody id="tabella"></tbody></table></div>
+<div class="azioni"><button type="button" class="azione" id="stampa"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg>Save as PDF or print</button></div>
+</div>
+</section>
+</div>
+<div class="dopo">
+<section class="faq-box"><h2>Frequently asked questions</h2>
+<details><summary><span>I had short contracts with different agencies. How do I count the weeks?</span></summary><div class="faq-contenuto">You add them all up, whatever the employer or agency. What counts are the weeks with unemployment insurance contributions in the four years before your job ended, even if they are split across ten contracts. The exact figure is on your INPS contribution statement (<i lang="it">estratto conto contributivo</i>).</div></details>
+<details><summary><span>I already received NASpI in the last four years. Can I get it again?</span></summary><div class="faq-contenuto">Yes, if you again have thirteen weeks of contributions in the four years and you lost your job involuntarily. The duration changes, though: weeks already covered by a previous NASpI are not counted twice, so the new benefit is shorter.</div></details>
+<details><summary><span>How long does NASpI last if I only worked a few months?</span></summary><div class="faq-contenuto">Half of the weeks of contributions. Thirteen weeks of work give six and a half weeks of benefit, about a month and a half: the last payment is reduced in proportion, it does not disappear. The absolute maximum is 104 weeks, 24 months.</div></details>
+<details><summary><span>How does the monthly cut (<i lang="it">décalage</i>) work?</span></summary><div class="faq-contenuto">The payment goes down by 3% every month from the sixth month, or from the eighth if you were 55 or older when you applied. The cut adds up, because each month it applies to the previous month's amount.</div></details>
+<details><summary><span>When do I have to apply?</span></summary><div class="faq-contenuto">Within 68 days of the end of your contract, and only after it has ended. You apply online on the INPS website, also through a <i lang="it">patronato</i> (an office that helps with INPS applications). If you apply by the eighth day after the job ends, NASpI starts from the eighth day; if you apply later, from the day after your application.</div></details>
+<details><summary><span>I'm a foreigner. Am I entitled to NASpI?</span></summary><div class="faq-contenuto">Yes, with the same requirements as Italians: you lost your job involuntarily and you have at least thirteen weeks of contributions in the last four years. Citizenship does not matter. INPS does exclude non-EU workers with a residence permit for seasonal work (<i lang="it">permesso di soggiorno per lavoro stagionale</i>), farm workers (<i lang="it">operai agricoli</i>), who have a different benefit, and permanent public-sector employees.</div></details>
+<details><summary><span>If I go back to my country, do I keep receiving NASpI?</span></summary><div class="faq-contenuto">Only if you go to look for work in another country of the European Union or the European Economic Area, or in Switzerland, and for a maximum of three months from your departure. Before leaving you must have been registered with the Job Centre (<i lang="it">Centro per l'impiego</i>) for at least one day; then you tell them you are no longer available, cancel your registration and ask INPS for documents U2 and U1, in person and by appointment. Within seven days of arriving, register with the employment office of that country and hand in the U2: until that office informs INPS, payments are suspended. After the three months, to keep receiving it, you must register again with a Job Centre in Italy. The procedure only applies to the countries of the European Union and the European Economic Area and to Switzerland: if you move anywhere else, ask INPS before you leave.</div></details>
+<details><summary><span>I'm a non-EU citizen. If I lose my job, do I lose my residence permit?</span></summary><div class="faq-contenuto">No. Losing your job is not a reason to revoke your residence permit (<i lang="it">permesso di soggiorno</i>). You can register with the Job Centre and apply for a job-seeking permit (<i lang="it">permesso per attesa occupazione</i>), valid for the time left on your permit and at least one year, or for the whole duration of your NASpI if that is longer. The one-year minimum does not apply to seasonal work permits. The rule is article 22, paragraph 11, of Legislative Decree 286/1998.</div></details>
+</section>
+<section class="metodo"><h2>How it is calculated</h2>
+<p class="aggiornamento"><span aria-hidden="true">✓</span> Figures and rules checked on <time datetime="2026-11-11">11 November 2026</time>.</p>
+<p class="nota">
+<strong>Amount.</strong> 75% of your average monthly pay up to €1,456.72, plus 25% of any part above that. The maximum is €1,584.70 gross a month.<br><br>
+<strong>Duration.</strong> INPS counts weeks, not whole months: half of the weeks of contributions in the last four years, excluding those already paid out, up to a maximum of 104. When a fraction is left over, the last payment is reduced in proportion instead of being dropped.<br><br>
+<strong>Monthly cut (<i lang="it">décalage</i>).</strong> 3% a month from the sixth month, from the eighth for people aged 55 or over when they apply. The cut adds up.<br><br>
+<strong>Sources.</strong> INPS Circular no. 4 of 28 January 2026 for the threshold and the maximum. Articles 3, 4, 5 and 6 of Legislative Decree 22/2015 as currently in force for requirements, duration, monthly cut and application; the requirement of thirty days of actual work has not applied since 2022 (art. 3, paragraph 1-bis). Law 199/2025 did not change ordinary NASpI. For exclusions and for NASpI in another European country, the INPS pages on NASpI. For residence permits, article 22, paragraph 11, of Legislative Decree 286/1998.<br><br>
+<strong>What this tool does not do.</strong> It does not handle vertical part-time work (<i lang="it">part time verticale</i>) or the rule on voluntary resignation from a permanent job in the previous twelve months. It does not apply to people excluded from NASpI: farm workers, permanent public-sector employees, non-EU workers with a seasonal work permit. Amounts are gross: INPS withholds income tax (<i lang="it">IRPEF</i>) at source. It is an estimate, not a decision: only INPS's decision is binding.<br><br>
+<strong>Translation.</strong> This page is the English version of the <a href="/" hreflang="it" lang="it">Italian page</a>, and the numbers come from the same calculation. Italian terms are kept in brackets so you can find them on your documents.</p></section>
+</div>
+<section class="altri"><h2>Other calculators (in Italian)</h2><div class="altri-griglia"><a href="/netto" hreflang="it"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></span><span><span class="altri-nome">Gross and net pay</span><span class="altri-desc">Even for a few months of work</span></span></a><a href="/tredicesima" hreflang="it"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V9"/><path d="M8.5 20V9"/><path d="M13 20V9"/><path d="M19.5 20V4.5"/></svg></span><span><span class="altri-nome">Thirteenth-month pay</span><span class="altri-desc">Also with partial months</span></span></a><a href="/malattia" hreflang="it"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4.5a2 2 0 0 0-4 0v9.9a4 4 0 1 0 4 0z"/><path d="M12 9.5v7"/></svg></span><span><span class="altri-nome">Sick pay</span><span class="altri-desc">Day by day</span></span></a><a href="/ferie" hreflang="it"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v7"/><path d="M5.5 10h13l-1.6 9.5a1.4 1.4 0 0 1-1.4 1.2H8.5a1.4 1.4 0 0 1-1.4-1.2z"/><path d="M9 3h6"/></svg></span><span><span class="altri-nome">Unused holiday pay</span><span class="altri-desc">Payment in lieu</span></span></a><a href="/tfr" hreflang="it"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5h16"/><path d="M6 14.8h12"/><path d="M8 10.1h8"/><path d="M10 5.4h4"/></svg></span><span><span class="altri-nome">Severance pay (TFR)</span><span class="altri-desc">Also with several contracts</span></span></a><a href="/naspi-anticipata" hreflang="it"><span class="altri-icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 20V4"/><path d="M16 20V12.5"/></svg></span><span><span class="altri-nome">NASpI paid in advance</span><span class="altri-desc">The two instalments, 70% and 30%</span></span></a></div></section></main>
+<footer class="piede"><div class="piede-interno">
+<div class="piede-griglia">
+<div><a class="marchio" href="/en/naspi" aria-label="calcolichiari.it, NASpI calculator in English"><svg class="segno" width="36" height="36" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect class="segno-fondo" width="48" height="48" rx="12"/><path class="segno-c" d="M27.80 14.58A11.5 11.5 0 1 0 27.80 33.42" fill="none" stroke-width="6.6" stroke-linecap="round"/><rect class="segno-u" x="20.60" y="17.40" width="20.60" height="4.4" rx="2.2"/><rect class="segno-u" x="20.60" y="26.20" width="20.60" height="4.4" rx="2.2"/></svg><span class="marchio-nome">calcolichiari</span></a>
+<p class="piede-intro">Calculators for people on short, fixed-term or agency contracts. Every result states the rule it comes from.</p></div>
+<div><h3>Calculators (in Italian)</h3><ul><li><a href="/netto" hreflang="it">Gross and net pay</a></li><li><a href="/tredicesima" hreflang="it">Thirteenth-month pay</a></li><li><a href="/malattia" hreflang="it">Sick pay</a></li><li><a href="/ferie" hreflang="it">Unused holiday pay</a></li><li><a href="/tfr" hreflang="it">Severance pay (TFR)</a></li><li><a href="/naspi-anticipata" hreflang="it">NASpI paid in advance</a></li></ul></div>
+<div><h3>The site (in Italian)</h3><ul>
+<li><a href="/chi-siamo" hreflang="it">Who's behind it</a></li>
+<li><a href="/contatti" hreflang="it">Contact</a></li>
+<li><a href="/privacy" hreflang="it">Privacy</a></li>
+</ul></div></div>
+<p class="piede-legale"><strong>calcolichiari.it</strong> — The calculations are for information only and are based on the laws in force, cited in full at the bottom of each page. Only the decisions of the competent social security and tax authorities are binding. The calculations run in your browser and the numbers you type are not sent anywhere. How data is handled is explained on the <a href="/privacy" hreflang="it">privacy page</a> (in Italian).</p>
+</div></footer>
+<script src="/dati-2026.js?v=10"></script>
+<script>
+const LINGUA='en';
+const euro = n => '\u20ac' + n.toLocaleString('en-GB',{minimumFractionDigits:2,maximumFractionDigits:2});
+const num = (n,d) => n.toLocaleString('en-GB',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});
+const plur = (n,f,d) => f[new Intl.PluralRules(LINGUA,{minimumFractionDigits:d||0,maximumFractionDigits:d||0}).select(n)] || f.other;
+let limitato = [];
+const leggi = (id,min,max,eti) => {
+  const e=document.getElementById(id); if(!e) return min;
+  const v=parseFloat(e.value); if(!isFinite(v)) return min;
+  const c=Math.min(max,Math.max(min,v));
+  if(eti && Math.abs(c-v)>0.001) limitato.push(eti+': I used '+num(c,c%1?2:0)+' instead of '+num(v,v%1?2:0));
+  return c;
+};
+const avvisoLimiti = () => limitato.length
+  ? '<div class="avviso">A value was outside the limits set by the law. '+limitato.join('. ')+'.</div>' : '';
+function collegaStampa(riepilogo){
+  const b=document.getElementById('stampa');
+  if(b) b.addEventListener('click',()=>{
+    const r=document.getElementById('riepilogoStampa');
+    if(r && riepilogo) r.innerHTML=riepilogo();
+    window.print();
+  });
+}
+
+function disegnaGrafico(valori, decDa, etichetta){
+  const el=document.getElementById('grafico'); if(!el||!valori.length) return;
+  const W=400, H=176, pl=3, pr=3, pt=24, pb=20;
+  const n=valori.length, max=Math.max(...valori.map(v=>v.importo))||1;
+  const larg=(W-pl-pr)/n, bw=Math.max(3, larg*0.66), off=(larg-bw)/2;
+  let b='', e='';
+  valori.forEach((v,i)=>{
+    const h=Math.max(2,(v.importo/max)*(H-pt-pb));
+    const x=pl+i*larg+off, y=H-pb-h;
+    b+='<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+h.toFixed(1)+
+       '" rx="2" class="'+(v.rid?'g-rid':'g-pieno')+'" opacity="'+(v.par?'.55':'1')+'"><title>Month '+v.mese+': '+euro(v.importo)+'</title></rect>';
+    if(i===0||i===n-1||(n>6&&i===Math.floor(n/2)))
+      e+='<text x="'+(x+bw/2).toFixed(1)+'" y="'+(H-7)+'" text-anchor="middle" font-size="11" class="g-testo">'+v.mese+'</text>';
+  });
+  const yd=H-pb-(valori[0].importo/max)*(H-pt-pb);
+  el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+etichetta+'">'+
+    '<line x1="'+pl+'" y1="'+(H-pb)+'" x2="'+(W-pr)+'" y2="'+(H-pb)+'" class="g-asse" stroke-width="1"/>'+
+    '<line x1="'+pl+'" y1="'+yd.toFixed(1)+'" x2="'+(W-pr)+'" y2="'+yd.toFixed(1)+'" class="g-rif" stroke-width="1" stroke-dasharray="4 4"/>'+
+    '<text x="'+pl+'" y="'+(yd-6).toFixed(1)+'" font-size="11" class="g-testo">full amount '+euro(valori[0].importo)+'</text>'+
+    b+e+'</svg>';
+}
+
+const P = Object.assign({}, DATI.naspi);
+const cM=document.getElementById('campoMedia'), cT=document.getElementById('campoTotale');
+document.querySelectorAll('input[name=modo]').forEach(r=>r.addEventListener('change',e=>{
+  const m=e.target.value==='media'; cM.hidden=!m; cT.hidden=m; if(attivo) mostra(calcola(),false); }));
+function base(rmm){
+  const l = rmm<=P.soglia ? rmm*P.qBase : P.soglia*P.qBase+(rmm-P.soglia)*P.qEcc;
+  return Math.min(l,P.massimale);
+}
+function calcola(){
+  limitato=[];
+  const modo=document.querySelector('input[name=modo]:checked').value;
+  const sett=leggi('settimane',0,P.sMax,'Weeks of contributions'),
+        ind=leggi('indennizzate',0,P.sMax,'Weeks already paid out'),
+        eta=leggi('eta',16,80,'Age');
+  const rmm = modo==='media' ? leggi('media',0,99999,'Average pay')
+                             : (sett>0 ? leggi('totale',0,9999999,'Total pay')/sett*P.sMese : 0);
+  const utili=Math.max(0,sett-ind), sNaspi=Math.min(P.durMax,utili/2);
+  const mDec=sNaspi*12/52, mPieni=Math.floor(mDec), fraz=mDec-mPieni;
+  const coda=fraz>.01, nRate=mPieni+(coda?1:0);
+  const decDa = eta>=P.eta55 ? P.decDa55 : P.decDa;
+  const b=base(rmm); const rate=[]; let mens=b;
+  for(let m=1;m<=nRate;m++){
+    if(m>=decDa) mens=mens*(1-P.dec);
+    const par = coda && m===nRate;
+    rate.push({mese:m,mens:mens,importo:par?mens*fraz:mens,par:par,rid:m>=decDa});
+  }
+  return {rmm,sett,ind,eta,sNaspi,mDec,base:b,rate,decDa,nRate,modo,
+          spetta: sett>=P.sMin && sNaspi>0,
+          totale:rate.reduce((s,r)=>s+r.importo,0)};
+}
+let ultimo=null;
+function mostra(r,scorri){
+  ultimo=r;
+  let h=avvisoLimiti();
+  const box=document.getElementById('risultato');
+  if(r.sett<P.sMin){
+    h+='<div class="avviso"><strong>You are not entitled to NASpI.</strong> You need at least '+P.sMin+' weeks of contributions in the four years before your job ended, and you entered '+num(r.sett)+'. The requirement is set by art. 3 of Legislative Decree 22/2015. Check the figure on your INPS contribution statement before taking it as final.</div>';
+  } else if(r.sNaspi<=0){
+    h+='<div class="avviso"><strong>No weeks left to be paid.</strong> The weeks already covered by a previous NASpI ('+num(r.ind)+') cancel out the useful ones. Check the figure: if you overestimated them, the result changes.</div>';
+  }
+  box.hidden=!r.spetta;
+  document.getElementById('avvisi').innerHTML=h;
+  const e=document.getElementById('esito'); e.hidden=false;
+  if(!r.spetta){ if(scorri) e.scrollIntoView({behavior:'smooth',block:'start'}); return; }
+  if(r.base>=P.massimale-.01)
+    document.getElementById('avvisi').innerHTML = h+'<div class="avviso successo">The result has reached the legal maximum ('+euro(P.massimale)+'): above this figure the payment does not go up.</div>';
+  document.getElementById('primoMese').textContent=euro(r.base);
+  document.getElementById('notaNetto').textContent='Gross. After income tax (IRPEF) you receive roughly between '+euro(r.base*(1-P.irpefMax))+' and '+euro(r.base*(1-P.irpefMin))+'.';
+  document.getElementById('durata').innerHTML=num(r.sNaspi,r.sNaspi%1?1:0)+' '+plur(r.sNaspi,{one:'week',other:'weeks'},r.sNaspi%1?1:0)+'<small>about '+num(r.mDec,1)+' months</small>';
+  const up=Math.min(r.decDa-1,r.nRate);
+  document.getElementById('ultimoPieno').textContent = up>0 ? ('month '+up) : '\u2014';
+  document.getElementById('ultimoImporto').textContent = euro(r.rate[r.rate.length-1].importo);
+  document.getElementById('totaleLordo').textContent=euro(r.totale);
+  disegnaGrafico(r.rate, r.decDa, 'Benefit month by month, with the monthly cut');
+  document.getElementById('tabella').innerHTML = r.rate.map(function(x){
+    const q = r.base>0 ? x.importo/r.base : 0;
+    const et = x.par ? 'fraction' : (x.rid ? '\u2212'+num((1-x.mens/r.base)*100,1)+'%' : 'full');
+    return '<tr class="'+(x.rid?'ridotto ':'')+(x.par?'parziale':'')+'"><td>'+x.mese+(x.par?' (part)':'')+'</td><td>'+euro(x.importo)+
+      '</td><td><div class="pista"><div class="barra" style="width:'+(q*58).toFixed(1)+'%"></div><span class="barra-eti">'+et+'</span></div></td></tr>';
+  }).join('');
+  if(scorri) e.scrollIntoView({behavior:'smooth',block:'start'});
+}
+collegaStampa(function(){
+  if(!ultimo) return '';
+  const d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  return '<b>NASpI calculation</b>, '+d+'<br>'+
+   'Average monthly pay: <b>'+euro(ultimo.rmm)+'</b><br>'+
+   'Weeks of contributions in 4 years: <b>'+num(ultimo.sett)+'</b>'+
+   (ultimo.ind>0 ? ' (already paid out: <b>'+num(ultimo.ind)+'</b>)' : '')+'<br>'+
+   'Age when applying: <b>'+num(ultimo.eta)+'</b>'+
+   ' &middot; monthly cut from month <b>'+ultimo.decDa+'</b>';
+});
+let attivo=false;
+document.getElementById('modulo').addEventListener('submit',e=>{e.preventDefault();mostra(calcola(),!attivo);attivo=true;});
+document.getElementById('modulo').addEventListener('input',()=>{if(attivo)mostra(calcola(),false);});
+
+
+(function(){
+  const es=document.getElementById('esito'), f=document.getElementById('modulo');
+  const sottolinea=()=>document.querySelectorAll('#esito .cifra').forEach(c=>{
+    c.classList.remove('ridisegna'); void c.offsetWidth; c.classList.add('ridisegna'); });
+  if(f) f.addEventListener('submit',()=>setTimeout(sottolinea,0));
+  if(!es||!f||!window.matchMedia||!matchMedia('(min-width: 1040px)').matches) return;
+  if(typeof calcola!=='function'||typeof mostra!=='function') return;
+  try{ mostra(calcola(),false); attivo=true; }catch(e){ return; }
+  const n=document.createElement('p'); n.className='nota-esempio';
+  n.textContent='Example with the starting values. Change your details and the result updates.';
+  es.insertBefore(n,es.firstChild); sottolinea();
+  const via=()=>{ n.remove(); ['input','change','submit'].forEach(t=>f.removeEventListener(t,via)); };
+  ['input','change','submit'].forEach(t=>f.addEventListener(t,via));
+})();
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "How much NASpI you're entitled to",
+   "inLanguage": "en",
+   "url": "https://calcolichiari.it/en/naspi",
+   "isPartOf": {
+    "@type": "WebSite",
+    "name": "calcolichiari.it",
+    "url": "https://calcolichiari.it/"
+   },
+   "dateModified": "2026-11-11",
+   "applicationCategory": "FinanceApplication",
+   "operatingSystem": "Any browser",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "I had short contracts with different agencies. How do I count the weeks?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You add them all up, whatever the employer or agency. What counts are the weeks with unemployment insurance contributions in the four years before your job ended, even if they are split across ten contracts. The exact figure is on your INPS contribution statement (estratto conto contributivo)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "I already received NASpI in the last four years. Can I get it again?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, if you again have thirteen weeks of contributions in the four years and you lost your job involuntarily. The duration changes, though: weeks already covered by a previous NASpI are not counted twice, so the new benefit is shorter."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does NASpI last if I only worked a few months?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Half of the weeks of contributions. Thirteen weeks of work give six and a half weeks of benefit, about a month and a half: the last payment is reduced in proportion, it does not disappear. The absolute maximum is 104 weeks, 24 months."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does the monthly cut (décalage) work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The payment goes down by 3% every month from the sixth month, or from the eighth if you were 55 or older when you applied. The cut adds up, because each month it applies to the previous month's amount."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "When do I have to apply?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Within 68 days of the end of your contract, and only after it has ended. You apply online on the INPS website, also through a patronato (an office that helps with INPS applications). If you apply by the eighth day after the job ends, NASpI starts from the eighth day; if you apply later, from the day after your application."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "I'm a foreigner. Am I entitled to NASpI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, with the same requirements as Italians: you lost your job involuntarily and you have at least thirteen weeks of contributions in the last four years. Citizenship does not matter. INPS does exclude non-EU workers with a residence permit for seasonal work (permesso di soggiorno per lavoro stagionale), farm workers (operai agricoli), who have a different benefit, and permanent public-sector employees."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "If I go back to my country, do I keep receiving NASpI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Only if you go to look for work in another country of the European Union or the European Economic Area, or in Switzerland, and for a maximum of three months from your departure. Before leaving you must have been registered with the Job Centre (Centro per l'impiego) for at least one day; then you tell them you are no longer available, cancel your registration and ask INPS for documents U2 and U1, in person and by appointment. Within seven days of arriving, register with the employment office of that country and hand in the U2: until that office informs INPS, payments are suspended. After the three months, to keep receiving it, you must register again with a Job Centre in Italy. The procedure only applies to the countries of the European Union and the European Economic Area and to Switzerland: if you move anywhere else, ask INPS before you leave."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "I'm a non-EU citizen. If I lose my job, do I lose my residence permit?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Losing your job is not a reason to revoke your residence permit (permesso di soggiorno). You can register with the Job Centre and apply for a job-seeking permit (permesso per attesa occupazione), valid for the time left on your permit and at least one year, or for the whole duration of your NASpI if that is longer. The one-year minimum does not apply to seasonal work permits. The rule is article 22, paragraph 11, of Legislative Decree 286/1998."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 /* calcolichiari.it — foglio di stile unico. Caratteri locali, nessuna richiesta a terzi.
    Mona Sans (SIL Open Font License) in due tagli: titoli e cifre. */
-@font-face{font-family:'Mona Titoli';src:url('/mona-titoli.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'Mona Cifre';src:url('/mona-cifre.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Mona Titoli';src:url('/mona-titoli.woff2?v=2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Mona Cifre';src:url('/mona-cifre.woff2?v=2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
 
 /* ===================== gettoni ===================== */
 :root{
@@ -385,3 +385,29 @@ summary:hover{color:var(--marca)}
   .legenda i{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   @page{margin:14mm}
 }
+
+/* ===================== lingue ===================== */
+.lingue{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin:0 0 18px;font-size:.92rem;font-weight:600}
+.lingue svg{color:var(--marca-2);flex:0 0 auto}
+.lingue a{color:var(--marca-2)}
+.lingue a:hover{color:var(--marca)}
+@media print{.lingue{display:none!important}}
+
+/* scrittura da destra a sinistra (arabo): si specchiano solo le regole scritte con sinistra e destra */
+[dir=rtl] .nav-sito{margin-left:0;margin-right:auto}
+[dir=rtl] legend{float:right}
+[dir=rtl] th,[dir=rtl] td{text-align:right}
+[dir=rtl] th:nth-child(2),[dir=rtl] td:nth-child(2){text-align:left}
+[dir=rtl] .riga-dato strong{text-align:left}
+[dir=rtl] .avviso{padding:13px 46px 13px 16px}
+[dir=rtl] .avviso::before{left:auto;right:14px}
+[dir=rtl] .cifra::before{transform-origin:right center}
+@media (max-width:1039px){
+  [dir=rtl] .nav-sito{-webkit-mask-image:linear-gradient(270deg,#000 88%,transparent);mask-image:linear-gradient(270deg,#000 88%,transparent)}
+  .nav-sito.nav-lingue{-webkit-mask-image:none;mask-image:none}
+}
+@media print{[dir=rtl] .avviso{padding-right:4mm}}
+/* l'arabo è una scrittura legata: niente spaziatura tra le lettere, righe più alte */
+[lang=ar] h1,[lang=ar] h2,[lang=ar] h3,[lang=ar] legend,[lang=ar] summary,[lang=ar] button,[lang=ar] .altri-nome{letter-spacing:0}
+[lang=ar] h1{line-height:1.3}
+[lang=ar] h2{line-height:1.4}
